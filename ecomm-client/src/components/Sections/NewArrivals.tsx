@@ -15,16 +15,17 @@ import { responsive } from "../../utils/Section.constants";
 import "./NewArrivals.css";
 
 const items: CardProps[] = [
-  { title: "T-Shirts", imagePath: TShirt, alt: "T-Shirts" },
-  { title: "Hats", imagePath: Hat, alt: "Hats" },
-  { title: "Dresses", imagePath: Dress, alt: "Dresses" },
-  { title: "Dress Shirts", imagePath: Shirt, alt: "Shirts" },
-  { title: "Baseball Jackets", imagePath: BJacket, alt: "BJacket" },
-  { title: "Leather Jackets", imagePath: LJacket, alt: "LJacket" },
-  { title: "White Dresses ", imagePath: WDress, alt: "WDress" },
-  { title: "Turtle Necks", imagePath: TNeck, alt: "TNeck" },
-  { title: "SweatShirts", imagePath:Sweatshirt , alt: "Sweatshirt" },
+  { title: "T-Shirts", imagePath: TShirt },
+  { title: "Hats", imagePath: Hat },
+  { title: "Dresses", imagePath: Dress },
+  { title: "Dress Shirts", imagePath: Shirt },
+  { title: "Baseball Jackets", imagePath: BJacket },
+  { title: "Leather Jackets", imagePath: LJacket },
+  { title: "White Dresses", imagePath: WDress },
+  { title: "Turtle Necks", imagePath: TNeck },
+  { title: "SweatShirts", imagePath: Sweatshirt },
 ];
+
 
 const NewArrivals = () => {
   return (
@@ -39,7 +40,7 @@ const NewArrivals = () => {
         infinite={false}
         partialVisible={false}
         itemClass={"react-slider-custom-item"}
-        className="px-12"
+        className="px-8"
       >
         {items &&
           items.map((item, index) => (
@@ -47,7 +48,6 @@ const NewArrivals = () => {
               key={index}
               imagePath={item.imagePath}
               title={item.title}
-              alt={item.alt}
             />
           ))}
       </Carousel>

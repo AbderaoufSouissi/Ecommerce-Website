@@ -1,0 +1,54 @@
+{
+  "categories": [
+    {
+      "title": "Categories for Women",
+      "data": [
+        {
+          "title": "Hoodies & Sweatshirts",
+          "description": "Explore Now!",
+          "imagePath": "/images/women-hoodies.jpg"
+        },
+        {
+          "title": "Jeans",
+          "description": "Explore Now!",
+          "imagePath": "/images/women-jeans.jpg"
+        },
+        {
+          "title": "Boots",
+          "description": "Explore Now!",
+          "imagePath": "/images/women-boots.jpg"
+        },
+        {
+          "title": "T-Shirts",
+          "description": "Explore Now!",
+          "imagePath": "/images/women-tshirts.png"
+        }
+      ]
+    },
+    {
+      "title": "Categories for Men",
+      "data": [
+        {
+          "title": "T-Shirts",
+          "description": "Explore Now!",
+          "imagePath": "/images/men-tshirts.jpg"
+        },
+        {
+          "title": "Coats",
+          "description": "Explore Now!",
+          "imagePath": "/images/men-coats.jpg"
+        },
+        {
+          "title": "Jackets",
+          "description": "Explore Now!",
+          "imagePath": "/images/men-jackets.jpg"
+        },
+        {
+          "title": "Shorts",
+          "description": "Explore Now!",
+          "imagePath": "/images/men-shorts.jpg"
+        }
+      ]
+    }
+  ]
+}
