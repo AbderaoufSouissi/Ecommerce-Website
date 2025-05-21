@@ -8,7 +8,7 @@ const Navigation = () => {
       <div className="flex items-center gap-6">
         {/* LOGO */}
         <a href="/" className="text-3xl text-black gap-8 font-bold">
-          Online Shop
+          TnGarments
         </a>
       </div>
 

@@ -50,5 +50,69 @@
         }
       ]
     }
-  ]
+  ],
+  "footer": {
+    "items": [
+      {
+        "title": "Need Help",
+        "list": [
+          {
+            "label": "Contact Us",
+            "path": "/contact-us"
+          },
+          {
+            "label": "Track Order",
+            "path": "/track-order"
+          },
+          {
+            "label": "Returns & Refunds",
+            "path": "/refunds"
+          },
+          {
+            "label": "FAQ's",
+            "path": "/faq"
+          },
+          {
+            "label": "Career",
+            "path": "/career"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "list": [
+          {
+            "label": "About Us",
+            "path": "/about"
+          },
+          {
+            "label": "Media",
+            "path": "/media"
+          }
+        ]
+      },
+      {
+        "title": "More Info",
+        "list": [
+          {
+            "label": "Terms & Conditions",
+            "path": "/terms-conditions"
+          },
+          {
+            "label": "Privacy Policy",
+            "path": "/policies"
+          },
+          {
+            "label": "Shipping Policy",
+            "path": "/shipping-policy"
+          }
+        ]
+      },
+      {
+        "title": "Location",
+        "description": "Tunisia, Tunis"
+      }
+    ]
+  },
+  "copyright": "Copyright © 2025 TnGarments"
 }
