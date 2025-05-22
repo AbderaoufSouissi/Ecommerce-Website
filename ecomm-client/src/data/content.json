@@ -1,52 +1,127 @@
 {
+  "pages": {
+    "shop": {
+      "sections": [
+        {
+          "title": "Categories for Women",
+          "data": [
+            {
+              "title": "Hoodies & Sweatshirts",
+              "description": "Explore Now!",
+              "imagePath": "/images/women-hoodies.jpg"
+            },
+            {
+              "title": "Jeans",
+              "description": "Explore Now!",
+              "imagePath": "/images/women-jeans.jpg"
+            },
+            {
+              "title": "Boots",
+              "description": "Explore Now!",
+              "imagePath": "/images/women-boots.jpg"
+            },
+            {
+              "title": "T-Shirts",
+              "description": "Explore Now!",
+              "imagePath": "/images/women-tshirts.png"
+            }
+          ]
+        },
+        {
+          "title": "Categories for Men",
+          "data": [
+            {
+              "title": "T-Shirts",
+              "description": "Explore Now!",
+              "imagePath": "/images/men-tshirts.jpg"
+            },
+            {
+              "title": "Coats",
+              "description": "Explore Now!",
+              "imagePath": "/images/men-coats.jpg"
+            },
+            {
+              "title": "Jackets",
+              "description": "Explore Now!",
+              "imagePath": "/images/men-jackets.jpg"
+            },
+            {
+              "title": "Shorts",
+              "description": "Explore Now!",
+              "imagePath": "/images/men-shorts.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "categories": [
     {
-      "title": "Categories for Women",
-      "data": [
+      "id": 1,
+      "name": "Men",
+      "code": "MEN",
+      "description":"Men's Clothing",
+      "types": [
         {
-          "title": "Hoodies & Sweatshirts",
-          "description": "Explore Now!",
-          "imagePath": "/images/women-hoodies.jpg"
+          "id": 1,
+          "name": "Jeans",
+          "description": "Men's Jeans"
         },
         {
-          "title": "Jeans",
-          "description": "Explore Now!",
-          "imagePath": "/images/women-jeans.jpg"
+          "id": 2,
+          "name": "Shirts",
+          "description": "Men's Shirts"
         },
         {
-          "title": "Boots",
-          "description": "Explore Now!",
-          "imagePath": "/images/women-boots.jpg"
-        },
-        {
-          "title": "T-Shirts",
-          "description": "Explore Now!",
-          "imagePath": "/images/women-tshirts.png"
+          "id": 3,
+          "name": "Shorts",
+          "description": "Men's Shorts"
         }
       ]
     },
     {
-      "title": "Categories for Men",
-      "data": [
+      "id": 2,
+      "name": "Women",
+      "code": "WOMEN",
+      "description":"Women's Clothing",
+      "types": [
         {
-          "title": "T-Shirts",
-          "description": "Explore Now!",
-          "imagePath": "/images/men-tshirts.jpg"
+          "id": 1,
+          "name": "Jeans",
+          "description": "Women's Jeans"
         },
         {
-          "title": "Coats",
-          "description": "Explore Now!",
-          "imagePath": "/images/men-coats.jpg"
+          "id": 2,
+          "name": "Shirts",
+          "description": "Women's Shirts"
         },
         {
-          "title": "Jackets",
-          "description": "Explore Now!",
-          "imagePath": "/images/men-jackets.jpg"
+          "id": 3,
+          "name": "Dresses",
+          "description": "Women's Dresses"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Kids",
+      "code": "KIDS",
+      "description":"Kid's Clothing",
+      "types": [
+        {
+          "id": 1,
+          "name": "Jeans",
+          "description": "Kid's Jeans"
         },
         {
-          "title": "Shorts",
-          "description": "Explore Now!",
-          "imagePath": "/images/men-shorts.jpg"
+          "id": 2,
+          "name": "Shirts",
+          "description": "Kid's Shirts"
+        },
+        {
+          "id": 3,
+          "name": "Dresses",
+          "description": "Kids's Dresses"
         }
       ]
     }
