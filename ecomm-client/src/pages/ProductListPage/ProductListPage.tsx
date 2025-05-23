@@ -1,6 +1,7 @@
 import { useMemo } from "react"
 import FilterIcon from "../../components/common/FilterIcon"
 import content from "../../data/content.json"
+import Categories from "../../components/Filters/Categories"
 
 type Category = {
   id: number,
@@ -10,10 +11,10 @@ type Category = {
   types: CategorieType[]
 }
 
-type CategorieType = {
-  id: number,
-  name: string,
-  description: string
+export type CategorieType = {
+  type_id: number,
+  code: string,
+  type: string
 }
 
 const categories: Category[] = content?.categories
@@ -36,6 +37,7 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
           </div>
           <div>
             <p className="text-[16px] text-black mt-5">Categories</p>
+            <Categories types={categoryContent?.types} />
           </div>
         </div>
         <div className="p-[15px]">

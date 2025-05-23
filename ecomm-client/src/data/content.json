@@ -62,22 +62,63 @@
       "code": "MEN",
       "description":"Men's Clothing",
       "types": [
-        {
-          "id": 1,
-          "name": "Jeans",
-          "description": "Men's Jeans"
-        },
-        {
-          "id": 2,
-          "name": "Shirts",
-          "description": "Men's Shirts"
-        },
-        {
-          "id": 3,
-          "name": "Shorts",
-          "description": "Men's Shorts"
-        }
-      ]
+  {
+    "type_id": 1,
+    "code": "JEANS",
+    "type": "Jeans"
+  },
+  {
+    "type_id": 2,
+    "code": "SHIRTS",
+    "type": "Shirts"
+  },
+  {
+    "type_id": 3,
+    "code": "SHORTS",
+    "type": "Shorts"
+  },
+  {
+    "type_id": 4,
+    "code": "TSHIRTS",
+    "type": "T-Shirts"
+  },
+  {
+    "type_id": 5,
+    "code": "HOODIES",
+    "type": "Hoodies"
+  },
+  {
+    "type_id": 6,
+    "code": "SWEATERS",
+    "type": "Sweaters"
+  },
+  {
+    "type_id": 7,
+    "code": "JACKETS",
+    "type": "Jackets"
+  },
+  {
+    "type_id": 8,
+    "code": "COATS",
+    "type": "Coats"
+  },
+  {
+    "type_id": 9,
+    "code": "SUITS",
+    "type": "Suits"
+  },
+  {
+    "type_id": 10,
+    "code": "BLAZERS",
+    "type": "Blazers"
+  },
+  {
+    "type_id": 11,
+    "code": "TRACKSUITS",
+    "type": "Tracksuits"
+  }
+]
+
     },
     {
       "id": 2,
@@ -85,22 +126,83 @@
       "code": "WOMEN",
       "description":"Women's Clothing",
       "types": [
-        {
-          "id": 1,
-          "name": "Jeans",
-          "description": "Women's Jeans"
-        },
-        {
-          "id": 2,
-          "name": "Shirts",
-          "description": "Women's Shirts"
-        },
-        {
-          "id": 3,
-          "name": "Dresses",
-          "description": "Women's Dresses"
-        }
-      ]
+  {
+    "type_id": 1,
+    "code": "JEANS",
+    "type": "Jeans"
+  },
+  {
+    "type_id": 2,
+    "code": "SHIRTS",
+    "type": "Shirts"
+  },
+  {
+    "type_id": 3,
+    "code": "DRESSES",
+    "type": "Dresses"
+  },
+  {
+    "type_id": 4,
+    "code": "CROPTOPS",
+    "type": "Crop Tops"
+  },
+  {
+    "type_id": 5,
+    "code": "TSHIRTS",
+    "type": "T-Shirts"
+  },
+  {
+    "type_id": 6,
+    "code": "HOODIES",
+    "type": "Hoodies"
+  },
+  {
+    "type_id": 7,
+    "code": "SWEATSHIRTS",
+    "type": "Sweatshirts"
+  },
+  {
+    "type_id": 8,
+    "code": "JACKETS",
+    "type": "Jackets"
+  },
+  {
+    "type_id": 9,
+    "code": "COATS",
+    "type": "Coats"
+  },
+  {
+    "type_id": 10,
+    "code": "SHORTS",
+    "type": "Shorts"
+  },
+  {
+    "type_id": 11,
+    "code": "SKIRTS",
+    "type": "Skirts"
+  },
+  {
+    "type_id": 12,
+    "code": "BLAZERS",
+    "type": "Blazers"
+  },
+  {
+    "type_id": 13,
+    "code": "LEGGINGS",
+    "type": "Leggings"
+  },
+  {
+    "type_id": 14,
+    "code": "SUITS",
+    "type": "Suits"
+  },
+  {
+    "type_id": 15,
+    "code": "OVERALLS",
+    "type": "Overalls"
+  }
+]
+
     },
     {
       "id": 3,
@@ -109,19 +211,19 @@
       "description":"Kid's Clothing",
       "types": [
         {
-          "id": 1,
-          "name": "Jeans",
-          "description": "Kid's Jeans"
+          "type_id": 1,
+          "code": "JEANS",
+          "type": "Jeans"
         },
         {
-          "id": 2,
-          "name": "Shirts",
-          "description": "Kid's Shirts"
+          "type_id": 2,
+          "code": "SHIRTS",
+          "type": "Shirts"
         },
         {
-          "id": 3,
-          "name": "Dresses",
-          "description": "Kids's Dresses"
+          "type_id": 3,
+          "code": "HATS",
+          "type": "Hats"
         }
       ]
     }
