@@ -60,155 +60,209 @@
       "id": 1,
       "name": "Men",
       "code": "MEN",
-      "description":"Men's Clothing",
+      "description": "Men's Clothing",
+      "meta_data": [
+        {
+          "colors": [
+            "Black",
+            "White",
+            "Royal Blue",
+            "Navy Blue",
+            "Grey",
+            "Forest Green",
+            "Khaki",
+            "Charcoal",
+            "Steel Blue",
+            "Slate",
+            "Burgundy",
+            "Deep Purple",
+            "Olive",
+            "Taupe",
+            "Midnight Blue",
+            "Pewter",
+            "Espresso",
+            "Sage",
+            "Gunmetal"
+          ],
+          "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+        }
+      ],
       "types": [
-  {
-    "type_id": 1,
-    "code": "JEANS",
-    "type": "Jeans"
-  },
-  {
-    "type_id": 2,
-    "code": "SHIRTS",
-    "type": "Shirts"
-  },
-  {
-    "type_id": 3,
-    "code": "SHORTS",
-    "type": "Shorts"
-  },
-  {
-    "type_id": 4,
-    "code": "TSHIRTS",
-    "type": "T-Shirts"
-  },
-  {
-    "type_id": 5,
-    "code": "HOODIES",
-    "type": "Hoodies"
-  },
-  {
-    "type_id": 6,
-    "code": "SWEATERS",
-    "type": "Sweaters"
-  },
-  {
-    "type_id": 7,
-    "code": "JACKETS",
-    "type": "Jackets"
-  },
-  {
-    "type_id": 8,
-    "code": "COATS",
-    "type": "Coats"
-  },
-  {
-    "type_id": 9,
-    "code": "SUITS",
-    "type": "Suits"
-  },
-  {
-    "type_id": 10,
-    "code": "BLAZERS",
-    "type": "Blazers"
-  },
-  {
-    "type_id": 11,
-    "code": "TRACKSUITS",
-    "type": "Tracksuits"
-  }
-]
-
+        {
+          "type_id": 1,
+          "code": "JEANS",
+          "type": "Jeans"
+        },
+        {
+          "type_id": 2,
+          "code": "SHIRTS",
+          "type": "Shirts"
+        },
+        {
+          "type_id": 3,
+          "code": "SHORTS",
+          "type": "Shorts"
+        },
+        {
+          "type_id": 4,
+          "code": "TSHIRTS",
+          "type": "T-Shirts"
+        },
+        {
+          "type_id": 5,
+          "code": "HOODIES",
+          "type": "Hoodies"
+        },
+        {
+          "type_id": 6,
+          "code": "SWEATERS",
+          "type": "Sweaters"
+        },
+        {
+          "type_id": 7,
+          "code": "JACKETS",
+          "type": "Jackets"
+        },
+        {
+          "type_id": 8,
+          "code": "COATS",
+          "type": "Coats"
+        },
+        {
+          "type_id": 9,
+          "code": "SUITS",
+          "type": "Suits"
+        },
+        {
+          "type_id": 10,
+          "code": "BLAZERS",
+          "type": "Blazers"
+        },
+        {
+          "type_id": 11,
+          "code": "TRACKSUITS",
+          "type": "Tracksuits"
+        }
+      ]
     },
     {
       "id": 2,
       "name": "Women",
       "code": "WOMEN",
-      "description":"Women's Clothing",
+      "description": "Women's Clothing",
+      "meta_data": [
+        {
+          "colors": [
+            "Black",
+            "White",
+            "Gray",
+            "Royal Blue",
+            "Navy Blue",
+            "Grey",
+            "Forest Green",
+            "Khaki"
+          ],
+          "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+        }
+      ],
       "types": [
-  {
-    "type_id": 1,
-    "code": "JEANS",
-    "type": "Jeans"
-  },
-  {
-    "type_id": 2,
-    "code": "SHIRTS",
-    "type": "Shirts"
-  },
-  {
-    "type_id": 3,
-    "code": "DRESSES",
-    "type": "Dresses"
-  },
-  {
-    "type_id": 4,
-    "code": "CROPTOPS",
-    "type": "Crop Tops"
-  },
-  {
-    "type_id": 5,
-    "code": "TSHIRTS",
-    "type": "T-Shirts"
-  },
-  {
-    "type_id": 6,
-    "code": "HOODIES",
-    "type": "Hoodies"
-  },
-  {
-    "type_id": 7,
-    "code": "SWEATSHIRTS",
-    "type": "Sweatshirts"
-  },
-  {
-    "type_id": 8,
-    "code": "JACKETS",
-    "type": "Jackets"
-  },
-  {
-    "type_id": 9,
-    "code": "COATS",
-    "type": "Coats"
-  },
-  {
-    "type_id": 10,
-    "code": "SHORTS",
-    "type": "Shorts"
-  },
-  {
-    "type_id": 11,
-    "code": "SKIRTS",
-    "type": "Skirts"
-  },
-  {
-    "type_id": 12,
-    "code": "BLAZERS",
-    "type": "Blazers"
-  },
-  {
-    "type_id": 13,
-    "code": "LEGGINGS",
-    "type": "Leggings"
-  },
-  {
-    "type_id": 14,
-    "code": "SUITS",
-    "type": "Suits"
-  },
-  {
-    "type_id": 15,
-    "code": "OVERALLS",
-    "type": "Overalls"
-  }
-]
-
+        {
+          "type_id": 1,
+          "code": "JEANS",
+          "type": "Jeans"
+        },
+        {
+          "type_id": 2,
+          "code": "SHIRTS",
+          "type": "Shirts"
+        },
+        {
+          "type_id": 3,
+          "code": "DRESSES",
+          "type": "Dresses"
+        },
+        {
+          "type_id": 4,
+          "code": "CROPTOPS",
+          "type": "Crop Tops"
+        },
+        {
+          "type_id": 5,
+          "code": "TSHIRTS",
+          "type": "T-Shirts"
+        },
+        {
+          "type_id": 6,
+          "code": "HOODIES",
+          "type": "Hoodies"
+        },
+        {
+          "type_id": 7,
+          "code": "SWEATSHIRTS",
+          "type": "Sweatshirts"
+        },
+        {
+          "type_id": 8,
+          "code": "JACKETS",
+          "type": "Jackets"
+        },
+        {
+          "type_id": 9,
+          "code": "COATS",
+          "type": "Coats"
+        },
+        {
+          "type_id": 10,
+          "code": "SHORTS",
+          "type": "Shorts"
+        },
+        {
+          "type_id": 11,
+          "code": "SKIRTS",
+          "type": "Skirts"
+        },
+        {
+          "type_id": 12,
+          "code": "BLAZERS",
+          "type": "Blazers"
+        },
+        {
+          "type_id": 13,
+          "code": "LEGGINGS",
+          "type": "Leggings"
+        },
+        {
+          "type_id": 14,
+          "code": "SUITS",
+          "type": "Suits"
+        },
+        {
+          "type_id": 15,
+          "code": "OVERALLS",
+          "type": "Overalls"
+        }
+      ]
     },
     {
       "id": 3,
       "name": "Kids",
       "code": "KIDS",
-      "description":"Kid's Clothing",
+      "description": "Kid's Clothing",
+      "meta_data": [
+        {
+          "colors": [
+            "Black",
+            "White",
+            "Gray",
+            "Royal Blue",
+            "Navy Blue",
+            "Grey",
+            "Forest Green",
+            "Khaki"
+          ],
+          "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+        }
+      ],
       "types": [
         {
           "type_id": 1,

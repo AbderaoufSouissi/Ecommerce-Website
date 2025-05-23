@@ -2,6 +2,8 @@ import { useMemo } from "react"
 import FilterIcon from "../../components/common/FilterIcon"
 import content from "../../data/content.json"
 import Categories from "../../components/Filters/Categories"
+import PriceFilter from "../../components/Filters/PriceFilter"
+import ColorsFilter from "../../components/Filters/ColorsFilter"
 
 type Category = {
   id: number,
@@ -9,6 +11,13 @@ type Category = {
   code: string,
   description:string
   types: CategorieType[]
+  meta_data: MetaData[]
+}
+
+export type MetaData = {
+  colors: string[],
+  sizes: string[]
+
 }
 
 export type CategorieType = {
@@ -23,7 +32,9 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
   
   const categoryContent = useMemo(() => {
     return categories?.find((category) => category.code === categoryType)
-  },[categoryType])
+  }, [categoryType])
+  
+
 
 
   return (
@@ -38,6 +49,15 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
           <div>
             <p className="text-[16px] text-black mt-5">Categories</p>
             <Categories types={categoryContent?.types} />
+            <hr />
+          </div>
+          <div>
+            {/* PRICE */}
+            <PriceFilter />
+            <hr className="mt-4"/>
+            {/* COLORS */}
+
+            <ColorsFilter colors={categoryContent?.meta_data?.[0]?.colors} />
           </div>
         </div>
         <div className="p-[15px]">
