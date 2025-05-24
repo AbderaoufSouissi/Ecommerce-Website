@@ -4,6 +4,7 @@ import content from "../../data/content.json"
 import Categories from "../../components/Filters/Categories"
 import PriceFilter from "../../components/Filters/PriceFilter"
 import ColorsFilter from "../../components/Filters/ColorsFilter"
+import SizeFilter from "../../components/Filters/SizeFilter"
 
 type Category = {
   id: number,
@@ -43,13 +44,13 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
         <div className="w-[20%] p-[10px] border rounded-lg m-[20px]">
           {/* FILTERS  */}
           <div className="flex justify-between">
-            <p className="text-[16px] text-gray-600">Filter</p>
+            <p className="text-xl text-gray-600">Filter</p>
             <FilterIcon/>
           </div>
           <div>
             <p className="text-[16px] text-black mt-5">Categories</p>
             <Categories types={categoryContent?.types} />
-            <hr />
+            <hr className="mt-4"/>
           </div>
           <div>
             {/* PRICE */}
@@ -58,6 +59,9 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
             {/* COLORS */}
 
             <ColorsFilter colors={categoryContent?.meta_data?.[0]?.colors} />
+            <hr />
+            {/* SIZES */}
+            <SizeFilter sizes={categoryContent?.meta_data?.[0]?.sizes}/>
           </div>
         </div>
         <div className="p-[15px]">
