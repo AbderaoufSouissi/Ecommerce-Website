@@ -1,14 +1,6 @@
 import Card, { type CardProps } from "../Card/Card";
 import SectionHeading from "./SectionsHeading/SectionHeading";
-import TShirt from "../../assets/img/white-tshirt.jpg";
-import Shirt from "../../assets/img/brown-dress-shirt.jpg";
-import Hat from "../../assets/img/black-hat.jpg";
-import Dress from "../../assets/img/red-dress.jpg";
-import TNeck from "../../assets/img/black-turtle-neck.jpg";
-import BJacket from "../../assets/img/baseball-jacket.jpg";
-import LJacket from "../../assets/img/leather-jacket.jpg";
-import WDress from "../../assets/img/white-dress_1.jpg";
-import Sweatshirt from "../../assets/img/white-dress_2.jpg";
+
 
 import Carousel from "react-multi-carousel";
 import { responsive } from "../../utils/Section.constants";

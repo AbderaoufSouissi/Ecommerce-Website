@@ -1,0 +1,42 @@
+import { useState } from "react"
+import FavoriteIcon from "../../components/common/FavoriteIcon"
+
+
+interface ProductCardProps{
+    title: string
+    description: string
+    price: number
+    discount: number
+    rating: number
+    brand: string
+    thumbnail: string
+
+}
+
+const ProductCard = ({ title, description, price, discount, rating, brand, thumbnail }: ProductCardProps) => {
+  
+   const [liked, setLiked] = useState(false);
+
+
+  return (
+    <div className="flex flex-col pt-2 max-w-70 relative">
+          <img src={thumbnail} className={"h-[400px] bg-cover block bg-center rounded hover:scale-101 cursor-pointer object-cover transition duration-200 ease-in-out w-full"}
+              alt={title}
+      />
+      <button className="absolute top-0 right-0 pt-4 pr-4">
+        <FavoriteIcon filled={liked} onClick={() => setLiked(!liked)} size={28} />
+        
+        </button>
+            <div className="flex justify-between items-center">
+                <div className="flex flex-col">
+                    <p className="text-xl font-bold p-1">{title}</p>
+                    {description && <p className="text-sm italic px-1 text-gray-900">{description}</p>}
+              </div>
+              <div><p>{ price} DT</p></div>
+          </div>
+          
+        </div>
+  )
+}
+
+export default ProductCard

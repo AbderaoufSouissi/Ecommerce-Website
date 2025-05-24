@@ -66,23 +66,12 @@
           "colors": [
             "Black",
             "White",
-            "Royal Blue",
-            "Navy Blue",
+            "Blue",
             "Grey",
-            "Forest Green",
-            "Khaki",
-            "Charcoal",
-            "Steel Blue",
-            "Slate",
-            "Burgundy",
-            "Deep Purple",
-            "Olive",
-            "Taupe",
-            "Midnight Blue",
-            "Pewter",
-            "Espresso",
-            "Sage",
-            "Gunmetal"
+            "Green",
+            "Brown",
+            "Navy",
+            "Beige"
           ],
           "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
         }
@@ -155,12 +144,12 @@
           "colors": [
             "Black",
             "White",
-            "Gray",
-            "Royal Blue",
-            "Navy Blue",
+            "Blue",
             "Grey",
-            "Forest Green",
-            "Khaki"
+            "Green",
+            "Brown",
+            "Navy",
+            "Beige"
           ],
           "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
         }
@@ -253,12 +242,12 @@
           "colors": [
             "Black",
             "White",
-            "Gray",
-            "Royal Blue",
-            "Navy Blue",
+            "Blue",
             "Grey",
-            "Forest Green",
-            "Khaki"
+            "Green",
+            "Brown",
+            "Navy",
+            "Beige"
           ],
           "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
         }
@@ -345,5 +334,204 @@
       }
     ]
   },
-  "copyright": "Copyright © 2025 TnGarments"
+  "copyright": "Copyright © 2025 TnGarments",
+  "products": [
+    {
+      "id": 1,
+      "title": "Black T-Shirt",
+      "description": "Soft cotton T-Shirt",
+      "category_id": 2,
+      "type_id": 10,
+      "brand": "Nike",
+      "price": 29.99,
+      "size": ["S", "M", "L"],
+      "color": ["Blue"],
+      "discount": 20,
+      "thumbnail": "./images/women-black-tshirt.jpg",
+      "images": ["sweatshirt-black1.jpg", "sweatshirt-black2.jpg"],
+      "rating": 4.8
+    },
+    {
+    "id": 2,
+    "title": "Oversized Black T-Shirt",
+    "description": "Oversized Black T ",
+    "category_id": 1,
+    "type_id": 11,
+    "brand": "Levi's",
+    "price": 89.99,
+    "size": ["M", "L", "XL"],
+    "color": ["Olive"],
+    "discount": 15,
+    "thumbnail": "./images/men-black-tshirt.webp",
+    "images": ["jacket-olive1.jpg", "jacket-olive2.jpg"],
+    "rating": 4.6
+  },
+  {
+    "id": 3,
+    "title": "Navy Blue T-Shirt",
+    "description": "Soft Cotton T-shirt",
+    "category_id": 2,
+    "type_id": 10,
+    "brand": "Adidas",
+    "price": 59.99,
+    "size": ["S", "M", "L", "XL"],
+    "color": ["Grey"],
+    "discount": 10,
+    "thumbnail": "./images/women-navy-blue-tshirt.jpg",
+    "images": ["hoodie-royalblue1.jpg", "hoodie-royalblue2.jpg"],
+    "rating": 4.7
+  },
+  {
+    "id": 4,
+    "title": "Black Sweater",
+    "description": "Classic Black Sweater",
+    "category_id": 1,
+    "type_id": 9,
+    "brand": "Uniqlo",
+    "price": 69.99,
+    "size": ["XS", "S", "M", "L", "XL"],
+    "color": ["Black"],
+    "discount": 5,
+    "thumbnail": "./images/men-black-sweatshirt.jpg",
+    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
+    "rating": 4.5
+
+  },
+  {
+    "id": 5,
+    "title": "Classic White T-Shirt",
+    "description": "Classic white-T for everyday comfort",
+    "category_id": 1,
+    "type_id": 9,
+    "brand": "Uniqlo",
+    "price": 19.99,
+    "size": ["XS", "S", "M", "L", "XL"],
+    "color": ["White"],
+    "discount": 5,
+    "thumbnail": "./images/men-white-t.jpg",
+    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "title": "Pink T-Shirt",
+    "description": "Soft Cotton T-Shirt",
+    "category_id": 2,
+    "type_id": 9,
+    "brand": "Uniqlo",
+    "price": 19.99,
+    "size": ["XS", "S", "M", "L", "XL"],
+    "color": ["White"],
+    "discount": 5,
+    "thumbnail": "./images/women-pink-tshirt.jpg",
+    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "title": "Pink T-Shirt",
+    "description": "Soft Cotton T-Shirt",
+    "category_id": 2,
+    "type_id": 9,
+    "brand": "Uniqlo",
+    "price": 19.99,
+    "size": ["XS", "S", "M", "L", "XL"],
+    "color": ["White"],
+    "discount": 5,
+    "thumbnail": "./images/women-purple-tshirt.jpg",
+    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "title": "Green T-Shirt",
+    "description": "Soft Cotton T-Shirt",
+    "category_id": 2,
+    "type_id": 9,
+    "brand": "Uniqlo",
+    "price": 19.99,
+    "size": ["XS", "S", "M", "L", "XL"],
+    "color": ["White"],
+    "discount": 5,
+    "thumbnail": "./images/women-green-tshirt.jpg",
+    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "title": "Pink T-Shirt",
+    "description": "Soft Cotton T-Shirt",
+    "category_id": 2,
+    "type_id": 9,
+    "brand": "Uniqlo",
+    "price": 19.99,
+    "size": ["XS", "S", "M", "L", "XL"],
+    "color": ["White"],
+    "discount": 5,
+    "thumbnail": "./images/women-green-tshirt.jpg",
+    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "title": "Pink T-Shirt",
+    "description": "Soft Cotton T-Shirt",
+    "category_id": 2,
+    "type_id": 9,
+    "brand": "Uniqlo",
+    "price": 19.99,
+    "size": ["XS", "S", "M", "L", "XL"],
+    "color": ["White"],
+    "discount": 5,
+    "thumbnail": "./images/women-green-tshirt.jpg",
+    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "title": "Pink T-Shirt",
+    "description": "Soft Cotton T-Shirt",
+    "category_id": 2,
+    "type_id": 9,
+    "brand": "Uniqlo",
+    "price": 19.99,
+    "size": ["XS", "S", "M", "L", "XL"],
+    "color": ["White"],
+    "discount": 5,
+    "thumbnail": "./images/women-green-tshirt.jpg",
+    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "title": "Black Jeans",
+    "description": "Relaxed Black Jeans",
+    "category_id": 1,
+    "type_id": 9,
+    "brand": "Uniqlo",
+    "price": 19.99,
+    "size": ["XS", "S", "M", "L", "XL"],
+    "color": ["White"],
+    "discount": 5,
+    "thumbnail": "./images/men-jeans-black-relaxed.webp",
+    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "title": "Classic Black Hoodie",
+    "description": "Basic Black Hoodie",
+    "category_id": 1,
+    "type_id": 9,
+    "brand": "Uniqlo",
+    "price": 19.99,
+    "size": ["XS", "S", "M", "L", "XL"],
+    "color": ["White"],
+    "discount": 5,
+    "thumbnail": "./images/men-black-hoodie.webp",
+    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
+    "rating": 4.5
+  }
+  
+  ]
 }

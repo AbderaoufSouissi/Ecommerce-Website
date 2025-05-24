@@ -6,26 +6,16 @@ interface ColorsFilterProps {
 
 
 const colorSelector = {
-    "Black": "#1A1A1A",
-    "White": "#F5F5F5",
-    "Royal Blue": "#1E3BA3",
-    "Navy Blue": "#000040",
-    "Grey": "#808080",
-    "Forest Green": "#0A3A0A",
-    "Khaki": "#A69B4F",
-    "Charcoal": "#36454F",
-    "Steel Blue": "#4682B4",
-    "Slate": "#708090",
-    "Burgundy": "#800020",
-    "Deep Purple": "#483D8B",
-    "Olive": "#556B2F",
-    "Taupe": "#8B7D6B",
-    "Midnight Blue": "#191970",
-    "Pewter": "#96A8A1",
-    "Espresso": "#3C2415",
-    "Sage": "#9CAF88",
-    "Gunmetal": "#2C3539"
+  "Grey": "#999999",
+  "Black": "#000000",
+  "Beige": "#FAF9E3",
+  "White": "#FFFFFF",
+  "Blue": "#0000FF",
+  "Brown": "#993333",
+  "Green": "#008000",
+  "Navy": "#000080"
 };
+
 
 const ColorsFilter = ({ colors }: ColorsFilterProps) => {
 

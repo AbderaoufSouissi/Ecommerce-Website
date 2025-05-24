@@ -5,6 +5,7 @@ import Categories from "../../components/Filters/Categories"
 import PriceFilter from "../../components/Filters/PriceFilter"
 import ColorsFilter from "../../components/Filters/ColorsFilter"
 import SizeFilter from "../../components/Filters/SizeFilter"
+import ProductCard from "./ProductCard"
 
 type Category = {
   id: number,
@@ -29,11 +30,20 @@ export type CategorieType = {
 
 const categories: Category[] = content?.categories
 
+
+
 const ProductListPage = ({ categoryType }: { categoryType: string }) => {
   
   const categoryContent = useMemo(() => {
     return categories?.find((category) => category.code === categoryType)
   }, [categoryType])
+
+  const productListItems = useMemo(() => {
+    return content?.products.filter((product) => product?.category_id === categoryContent?.id) 
+  },[])
+
+
+
   
 
 
@@ -66,7 +76,12 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
         </div>
         <div className="p-[15px]">
           {/* PRODUCTS */}
-          <p className="text-black text-lg">{categoryContent?.description}</p>
+           <p className="text-black text-lg">{categoryContent?.description}</p>
+          <div className="pt-4 grid grid-cols-1  lg:grid-cols-3 md:grid-cols-2 gap-8 px-2">
+            {productListItems?.map((item, id) => <ProductCard key={id}  {...item} />)}
+          </div>
+         
+          
         </div>
       </div>
     </div>
