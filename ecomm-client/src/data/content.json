@@ -310,8 +310,18 @@
       "type_id": 1,
       "brand": "Levi's",
       "price": 89.99,
-      "size": ["M", "L", "XL"],
-      "color": ["Black", "White", "Grey", "Navy", "Green"],
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "White",
+        "Grey",
+        "Navy",
+        "Green"
+      ],
       "discount": 15,
       "thumbnail": "/images/women-black-long-sleeve.webp",
       "images": [
@@ -331,8 +341,15 @@
       "type_id": 2,
       "brand": "Levi's",
       "price": 89.99,
-      "size": ["M", "L", "XL"],
-      "color": ["Black", "White"],
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "White"
+      ],
       "discount": 15,
       "thumbnail": "/images/men-black-tshirt.webp",
       "images": [
@@ -341,7 +358,6 @@
       ],
       "rating": 4.6
     },
-
     {
       "id": 3,
       "title": "Sweats",
@@ -350,8 +366,17 @@
       "type_id": 3,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-       "color": ["Black", "White"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "White"
+      ],
       "discount": 5,
       "thumbnail": "/images/men-black-sweat.webp",
       "images": [
@@ -360,7 +385,6 @@
       ],
       "rating": 4.5
     },
-
     {
       "id": 4,
       "title": "Relaxed Fit Jeans",
@@ -369,8 +393,17 @@
       "type_id": 1,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-      "color": ["Black", "Blue"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "Blue"
+      ],
       "discount": 5,
       "thumbnail": "/images/men-jeans-black-relaxed.webp",
       "images": [
@@ -387,8 +420,17 @@
       "type_id": 4,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-      "color": ["Black", "White"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "White"
+      ],
       "discount": 5,
       "thumbnail": "/images/men-black-hoodie.webp",
       "images": [
@@ -398,15 +440,24 @@
       "rating": 4.5
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Smart Joggers",
       "description": "Men's Smart Joggers",
       "category_id": 1,
       "type_id": 9,
       "brand": "Uniqlo",
       "price": 49.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-      "color": ["Grey", "Black"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Grey",
+        "Black"
+      ],
       "discount": 5,
       "thumbnail": "/images/men-joggers-grey.webp",
       "images": [
@@ -416,15 +467,25 @@
       "rating": 4.5
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Blasers",
       "description": "Men's Blasers",
       "category_id": 1,
       "type_id": 8,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-      "color": ["Black", "Navy", "Grey"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "Navy",
+        "Grey"
+      ],
       "discount": 5,
       "thumbnail": "/images/men-black-blaser.webp",
       "images": [
@@ -435,15 +496,27 @@
       "rating": 4.5
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "Jogger Pants",
       "description": "Men's Jogger Pants",
       "category_id": 1,
       "type_id": 9,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-      "color": ["Grey", "Black", "Brown", "White", "Navy Blue"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Grey",
+        "Black",
+        "Brown",
+        "White",
+        "Navy Blue"
+      ],
       "discount": 5,
       "thumbnail": "/images/men-grey-jogger-pant.webp",
       "images": [
@@ -456,15 +529,24 @@
       "rating": 4.5
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "Bomber Jackets",
       "description": "Women's Bomber jackets",
       "category_id": 2,
       "type_id": 7,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-      "color": ["Black", "White"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "White"
+      ],
       "discount": 5,
       "thumbnail": "/images/women-black-bomber-jacket.webp",
       "images": [
@@ -474,15 +556,26 @@
       "rating": 4.5
     },
     {
-      "id": 9,
+      "id": 10,
       "title": "Cardigans",
       "description": "Men's Cardigans",
       "category_id": 1,
       "type_id": 5,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-"color": ["Black", "Navy Blue", "Brown"],      "discount": 5,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "Navy Blue",
+        "Brown"
+      ],
+      "discount": 5,
       "thumbnail": "/images/men-black-cardigan.webp",
       "images": [
         "/images/men-black-cardigan.webp",
@@ -492,15 +585,26 @@
       "rating": 4.5
     },
     {
-      "id": 10,
+      "id": 11,
       "title": "Bomber Jackets",
       "description": "Men's Bomber jackets",
       "category_id": 1,
       "type_id": 7,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-"color": ["Black", "Navy Blue", "Brown"],      "discount": 5,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "Navy Blue",
+        "Brown"
+      ],
+      "discount": 5,
       "thumbnail": "/images/men-black-bomber-jacket.webp",
       "images": [
         "/images/men-black-bomber-jacket.webp",
@@ -510,15 +614,27 @@
       "rating": 4.5
     },
     {
-      "id": 11,
+      "id": 12,
       "title": "OverShirts",
       "description": "Men's Overshirts ",
       "category_id": 1,
       "type_id": 11,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-"color": ["Black", "Brown", "Grey", "Green"],      "discount": 5,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "Brown",
+        "Grey",
+        "Green"
+      ],
+      "discount": 5,
       "thumbnail": "/images/men-black-overshirt.webp",
       "images": [
         "/images/men-black-overshirt.webp",
@@ -529,15 +645,26 @@
       "rating": 4.5
     },
     {
-      "id": 12,
+      "id": 13,
       "title": "Polos",
       "description": "Men's Polos",
       "category_id": 1,
       "type_id": 6,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-      "color": ["Black", "Navy Blue", "White", "Green"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "Navy Blue",
+        "White",
+        "Green"
+      ],
       "discount": 5,
       "thumbnail": "/images/men-black-polo.webp",
       "images": [
@@ -549,15 +676,25 @@
       "rating": 4.5
     },
     {
-      "id": 13,
+      "id": 14,
       "title": "Long Sleeve Split Hem Dress",
       "description": "Women's Dresses",
       "category_id": 2,
       "type_id": 2,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-      "color": ["Black", "Coffee", "Driftwood"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "Coffee",
+        "Driftwood"
+      ],
       "discount": 5,
       "thumbnail": "/images/women-black-long-sleeve-split-hem-dress.webp",
       "images": [
@@ -568,16 +705,28 @@
       "rating": 4.5
     },
     {
-      "id": 14,
+      "id": 15,
       "title": "Wide Leg Pants",
       "description": "Women's Pants",
       "category_id": 2,
       "type_id": 4,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-"color": ["Black", "White", "Navy", "Brown", "Grey"]
-,      "discount": 5,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "White",
+        "Navy",
+        "Brown",
+        "Grey"
+      ],
+      "discount": 5,
       "thumbnail": "/images/women-black-wide-leg-pants.webp",
       "images": [
         "/images/women-black-wide-leg-pants.webp",
@@ -589,16 +738,26 @@
       "rating": 4.5
     },
     {
-      "id": 15,
+      "id": 16,
       "title": "Straight Everyday Pants",
       "description": "Women's Pants",
       "category_id": 2,
       "type_id": 4,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-"color": ["Black", "Navy", "Grey"]
-,      "discount": 5,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "Navy",
+        "Grey"
+      ],
+      "discount": 5,
       "thumbnail": "/images/women-black-straight-everyday-pants.webp",
       "images": [
         "/images/women-black-straight-everyday-pants.webp",
@@ -608,15 +767,26 @@
       "rating": 4.5
     },
     {
-      "id": 16,
+      "id": 17,
       "title": "Skinny Everyday Pants",
       "description": "Women's Pants",
       "category_id": 2,
       "type_id": 4,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-"color": ["Black", "Dark Taupe", "Green", "Navy"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "Dark Taupe",
+        "Green",
+        "Navy"
+      ],
       "discount": 5,
       "thumbnail": "/images/women-black-skinny-everyday-pants.webp",
       "images": [
@@ -628,16 +798,26 @@
       "rating": 4.5
     },
     {
-      "id": 17,
+      "id": 18,
       "title": "Classic T-Shirt",
       "description": "Women's T-Shirts",
       "category_id": 2,
       "type_id": 5,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-      "color": ["Black", "White", "Brown", "Grey"]
-,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "White",
+        "Brown",
+        "Grey"
+      ],
       "discount": 5,
       "thumbnail": "/images/women-black-tshirt.webp",
       "images": [
@@ -649,19 +829,27 @@
       "rating": 4.5
     },
     {
-      "id": 29,
+      "id": 19,
       "title": "V Neck T-Shirt",
       "description": "Women's T-Shirts",
       "category_id": 2,
       "type_id": 5,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-      "color": ["Black", "White", "Grey"]
-,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "White",
+        "Grey"
+      ],
       "discount": 5,
       "thumbnail": "/images/women-black-vneck-tshirt.webp",
-
       "images": [
         "/images/women-black-vneck-tshirt.webp",
         "/images/women-white-vneck-tshirt.webp",
@@ -670,18 +858,27 @@
       "rating": 4.5
     },
     {
-      "id": 30,
+      "id": 20,
       "title": "Button-Down Shirt",
       "description": "Women's Shirts",
       "category_id": 2,
       "type_id": 6,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-      "color": ["White"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "White",
+        "Coffee"
+      ],
       "discount": 5,
       "thumbnail": "/images/women-black-button-down.webp",
-
       "images": [
         "/images/women-black-button-down.webp",
         "/images/women-white-button-down.webp",
@@ -690,19 +887,27 @@
       "rating": 4.5
     },
     {
-      "id": 31,
+      "id": 21,
       "title": "Relaxed Polo Shirt",
       "description": "Women's Polos",
       "category_id": 2,
       "type_id": 7,
       "brand": "Uniqlo",
       "price": 69.99,
-      "size": ["XS", "S", "M", "L", "XL"],
-      "color": ["White"],
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black",
+        "Grey",
+        "Driftwood"
+      ],
       "discount": 5,
-      "thumbnail":         "/images/women-black-relaxed-polo.webp",
-
-
+      "thumbnail": "/images/women-black-relaxed-polo.webp",
       "images": [
         "/images/women-black-relaxed-polo.webp",
         "/images/women-grey-relaxed-polo.webp",
