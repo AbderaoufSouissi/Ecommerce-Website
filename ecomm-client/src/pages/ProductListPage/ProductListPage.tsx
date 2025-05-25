@@ -11,7 +11,8 @@ type Category = {
   id: number,
   name: string,
   code: string,
-  description:string
+  description: string
+  path: string
   types: CategorieType[]
   meta_data: MetaData[]
 }
@@ -25,7 +26,7 @@ export type MetaData = {
 export type CategorieType = {
   type_id: number,
   code: string,
-  type: string
+  name: string
 }
 
 const categories: Category[] = content?.categories

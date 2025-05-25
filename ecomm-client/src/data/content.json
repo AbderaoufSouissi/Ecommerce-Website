@@ -60,6 +60,7 @@
       "id": 1,
       "name": "Men",
       "code": "MEN",
+      "path":"/men",
       "description": "Men's Clothing",
       "meta_data": [
         {
@@ -73,64 +74,72 @@
             "Navy",
             "Beige"
           ],
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
         }
       ],
       "types": [
         {
           "type_id": 1,
-          "code": "JEANS",
-          "type": "Jeans"
+          "code": "RELAXED-FIT-JEANS",
+          "name": "Relaxed Fit Jeans"
         },
         {
           "type_id": 2,
-          "code": "SHIRTS",
-          "type": "Shirts"
+          "code": "OVERSIZED-T-SHIRTS",
+          "name": "Oversized T-Shirts"
         },
         {
           "type_id": 3,
-          "code": "SHORTS",
-          "type": "Shorts"
+          "code": "SWEATS",
+          "name": "Sweats"
         },
         {
           "type_id": 4,
-          "code": "TSHIRTS",
-          "type": "T-Shirts"
+          "code": "BASIC-HOODIES",
+          "name": "Basic Hoodies"
         },
+  
         {
           "type_id": 5,
-          "code": "HOODIES",
-          "type": "Hoodies"
+          "code": "CARDIGANS",
+          "name": "Cardigans"
         },
         {
           "type_id": 6,
-          "code": "SWEATERS",
-          "type": "Sweaters"
+          "code": "POLOS",
+          "name": "Polos"
         },
         {
           "type_id": 7,
-          "code": "JACKETS",
-          "type": "Jackets"
+          "code": "BOMBER-JACKETS",
+          "name": "Bomber Jackets"
         },
         {
           "type_id": 8,
-          "code": "COATS",
-          "type": "Coats"
+          "code": "BLASERS",
+          "name": "Blasers"
         },
         {
           "type_id": 9,
-          "code": "SUITS",
-          "type": "Suits"
+          "code": "SMART-JOGGERS",
+          "name": "Smart Joggers"
         },
         {
           "type_id": 10,
-          "code": "BLAZERS",
-          "type": "Blazers"
+          "code": "JOGGER-PANTS",
+          "name": "Jogger Pants"
         },
         {
           "type_id": 11,
-          "code": "TRACKSUITS",
-          "type": "Tracksuits"
+          "code": "OVERSHIRTS",
+          "name": "Overshirts"
         }
       ]
     },
@@ -138,6 +147,7 @@
       "id": 2,
       "name": "Women",
       "code": "WOMEN",
+      "path":"/women",
       "description": "Women's Clothing",
       "meta_data": [
         {
@@ -151,84 +161,31 @@
             "Navy",
             "Beige"
           ],
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
         }
       ],
       "types": [
         {
           "type_id": 1,
-          "code": "JEANS",
-          "type": "Jeans"
+          "code": "LONG-SLEEVES",
+          "name": "Long Sleeves"
         },
         {
           "type_id": 2,
-          "code": "SHIRTS",
-          "type": "Shirts"
+          "code": "DRESSES",
+          "name": "Dresses"
         },
         {
           "type_id": 3,
-          "code": "DRESSES",
-          "type": "Dresses"
-        },
-        {
-          "type_id": 4,
-          "code": "CROPTOPS",
-          "type": "Crop Tops"
-        },
-        {
-          "type_id": 5,
-          "code": "TSHIRTS",
-          "type": "T-Shirts"
-        },
-        {
-          "type_id": 6,
-          "code": "HOODIES",
-          "type": "Hoodies"
-        },
-        {
-          "type_id": 7,
-          "code": "SWEATSHIRTS",
-          "type": "Sweatshirts"
-        },
-        {
-          "type_id": 8,
           "code": "JACKETS",
-          "type": "Jackets"
-        },
-        {
-          "type_id": 9,
-          "code": "COATS",
-          "type": "Coats"
-        },
-        {
-          "type_id": 10,
-          "code": "SHORTS",
-          "type": "Shorts"
-        },
-        {
-          "type_id": 11,
-          "code": "SKIRTS",
-          "type": "Skirts"
-        },
-        {
-          "type_id": 12,
-          "code": "BLAZERS",
-          "type": "Blazers"
-        },
-        {
-          "type_id": 13,
-          "code": "LEGGINGS",
-          "type": "Leggings"
-        },
-        {
-          "type_id": 14,
-          "code": "SUITS",
-          "type": "Suits"
-        },
-        {
-          "type_id": 15,
-          "code": "OVERALLS",
-          "type": "Overalls"
+          "name": "Jackets"
         }
       ]
     },
@@ -236,6 +193,7 @@
       "id": 3,
       "name": "Kids",
       "code": "KIDS",
+      "path":"/kids",
       "description": "Kid's Clothing",
       "meta_data": [
         {
@@ -249,24 +207,31 @@
             "Navy",
             "Beige"
           ],
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
         }
       ],
       "types": [
         {
           "type_id": 1,
           "code": "JEANS",
-          "type": "Jeans"
+          "name": "Jeans"
         },
         {
           "type_id": 2,
           "code": "SHIRTS",
-          "type": "Shirts"
+          "name": "Shirts"
         },
         {
           "type_id": 3,
           "code": "HATS",
-          "type": "Hats"
+          "name": "Hats"
         }
       ]
     }
@@ -336,248 +301,385 @@
   },
   "copyright": "Copyright © 2025 TnGarments",
   "products": [
-    {
+     {
       "id": 1,
-      "title": "Black T-Shirt",
-      "description": "Soft cotton T-Shirt",
+      "title": "Long Sleeves",
+      "description": "Women's Long Sleeves ",
       "category_id": 2,
-      "type_id": 10,
-      "brand": "Nike",
-      "price": 29.99,
-      "size": ["S", "M", "L"],
-      "color": ["Blue"],
-      "discount": 20,
-      "thumbnail": "./images/women-black-tshirt.jpg",
-      "images": ["sweatshirt-black1.jpg", "sweatshirt-black2.jpg"],
-      "rating": 4.8
+      "type_id": 1,
+      "brand": "Levi's",
+      "price": 89.99,
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Olive"
+      ],
+      "discount": 15,
+      "thumbnail": "/images/women-black-long-sleeve.webp",
+      "images": [
+          "/images/women-black-long-sleeve.webp",
+          "/images/women-white-long-sleeve.webp",
+          "/images/women-grey-long-sleeve.webp",
+          "/images/women-navy-blue-long-sleeve.webp"
+      ],
+      "rating": 4.6
     },
     {
-    "id": 2,
-    "title": "Oversized Black T",
-    "description": "Oversized Black T-Shirt ",
-    "category_id": 1,
-    "type_id": 11,
-    "brand": "Levi's",
-    "price": 89.99,
-    "size": ["M", "L", "XL"],
-    "color": ["Olive"],
-    "discount": 15,
-    "thumbnail": "./images/men-black-tshirt.webp",
-    "images": ["jacket-olive1.jpg", "jacket-olive2.jpg"],
-    "rating": 4.6
-  },
-  {
-    "id": 3,
-    "title": "Navy Blue T-Shirt",
-    "description": "Soft Cotton T-shirt",
-    "category_id": 2,
-    "type_id": 10,
-    "brand": "Adidas",
-    "price": 59.99,
-    "size": ["S", "M", "L", "XL"],
-    "color": ["Grey"],
-    "discount": 10,
-    "thumbnail": "./images/women-navy-blue-tshirt.jpg",
-    "images": ["hoodie-royalblue1.jpg", "hoodie-royalblue2.jpg"],
-    "rating": 4.7
-  },
-  {
-    "id": 4,
-    "title": "Black Sweater",
-    "description": "Classic Black Sweater",
-    "category_id": 1,
-    "type_id": 9,
-    "brand": "Uniqlo",
-    "price": 69.99,
-    "size": ["XS", "S", "M", "L", "XL"],
-    "color": ["Black"],
-    "discount": 5,
-    "thumbnail": "./images/men-black-sweatshirt.jpg",
-    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
-    "rating": 4.5
-
-  },
-  {
-    "id": 5,
-    "title": "Classic White T",
-    "description": "Classic White T-Shirt",
-    "category_id": 1,
-    "type_id": 9,
-    "brand": "Uniqlo",
-    "price": 19.99,
-    "size": ["XS", "S", "M", "L", "XL"],
-    "color": ["White"],
-    "discount": 5,
-    "thumbnail": "./images/men-white-t.jpg",
-    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
-    "rating": 4.5
-  },
-  {
-    "id": 6,
-    "title": "Pink T-Shirt",
-    "description": "Soft Cotton T-Shirt",
-    "category_id": 2,
-    "type_id": 9,
-    "brand": "Uniqlo",
-    "price": 19.99,
-    "size": ["XS", "S", "M", "L", "XL"],
-    "color": ["White"],
-    "discount": 5,
-    "thumbnail": "./images/women-pink-tshirt.jpg",
-    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
-    "rating": 4.5
-  },
-  {
-    "id": 7,
-    "title": "Pink T-Shirt",
-    "description": "Soft Cotton T-Shirt",
-    "category_id": 2,
-    "type_id": 9,
-    "brand": "Uniqlo",
-    "price": 19.99,
-    "size": ["XS", "S", "M", "L", "XL"],
-    "color": ["White"],
-    "discount": 5,
-    "thumbnail": "./images/women-purple-tshirt.jpg",
-    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
-    "rating": 4.5
-  },
-  {
-    "id": 8,
+      "id": 2,
+      "title": "Oversized T-Shirts",
+      "description": "Men's Oversized T-shirts",
+      "category_id": 1,
+      "type_id": 11,
+      "brand": "Levi's",
+      "price": 89.99,
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Olive"
+      ],
+      "discount": 15,
+      "thumbnail": "/images/men-black-tshirt.webp",
+      "images": [
+         "/images/men-black-tshirt.webp",
+         "/images/men-white-tshirt.webp"
+      ],
+      "rating": 4.6
+    },
     
-    "title": "Royal Blue T-Shirt",
-    "description": "Soft Cotton T-Shirt",
-    "category_id": 2,
-    "type_id": 9,
-    "brand": "Uniqlo",
-    "price": 19.99,
-    "size": ["XS", "S", "M", "L", "XL"],
-    "color": ["White"],
-    "discount": 5,
-    "thumbnail": "./images/women-royal-blue-tshirt.jpg",
-    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
-    "rating": 4.5
-  },
-  {
-    "id": 9,
-    "title": "Green T-Shirt",
-    "description": "Soft Cotton T-Shirt",
-    "category_id": 2,
-    "type_id": 9,
-    "brand": "Uniqlo",
-    "price": 19.99,
-    "size": ["XS", "S", "M", "L", "XL"],
-    "color": ["White"],
-    "discount": 5,
-    "thumbnail": "./images/women-green-tshirt.jpg",
-    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
-    "rating": 4.5
-  },
-  {
-    "id": 10,
-    "title": "Navy Blue Denim Jacket",
-    "description": "Denim Jacket",
-    "category_id": 2,
-    "type_id": 9,
-    "brand": "Uniqlo",
-    "price": 69.99,
-    "size": ["XS", "S", "M", "L", "XL"],
-    "color": ["Blue","Black"],
-    "discount": 5,
-    "thumbnail": "./images/women-navy-blue-denim-jacket.jpg",
-    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
-    "rating": 4.5
-  },
-  {
-    "id": 11,
-    "title": "Black denim jacket",
-    "description": "Denim Jacket",
-    "category_id": 2,
-    "type_id": 9,
-    "brand": "Uniqlo",
-    "price": 19.99,
-    "size": ["XS", "S", "M", "L", "XL"],
-    "color": ["White"],
-    "discount": 5,
-    "thumbnail": "./images/women-black-denim-jacket.jpg",
-    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
-    "rating": 4.5
-  },
-  {
-    "id": 12,
-    "title": "Black Jeans",
-    "description": "Relaxed Black Jeans",
-    "category_id": 1,
-    "type_id": 9,
-    "brand": "Uniqlo",
-    "price": 69.99,
-    "size": ["XS", "S", "M", "L", "XL"],
-    "color": ["White"],
-    "discount": 5,
-    "thumbnail": "./images/men-jeans-black-relaxed.webp",
-    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
-    "rating": 4.5
-  },
-  {
-    "id": 13,
-    "title": "Classic Black Hoodie",
-    "description": "Basic Black Hoodie",
-    "category_id": 1,
-    "type_id": 9,
-    "brand": "Uniqlo",
-    "price": 69.99,
-    "size": ["XS", "S", "M", "L", "XL"],
-    "color": ["White"],
-    "discount": 5,
-    "thumbnail": "./images/men-black-hoodie.webp",
-    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
-    "rating": 4.5
-  },
-  {
-    "id": 14,
-    "title": "Grey Joggers",
-    "description": "Basic Grey Joggers",
-    "category_id": 1,
-    "type_id": 9,
-    "brand": "Uniqlo",
-    "price": 49.99,
-    "size": ["XS", "S", "M", "L", "XL"],
-    "color": ["White"],
-    "discount": 5,
-    "thumbnail": "./images/men-joggers-grey.webp",
-    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
-    "rating": 4.5
-  },
-  {
-    "id": 15,
-    "title": "Black Joggers",
-    "description": "Basic Grey Joggers",
-    "category_id": 1,
-    "type_id": 9,
-    "brand": "Uniqlo",
-    "price": 49.99,
-    "size": ["XS", "S", "M", "L", "XL"],
-    "color": ["White"],
-    "discount": 5,
-    "thumbnail": "./images/men-joggers-black.webp",
-    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
-    "rating": 4.5
-  },
-  {
-    "id": 16,
-    "title": "Blue Relaxed Jeans",
-    "description": "Basic Blue Jeans",
-    "category_id": 1,
-    "type_id": 9,
-    "brand": "Uniqlo",
-    "price": 69.99,
-    "size": ["XS", "S", "M", "L", "XL"],
-    "color": ["White"],
-    "discount": 5,
-    "thumbnail": "./images/men-jeans-blue-relaxed.webp",
-    "images": ["tshirt-white1.jpg", "tshirt-white2.jpg"],
-    "rating": 4.5
-  }
+    {
+      "id": 4,
+      "title": "Sweats",
+      "description": "Men's Sweats",
+      "category_id": 1,
+      "type_id": 9,
+      "brand": "Uniqlo",
+      "price": 69.99,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "Black"
+      ],
+      "discount": 5,
+      "thumbnail": "/images/men-black-sweat.webp",
+      "images": [
+        "/images/men-black-sweat.webp",
+        "/images/men-white-sweat.webp"
+      ],
+      "rating": 4.5
+    },
   
+   
+    
+    
+    
+
+    {
+      "id": 12,
+      "title": "Relaxed Fit Jeans",
+      "description": "Men's Relaxed Fit Jeans",
+      "category_id": 1,
+      "type_id": 9,
+      "brand": "Uniqlo",
+      "price": 69.99,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White"
+      ],
+      "discount": 5,
+      "thumbnail": "/images/men-jeans-black-relaxed.webp",
+      "images": [
+        "/images/men-jeans-black-relaxed.webp",
+        "/images/men-jeans-blue-relaxed.webp"      ],
+      "rating": 4.5
+    },
+    {
+      "id": 13,
+      "title": "Basic Hoodies",
+      "description": "Men's Basic Hoodies",
+      "category_id": 1,
+      "type_id": 9,
+      "brand": "Uniqlo",
+      "price": 69.99,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White"
+      ],
+      "discount": 5,
+      "thumbnail": "/images/men-black-hoodie.webp",
+      "images": [
+         "/images/men-black-hoodie.webp",
+         "/images/men-white-hoodie.webp"
+      ],
+      "rating": 4.5
+    },
+    {
+      "id": 14,
+      "title": "Smart Joggers",
+      "description": "Men's Smart Joggers",
+      "category_id": 1,
+      "type_id": 9,
+      "brand": "Uniqlo",
+      "price": 49.99,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White"
+      ],
+      "discount": 5,
+      "thumbnail": "/images/men-joggers-grey.webp",
+      "images": [
+        "/images/men-joggers-grey.webp",
+        "/images/men-joggers-black.webp"
+      
+      ],
+      "rating": 4.5
+    },
+    {
+      "id": 17,
+      "title": "Blasers",
+      "description": "Men's Blasers",
+      "category_id": 1,
+      "type_id": 9,
+      "brand": "Uniqlo",
+      "price": 69.99,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White"
+      ],
+      "discount": 5,
+      "thumbnail": "/images/men-black-blaser.webp",
+      "images": [
+        "/images/men-black-blaser.webp",
+        "/images/men-navy-blue-blaser.webp",
+        "/images/men-grey-blaser.webp"
+      ],
+      "rating": 4.5
+    },
+    {
+      "id": 18,
+      "title": "Jogger Pants",
+      "description": "Men's Jogger Pants",
+      "category_id": 1,
+      "type_id": 9,
+      "brand": "Uniqlo",
+      "price": 69.99,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White"
+      ],
+      "discount": 5,
+      "thumbnail": "/images/men-grey-jogger-pant.webp",
+      "images": [
+        "/images/men-grey-jogger-pant.webp",
+        "/images/men-black-jogger-pant.webp",
+        "/images/men-brown-jogger-pant.webp",
+        "/images/men-white-jogger-pant.webp","/images/men-blue-navy-jogger-pant.webp"
+      ],
+      "rating": 4.5
+    },
+    {
+      "id": 19,
+      "title": "Bomber Jackets",
+      "description": "Women's Bomber jackets",
+      "category_id": 2,
+      "type_id": 3,
+      "brand": "Uniqlo",
+      "price": 69.99,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White"
+      ],
+      "discount": 5,
+      "thumbnail": "/images/women-black-bomber-jacket.webp",
+      "images": [
+        "/images/women-black-bomber-jacket.webp",
+        "/images/women-white-bomber-jacket.webp"
+      ],
+      "rating": 4.5
+    },
+    {
+      "id": 20,
+      "title": "Cardigans",
+      "description": "Men's Cardigans",
+      "category_id": 1,
+      "type_id": 9,
+      "brand": "Uniqlo",
+      "price": 69.99,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White"
+      ],
+      "discount": 5,
+      "thumbnail": "/images/men-black-cardigan.webp",
+      "images": [
+        "/images/men-black-cardigan.webp",
+        "/images/men-navy-blue-cardigan.webp",
+        "/images/men-brown-cardigan.webp"
+      ],
+      "rating": 4.5
+    },
+    {
+      "id": 21,
+      "title": "Bomber Jackets",
+      "description": "Men's Bomber jackets",
+      "category_id": 1,
+      "type_id": 9,
+      "brand": "Uniqlo",
+      "price": 69.99,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White"
+      ],
+      "discount": 5,
+      "thumbnail": "/images/men-black-bomber-jacket.webp",
+      "images": [
+        "/images/men-black-bomber-jacket.webp",
+        "/images/men-navy-blue-bomber-jacket.webp",
+        "/images/men-brown-bomber-jacket.webp"
+      ],
+      "rating": 4.5
+    },
+    {
+      "id": 22,
+      "title": "OverShirts",
+      "description": "Men's Overshirts ",
+      "category_id": 1,
+      "type_id": 9,
+      "brand": "Uniqlo",
+      "price": 69.99,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White"
+      ],
+      "discount": 5,
+      "thumbnail": "/images/men-black-overshirt.webp",
+      "images": [
+        "/images/men-black-overshirt.webp",
+        "/images/men-brown-overshirt.webp",
+        "/images/men-grey-overshirt.webp",
+        "/images/men-green-overshirt.webp"
+      ],
+      "rating": 4.5
+    },
+    {
+      "id": 23,
+      "title": "Polos",
+      "description": "Men's Polos",
+      "category_id": 1,
+      "type_id": 9,
+      "brand": "Uniqlo",
+      "price": 69.99,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White"
+      ],
+      "discount": 5,
+      "thumbnail": "/images/men-black-polo.webp",
+      "images": [
+        "/images/men-black-polo.webp",
+        "/images/men-navy-blue-polo.webp",
+        "/images/men-white-polo.webp",
+        "/images/men-green-polo.webp"
+      ],
+      "rating": 4.5
+    },
+    {
+      "id": 24,
+      "title": "Long Sleeve Split Hem Dress",
+      "description": "Women's Dresses",
+      "category_id": 2,
+      "type_id": 2,
+      "brand": "Uniqlo",
+      "price": 69.99,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": [
+        "White"
+      ],
+      "discount": 5,
+      "thumbnail": "/images/women-black-long-sleeve-split-hem-dress.webp",
+      "images": [
+        "/images/women-black-long-sleeve-split-hem-dress.webp",
+        "/images/women-coffee-long-sleeve-split-hem-dress.webp",
+        "/images/women-driftwood-long-sleeve-split-hem-dress.webp"
+        
+      ],
+      "rating": 4.5
+    }
   ]
 }

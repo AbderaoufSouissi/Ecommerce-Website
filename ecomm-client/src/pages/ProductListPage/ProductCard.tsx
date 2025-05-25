@@ -1,8 +1,10 @@
 import { useState } from "react"
 import FavoriteIcon from "../../components/common/FavoriteIcon"
+import { Link } from "react-router-dom"
 
 
 interface ProductCardProps{
+    id: number,
     title: string
     description: string
     price: number
@@ -13,17 +15,19 @@ interface ProductCardProps{
 
 }
 
-const ProductCard = ({ title, description, price, discount, rating, brand, thumbnail }: ProductCardProps) => {
+const ProductCard = ({ id,title, description, price, discount, rating, brand, thumbnail }: ProductCardProps) => {
   
    const [liked, setLiked] = useState(false);
 
 
   return (
     <div className="flex flex-col pt-2 max-w-70 relative">
+      <Link to={`/product/${id}`}>
           <img src={thumbnail} className={"h-[400px] bg-cover block bg-center rounded hover:scale-101 cursor-pointer object-cover transition duration-200 ease-in-out w-full"}
               alt={title}
-      />
-      <button className="absolute top-0 right-0 pt-4 pr-4">
+        />
+        </Link>
+      <button className="absolute top-0 right-0 pt-4 pr-4 cursor-pointer">
         <FavoriteIcon filled={liked} onClick={() => setLiked(!liked)} size={28} />
         
         </button>

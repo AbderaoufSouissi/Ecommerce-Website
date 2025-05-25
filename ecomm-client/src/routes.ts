@@ -3,6 +3,8 @@ import ProductListPage from "./pages/ProductListPage/ProductListPage";
 import ShopAppWrapper from "./pages/ShopAppWrapper";
 import App from "./App";
 import { createElement } from "react";
+import ProductDetails from "./pages/ProductDetailsPage/ProductDetails";
+import { loadProductById } from "./routes/products";
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +22,11 @@ export const router = createBrowserRouter([
             {
                 path: "/men",
                 element: createElement(ProductListPage, {categoryType: "MEN"})
+            },
+            {
+                path: "/product/:productId",
+                loader: loadProductById,
+                element: createElement(ProductDetails)
             }
         ]
     },
