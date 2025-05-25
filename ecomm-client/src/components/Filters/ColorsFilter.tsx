@@ -6,14 +6,16 @@ interface ColorsFilterProps {
 
 
 const colorSelector = {
-  "Grey": "#999999",
   "Black": "#000000",
-  "Beige": "#FAF9E3",
-  "White": "#FFFFFF",
-  "Blue": "#0000FF",
-  "Brown": "#993333",
-  "Green": "#008000",
-  "Navy": "#000080"
+  "White": "#F5F5F5",
+  "Grey": "#808080",
+  "Navy": "#000080",
+  "Green": "#014421",
+  "Blue": "#0066CC",
+  "Brown": "#8B4513",
+  "Coffee": "#6F4E37",
+  "Driftwood": "#B8860B",
+  "Dark Taupe": "#483C32"
 };
 
 
