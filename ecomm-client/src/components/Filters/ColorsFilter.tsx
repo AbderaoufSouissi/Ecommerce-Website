@@ -44,7 +44,7 @@ const ColorsFilter = ({ colors }: ColorsFilterProps) => {
                     <div
                         key={color}
                         title={color}
-                        className={`w-8 h-8 rounded-lg shadow-sm hover:scale-105 transition-transform duration-150 cursor-pointer ${appliedColors.includes(color)
+                        className={`w-6 h-6 rounded-lg shadow-sm hover:scale-105 transition-transform duration-150 cursor-pointer ${appliedColors.includes(color)
                                 ? "border border-black ring-2 ring-purple-900 ring-offset-1" // Fixed purple ring
                                 : "border-0"
                             }`}
