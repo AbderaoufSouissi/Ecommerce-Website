@@ -58,11 +58,16 @@ const Navigation = () => {
 
       <div className="flex flex-wrap items-center gap-4">
         {/* ACTION ITEMS icons */}
-        <ul className="flex items-center gap-8">
-          <li><button><Wishlist/></button></li>
-          <li><button><AccountIcon/></button></li>
-          <li><Link to={"/cart-items"}><CartIcon/></Link></li>
-        </ul>
+       <ul className="flex items-center gap-8">
+  <li><button className="group"><Wishlist /></button></li>
+  <li><button className="group"><AccountIcon /></button></li>
+  <li>
+    <Link to="/cart-items" className="group">
+      <CartIcon />
+    </Link>
+  </li>
+</ul>
+
       </div>
     </nav>
   );

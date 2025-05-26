@@ -5,6 +5,7 @@ import content from "../../data/content.json"
 import Rating from "../../components/Rating/Rating";
 import SizeFilter from "../../components/Filters/SizeFilter";
 import ProductColors from "./ProductColors";
+import CartIcon from "../../components/common/CartIcon";
 
 
 interface Product {
@@ -94,7 +95,15 @@ const ProductDetails = () => {
           <p className="text-lg font-bold" >Available Colors</p>
           <ProductColors colors={product?.color}/>
         </div>
-        
+        <div className='flex pt-2'>
+        <button className="group bg-black hover:bg-gray-300 rounded-lg px-4 py-2 transition-colors duration-200">
+            <div className="flex items-center text-white group-hover:text-black transition-colors">
+              <CartIcon />
+              <span>Add to cart</span>
+            </div>
+          </button>
+        </div>
+
       </div>
     </div>
 
