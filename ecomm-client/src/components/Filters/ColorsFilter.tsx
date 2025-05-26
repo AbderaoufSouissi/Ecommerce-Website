@@ -5,7 +5,7 @@ interface ColorsFilterProps {
 }
 
 
-const colorSelector = {
+export const colorSelector: Record<string,string> = {
   "Black": "#000000",
   "White": "#F5F5F5",
   "Grey": "#808080",

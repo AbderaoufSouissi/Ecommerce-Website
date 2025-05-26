@@ -2,10 +2,11 @@ import { useState } from "react"
 
 
 interface SizeFilterProps {
-    sizes?: Array<string>
+    sizes?: Array<string>,
+    hideTitle:boolean
 }
 
-const SizeFilter = ({ sizes }: SizeFilterProps) => {
+const SizeFilter = ({ sizes , hideTitle }: SizeFilterProps) => {
 
     const [appliedSizes, setAppliedSizes] = useState<Array<string>>([])
 
@@ -23,7 +24,8 @@ const SizeFilter = ({ sizes }: SizeFilterProps) => {
 
     return (
         <div className="flex flex-col mb-4">
-            <p className="text-[16px] text-black mt-5 mb-5">Sizes</p>
+            {!hideTitle &&  <p className="text-[16px] text-black mt-5 mb-5">Sizes</p>}
+           
             <div className="flex flex-wrap gap-3">
                 {sizes?.map((size) => (
                     <div
