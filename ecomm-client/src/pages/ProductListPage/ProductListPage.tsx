@@ -72,13 +72,13 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
             <ColorsFilter colors={categoryContent?.meta_data?.[0]?.colors} />
             <hr />
             {/* SIZES */}
-            <SizeFilter sizes={categoryContent?.meta_data?.[0]?.sizes}/>
+            <SizeFilter sizes={categoryContent?.meta_data?.[0]?.sizes} hideTitle={false}/>
           </div>
         </div>
         <div className="p-[15px]">
           {/* PRODUCTS */}
            <p className="text-black text-lg">{categoryContent?.description}</p>
-          <div className="pt-4 grid grid-cols-1  lg:grid-cols-3 md:grid-cols-2 gap-8 px-2">
+          <div className="pt-4 grid grid-cols-1  lg:grid-cols-4 md:grid-cols-2 gap-8 px-2">
             {productListItems?.map((item, id) => <ProductCard key={id}  {...item} />)}
           </div>
          

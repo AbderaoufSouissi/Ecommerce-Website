@@ -305,7 +305,7 @@
     {
       "id": 1,
       "title": "Long Sleeves",
-      "description": "Women's Long Sleeves ",
+      "description": "Stay cozy and chic with our women's long sleeve tops. Designed with soft fabrics and flattering cuts, they’re perfect for layering or wearing on their own.",
       "category_id": 2,
       "type_id": 1,
       "brand": "Women's Long Sleeves ",
@@ -336,7 +336,7 @@
     {
       "id": 2,
       "title": "Oversized T-Shirts",
-      "description": "Men's Oversized T-shirts",
+      "description": "Stay effortlessly cool with our men's oversized t-shirts. Crafted from soft, breathable cotton, these tees offer a relaxed fit for ultimate comfort and style—perfect for laid-back looks or layered streetwear vibes.",
       "category_id": 1,
       "type_id": 2,
       "brand": "Men's Oversized T-shirts",
@@ -361,7 +361,7 @@
     {
       "id": 3,
       "title": "Sweats",
-      "description": "Men's Sweats",
+      "description": "Lounge or move in style with our men’s sweats. Designed for comfort with soft fleece interiors and a modern fit, they’re ideal for everything from casual outings to chill days at home.",
       "category_id": 1,
       "type_id": 3,
       "brand": "Men's Sweats",
@@ -388,7 +388,7 @@
     {
       "id": 4,
       "title": "Relaxed Fit Jeans",
-      "description": "Men's Jeans",
+      "description": "Meet your new go-to denim. Our relaxed fit jeans feature a roomy cut through the thigh and leg, offering all-day comfort with classic style that never fades",
       "category_id": 1,
       "type_id": 1,
       "brand": "Men's Jeans",
@@ -415,7 +415,7 @@
     {
       "id": 5,
       "title": "Basic Hoodies",
-      "description": "Men's Basic Hoodies",
+      "description": "A wardrobe essential, our men’s basic hoodies are made from premium cotton blends for softness and warmth. Perfect for layering or wearing solo on cooler days",
       "category_id": 1,
       "type_id": 4,
       "brand": "Men's Hoodies",
@@ -442,7 +442,7 @@
     {
       "id": 6,
       "title": "Smart Joggers",
-      "description": "Men's Smart Joggers",
+      "description": "Elevate your casualwear with our smart joggers. With tailored lines and a tapered fit, they blend comfort and sophistication—perfect for work-from-home or weekend outings.",
       "category_id": 1,
       "type_id": 9,
       "brand": "Men's Joggers",
@@ -469,7 +469,7 @@
     {
       "id": 7,
       "title": "Blasers",
-      "description": "Men's Blasers",
+      "description": "Add instant polish to any outfit with our men’s blazers. Designed with modern cuts and clean lines, they’re ideal for formal events or smart-casual ensembles.",
       "category_id": 1,
       "type_id": 8,
       "brand": "Men's Blasers",
@@ -498,7 +498,7 @@
     {
       "id": 8,
       "title": "Jogger Pants",
-      "description": "Men's Jogger Pants",
+      "description": "Casual comfort meets everyday style. Our jogger pants are lightweight, breathable, and feature an elastic waist and cuffs—perfect for on-the-go ease.",
       "category_id": 1,
       "type_id": 9,
       "brand": "Men's Joggers",
@@ -531,7 +531,7 @@
     {
       "id": 9,
       "title": "Bomber Jackets",
-      "description": "Women's Bomber jackets",
+      "description": "Bold yet versatile, our women’s bomber jackets bring edge to any outfit. Designed with a sleek fit and functional details for year-round wear.",
       "category_id": 2,
       "type_id": 7,
       "brand": "Women's Jackets",
@@ -558,7 +558,7 @@
     {
       "id": 10,
       "title": "Cardigans",
-      "description": "Men's Cardigans",
+      "description": "Layer up in style with our versatile men’s cardigans. Whether open or buttoned, they provide a cozy, refined look for chilly days or office layering.",
       "category_id": 1,
       "type_id": 5,
       "brand": "Men's Cardigans",
@@ -587,7 +587,7 @@
     {
       "id": 11,
       "title": "Bomber Jackets",
-      "description": "Men's Bomber jackets",
+      "description": "Cool and contemporary, our bomber jackets feature classic silhouettes with modern detailing. Great for transitional weather and easy layering.",
       "category_id": 1,
       "type_id": 7,
       "brand": "Men's jackets",
@@ -616,7 +616,7 @@
     {
       "id": 12,
       "title": "OverShirts",
-      "description": "Men's Overshirts",
+      "description": "Part shirt, part jacket—our overshirts are the perfect lightweight layer. Designed for versatility, they work great over tees or under coats.",
       "category_id": 1,
       "type_id": 11,
       "brand": "Men's Overshirts",
@@ -647,7 +647,7 @@
     {
       "id": 13,
       "title": "Polos",
-      "description": "Men's Polos",
+      "description": "Clean, crisp, and classic. Our men’s polos are made with soft, breathable fabrics and tailored fits—perfect for work or weekends.",
       "category_id": 1,
       "type_id": 6,
       "brand": "Men's Polos",
@@ -678,7 +678,7 @@
     {
       "id": 14,
       "title": "Long Sleeve Split Hem Dress",
-      "description": "Women's Dresses",
+      "description": "Elevate your wardrobe with our split hem dress. Featuring a flattering fit, long sleeves, and a stylish side split—it’s your go-to piece for effortless elegance.",
       "category_id": 2,
       "type_id": 2,
       "brand": "Women's Dresses",
@@ -707,7 +707,7 @@
     {
       "id": 15,
       "title": "Wide Leg Pants",
-      "description": "Women's Pants",
+      "description": "Flowy and flattering, our wide leg pants offer breathable comfort and chic style. Perfect for office days, brunch dates, or relaxing in style.",
       "category_id": 2,
       "type_id": 4,
       "brand": "Women's Pants",
@@ -740,7 +740,7 @@
     {
       "id": 16,
       "title": "Straight Everyday Pants",
-      "description": "Women's Pants",
+      "description": "Sleek and simple, our straight everyday pants are a closet staple. With a tailored silhouette and all-day comfort, they’re your versatile work-to-weekend essential.",
       "category_id": 2,
       "type_id": 4,
       "brand": "Women's Pants",
@@ -769,7 +769,7 @@
     {
       "id": 17,
       "title": "Skinny Everyday Pants",
-      "description": "Women's Pants",
+      "description": "Form-fitting and functional, these skinny pants hug your curves while offering stretch and comfort. Great for office or casual wear.",
       "category_id": 2,
       "type_id": 4,
       "brand": "Women's Pants",
@@ -800,7 +800,7 @@
     {
       "id": 18,
       "title": "Classic T-Shirt",
-      "description": "Women's T-Shirts",
+      "description": "Timeless and comfy, our classic tees are made with soft cotton and a flattering fit. Perfect for layering or pairing with anything.",
       "category_id": 2,
       "type_id": 5,
       "brand": "Women's T-Shirts",
@@ -831,7 +831,7 @@
     {
       "id": 19,
       "title": "V Neck T-Shirt",
-      "description": "Women's T-Shirts",
+      "description": "A staple with a twist. Our v-neck tees offer a feminine neckline and a relaxed fit—ideal for dressing up or down.",
       "category_id": 2,
       "type_id": 5,
       "brand": "Women's T-Shirts",
@@ -860,7 +860,7 @@
     {
       "id": 20,
       "title": "Button-Down Shirt",
-      "description": "Women's Shirts",
+      "description": "Smart meets style. Our button-down shirts feature crisp lines and breathable fabrics, ideal for work or layering over basics.",
       "category_id": 2,
       "type_id": 6,
       "brand": "Women's Shirts",
@@ -889,7 +889,7 @@
     {
       "id": 21,
       "title": "Relaxed Polo Shirt",
-      "description": "Women's Polos",
+      "description": "Easygoing and stylish, our relaxed polos offer a looser fit for everyday comfort—perfect for a polished yet casual look.",
       "category_id": 2,
       "type_id": 7,
       "brand": "Women's Polos",

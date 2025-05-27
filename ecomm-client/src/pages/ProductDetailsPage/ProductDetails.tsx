@@ -61,7 +61,7 @@ const ProductDetails = () => {
   return (
     <>
     <div className='flex flex-col md:flex-row p-10'>
-      <div className='w-[100%] 1g:w-[50%] md:w-[40%]'>
+      <div className='w-[100%] lg:w-[50%] md:w-[40%]'>
         {/* Image */}
         <div className="flex flex-col md:flex-row">
           <div className="w-[100%] md:w-[30%] justify-center h-[40px] md:h-[420px]">
@@ -112,8 +112,11 @@ const ProductDetails = () => {
       </div>
       
       </div>
-      <SectionHeading title={"Product Description"} />
-      <p>{product?.description}</p>
+      {/* Product Description */}
+      <div className="md:w-[50%] w-full">
+        <SectionHeading title="Product Description" />
+        <p className="px-10">{product?.description}</p>
+      </div>
       </>
 
 
