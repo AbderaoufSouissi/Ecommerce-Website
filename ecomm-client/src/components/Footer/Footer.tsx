@@ -23,10 +23,10 @@ const Footer = ({ content }: FooterProps) => {
         <div className='bg-black text-white'>
             <div className='flex p-8 justify-between'>
                 {content.items?.map((item, _index) => (
-                    <div className="flex flex-col">
+                    <div key={_index} className="flex flex-col">
                         <p className="text-xl pb-[10px]">{item.title}</p>
-                        {item.list?.map((listItem, _index) => (
-                            <a className='flex flex-col text-[14px] py-2' href={listItem.path}>{listItem.label}</a>
+                        {item.list?.map((listItem, index) => (
+                            <a key={index} className='flex flex-col text-[14px] py-2' href={listItem.path}>{listItem.label}</a>
                         ))}
                         {item?.description && <p>{item.description}</p>}
                     </div>
