@@ -77,8 +77,8 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
         </div>
         <div className="p-[15px]">
           {/* PRODUCTS */}
-           <p className="text-black text-lg">{categoryContent?.description}</p>
-          <div className="pt-4 grid grid-cols-1  lg:grid-cols-4 md:grid-cols-2 gap-8 px-2">
+           <p className="text-black text-lg ">{categoryContent?.description}</p>
+          <div className="pt-4 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8 px-2">
             {productListItems?.map((item, id) => <ProductCard key={id}  {...item} />)}
           </div>
          
