@@ -7,6 +7,7 @@ import SizeFilter from "../../components/Filters/SizeFilter";
 import ProductColors from "./ProductColors";
 import CartIcon from "../../components/common/CartIcon";
 import SectionHeading from "../../components/Sections/SectionsHeading/SectionHeading";
+import ProductCard from "../ProductListPage/ProductCard";
 
 
 interface Product {
@@ -36,11 +37,20 @@ const ProductDetails = () => {
   const [image, setImage] = useState<string>(product?.thumbnail)
   const [breadCrumbLinks, setBreadCrumbLinks] = useState<BreadcrumbLink[]>([{ title: 'Shop', path: '/' }]);
 
+  const similarProducts = useMemo(() => {
+    return content?.products?.filter(
+      (productItem) => productItem?.id != product?.id
+        && productItem?.type_id == product?.type_id
+        && productItem?.category_id == product?.category_id)
+  },[product])
+
   const productCategory = useMemo(() => {
     return categories?.find((category) => category.id === product?.category_id);
   }, [product])
 
   useEffect(() => {
+    setImage(product?.images[0])
+
     const arrayLinks: BreadcrumbLink[] = [];
 
     if (productCategory?.name && productCategory?.path) {
@@ -113,11 +123,24 @@ const ProductDetails = () => {
       
       </div>
       {/* Product Description */}
+      <SectionHeading title="Product Description" />
       <div className="md:w-[50%] w-full">
-        <SectionHeading title="Product Description" />
-        <p className="px-10">{product?.description}</p>
+
+        <p className="px-10 text-xl">{product?.description}</p>
       </div>
-      </>
+      {similarProducts.length && <><SectionHeading title="Similar Products" />
+      <div>
+
+        
+        <div className="pt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 px-4 sm:px-10 lg:px-10">
+          {similarProducts?.map((item, id) => (
+            <ProductCard key={id} {...item} />
+          ))}
+        </div>
+
+      </div></> }
+      
+    </>
 
 
   )
