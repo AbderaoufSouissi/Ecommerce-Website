@@ -9,6 +9,8 @@ build/
 .DS_Store
 Thumbs.db
 
+**/*.class
+
 # Editor configs
 .vscode/
 .idea/
@@ -42,3 +44,63 @@ ecomm-client/.vite/
 ecomm-client/coverage/
 ecomm-client/.env.local
 ecomm-client/.env.*.local
+
+# Spring Boot specific ignores for ecomm-api/
+ecomm-api/.idea/
+ecomm-api/**/test-output/
+ecomm-api/target/
+ecomm-api/!.mvn/wrapper/maven-wrapper.jar
+ecomm-api/!**/src/main/**/target/
+ecomm-api/!**/src/test/**/target/
+
+
+ecomm-api/.classpath
+ecomm-api/.project
+
+# Spring Boot DevTools
+ecomm-api/*.tmp
+ecomm-api/*.bak
+ecomm-api/*.swp
+ecomm-api/*~.nib
+ecomm-api/local.properties
+ecomm-api/.settings/
+ecomm-api/.loadpath
+ecomm-api/.factorypath
+
+# Spring Boot Logs
+ecomm-api/spring.log
+
+# Database files (if using H2 or similar)
+ecomm-api/*.db
+ecomm-api/*.h2.db
+ecomm-api/*.mv.db
+ecomm-api/*.trace.db
+
+# IDE specific files for Spring Boot
+ecomm-api/.sts4-cache/
+ecomm-api/.apt_generated/
+ecomm-api/.apt_generated_test/
+
+# Gradle (if you switch from Maven to Gradle later)
+ecomm-api/.gradle/
+ecomm-api/gradle/
+ecomm-api/gradlew
+ecomm-api/gradlew.bat
+
+# Application-specific environment files
+ecomm-api/application-local.properties
+ecomm-api/application-local.yml
+ecomm-api/src/main/resources/application-local.properties
+ecomm-api/src/main/resources/application-local.yml
+
+# Spring Boot environment files
+ecomm-api/.env
+ecomm-api/.env.local
+ecomm-api/.env.*.local
+ecomm-api/.env.development
+ecomm-api/.env.production
+ecomm-api/.env.test
+
+# Generated files
+ecomm-api/bin/
+ecomm-api/generated/
