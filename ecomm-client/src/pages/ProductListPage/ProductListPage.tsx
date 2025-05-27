@@ -41,7 +41,7 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
 
   const productListItems = useMemo(() => {
     return content?.products.filter((product) => product?.category_id === categoryContent?.id) 
-  },[])
+  },[categoryContent?.id])
 
 
 
