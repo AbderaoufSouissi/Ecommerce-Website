@@ -128,7 +128,7 @@ const ProductDetails = () => {
 
         <p className="px-10 text-xl">{product?.description}</p>
       </div>
-      {similarProducts.length && <><SectionHeading title="Similar Products" />
+      {similarProducts.length > 0 && <><SectionHeading title="Similar Products" />
       <div>
 
         
