@@ -20,15 +20,6 @@ const items: CardProps[] = [
   { title: "", imagePath: shirts },
   { title: "", imagePath: lumberjack },
   { title: "", imagePath: joggers },
-  
-  // { title: "Hats", imagePath: Hat },
-  // { title: "Dresses", imagePath: Dress },
-  // { title: "Dress Shirts", imagePath: Shirt },
-  // { title: "Baseball Jackets", imagePath: BJacket },
-  // { title: "Leather Jackets", imagePath: LJacket },
-  // { title: "White Dresses", imagePath: WDress },
-  // { title: "Turtle Necks", imagePath: TNeck },
-  // { title: "SweatShirts", imagePath: Sweatshirt },
 ];
 
 

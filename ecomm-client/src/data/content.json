@@ -308,7 +308,7 @@
       "description": "Women's Long Sleeves ",
       "category_id": 2,
       "type_id": 1,
-      "brand": "Levi's",
+      "brand": "Women's Long Sleeves ",
       "price": 89.99,
       "size": [
         "M",
@@ -339,7 +339,7 @@
       "description": "Men's Oversized T-shirts",
       "category_id": 1,
       "type_id": 2,
-      "brand": "Levi's",
+      "brand": "Men's Oversized T-shirts",
       "price": 89.99,
       "size": [
         "M",
@@ -364,7 +364,7 @@
       "description": "Men's Sweats",
       "category_id": 1,
       "type_id": 3,
-      "brand": "Uniqlo",
+      "brand": "Men's Sweats",
       "price": 69.99,
       "size": [
         "XS",
@@ -388,10 +388,10 @@
     {
       "id": 4,
       "title": "Relaxed Fit Jeans",
-      "description": "Men's Relaxed Fit Jeans",
+      "description": "Men's Jeans",
       "category_id": 1,
       "type_id": 1,
-      "brand": "Uniqlo",
+      "brand": "Men's Jeans",
       "price": 69.99,
       "size": [
         "XS",
@@ -418,7 +418,7 @@
       "description": "Men's Basic Hoodies",
       "category_id": 1,
       "type_id": 4,
-      "brand": "Uniqlo",
+      "brand": "Men's Hoodies",
       "price": 69.99,
       "size": [
         "XS",
@@ -445,7 +445,7 @@
       "description": "Men's Smart Joggers",
       "category_id": 1,
       "type_id": 9,
-      "brand": "Uniqlo",
+      "brand": "Men's Joggers",
       "price": 49.99,
       "size": [
         "XS",
@@ -472,7 +472,7 @@
       "description": "Men's Blasers",
       "category_id": 1,
       "type_id": 8,
-      "brand": "Uniqlo",
+      "brand": "Men's Blasers",
       "price": 69.99,
       "size": [
         "XS",
@@ -501,7 +501,7 @@
       "description": "Men's Jogger Pants",
       "category_id": 1,
       "type_id": 9,
-      "brand": "Uniqlo",
+      "brand": "Men's Joggers",
       "price": 69.99,
       "size": [
         "XS",
@@ -515,7 +515,7 @@
         "Black",
         "Brown",
         "White",
-        "Navy Blue"
+        "Navy"
       ],
       "discount": 5,
       "thumbnail": "/images/men-grey-jogger-pant.webp",
@@ -534,7 +534,7 @@
       "description": "Women's Bomber jackets",
       "category_id": 2,
       "type_id": 7,
-      "brand": "Uniqlo",
+      "brand": "Women's Jackets",
       "price": 69.99,
       "size": [
         "XS",
@@ -561,7 +561,7 @@
       "description": "Men's Cardigans",
       "category_id": 1,
       "type_id": 5,
-      "brand": "Uniqlo",
+      "brand": "Men's Cardigans",
       "price": 69.99,
       "size": [
         "XS",
@@ -572,7 +572,7 @@
       ],
       "color": [
         "Black",
-        "Navy Blue",
+        "Navy",
         "Brown"
       ],
       "discount": 5,
@@ -590,7 +590,7 @@
       "description": "Men's Bomber jackets",
       "category_id": 1,
       "type_id": 7,
-      "brand": "Uniqlo",
+      "brand": "Men's jackets",
       "price": 69.99,
       "size": [
         "XS",
@@ -601,7 +601,7 @@
       ],
       "color": [
         "Black",
-        "Navy Blue",
+        "Navy",
         "Brown"
       ],
       "discount": 5,
@@ -616,10 +616,10 @@
     {
       "id": 12,
       "title": "OverShirts",
-      "description": "Men's Overshirts ",
+      "description": "Men's Overshirts",
       "category_id": 1,
       "type_id": 11,
-      "brand": "Uniqlo",
+      "brand": "Men's Overshirts",
       "price": 69.99,
       "size": [
         "XS",
@@ -650,7 +650,7 @@
       "description": "Men's Polos",
       "category_id": 1,
       "type_id": 6,
-      "brand": "Uniqlo",
+      "brand": "Men's Polos",
       "price": 69.99,
       "size": [
         "XS",
@@ -661,7 +661,7 @@
       ],
       "color": [
         "Black",
-        "Navy Blue",
+        "Navy",
         "White",
         "Green"
       ],
@@ -681,7 +681,7 @@
       "description": "Women's Dresses",
       "category_id": 2,
       "type_id": 2,
-      "brand": "Uniqlo",
+      "brand": "Women's Dresses",
       "price": 69.99,
       "size": [
         "XS",
@@ -710,7 +710,7 @@
       "description": "Women's Pants",
       "category_id": 2,
       "type_id": 4,
-      "brand": "Uniqlo",
+      "brand": "Women's Pants",
       "price": 69.99,
       "size": [
         "XS",
@@ -743,7 +743,7 @@
       "description": "Women's Pants",
       "category_id": 2,
       "type_id": 4,
-      "brand": "Uniqlo",
+      "brand": "Women's Pants",
       "price": 69.99,
       "size": [
         "XS",
@@ -772,7 +772,7 @@
       "description": "Women's Pants",
       "category_id": 2,
       "type_id": 4,
-      "brand": "Uniqlo",
+      "brand": "Women's Pants",
       "price": 69.99,
       "size": [
         "XS",
@@ -803,7 +803,7 @@
       "description": "Women's T-Shirts",
       "category_id": 2,
       "type_id": 5,
-      "brand": "Uniqlo",
+      "brand": "Women's T-Shirts",
       "price": 69.99,
       "size": [
         "XS",
@@ -834,7 +834,7 @@
       "description": "Women's T-Shirts",
       "category_id": 2,
       "type_id": 5,
-      "brand": "Uniqlo",
+      "brand": "Women's T-Shirts",
       "price": 69.99,
       "size": [
         "XS",
@@ -863,7 +863,7 @@
       "description": "Women's Shirts",
       "category_id": 2,
       "type_id": 6,
-      "brand": "Uniqlo",
+      "brand": "Women's Shirts",
       "price": 69.99,
       "size": [
         "XS",
@@ -892,7 +892,7 @@
       "description": "Women's Polos",
       "category_id": 2,
       "type_id": 7,
-      "brand": "Uniqlo",
+      "brand": "Women's Polos",
       "price": 69.99,
       "size": [
         "XS",

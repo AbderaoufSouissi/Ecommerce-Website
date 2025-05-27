@@ -34,9 +34,9 @@ const ProductCard = ({ id,title, description, price, discount, rating, brand, th
             <div className="flex justify-between items-center">
                 <div className="flex flex-col">
                     <p className="text-xl font-bold p-1">{title}</p>
-                    {description && <p className="text-sm italic px-1 text-gray-900">{description}</p>}
+                    {description && <p className="text-sm italic px-1 text-gray-900">{brand}</p>}
               </div>
-              <div><p>{ price} DT</p></div>
+              <div><p>{ price} TND</p></div>
           </div>
           
         </div>

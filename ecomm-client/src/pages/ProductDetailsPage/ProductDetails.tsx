@@ -6,6 +6,7 @@ import Rating from "../../components/Rating/Rating";
 import SizeFilter from "../../components/Filters/SizeFilter";
 import ProductColors from "./ProductColors";
 import CartIcon from "../../components/common/CartIcon";
+import SectionHeading from "../../components/Sections/SectionsHeading/SectionHeading";
 
 
 interface Product {
@@ -58,6 +59,7 @@ const ProductDetails = () => {
     setBreadCrumbLinks([breadCrumbLinks[0], ...arrayLinks]);
   }, [productCategory, product]);
   return (
+    <>
     <div className='flex flex-col md:flex-row p-10'>
       <div className='w-[100%] 1g:w-[50%] md:w-[40%]'>
         {/* Image */}
@@ -84,6 +86,8 @@ const ProductDetails = () => {
         {/* Product Description */}
         <p className="text-3xl pt-2">{product?.title}</p>
         <Rating rating={product?.rating} />
+        {/* PRICE TAG */}
+        <p className="text-xl font-bold py-2">{product?.price} TND</p>
         <div className='flex flex-col'>
           <div className='flex gap-2'>
             <p className='text-sm bold'>Select Size</p>
@@ -95,7 +99,7 @@ const ProductDetails = () => {
           <p className="text-lg font-bold" >Available Colors</p>
           <ProductColors colors={product?.color}/>
         </div>
-        <div className='flex pt-2'>
+        <div className='flex pt-4'>
         <button className="group bg-black hover:bg-gray-300 rounded-lg px-4 py-2 transition-colors duration-200">
             <div className="flex items-center text-white group-hover:text-black transition-colors">
               <CartIcon />
@@ -103,9 +107,14 @@ const ProductDetails = () => {
             </div>
           </button>
         </div>
-
+        {/* Product Description */}
+      
       </div>
-    </div>
+      
+      </div>
+      <SectionHeading title={"Product Description"} />
+      <p>{product?.description}</p>
+      </>
 
 
   )

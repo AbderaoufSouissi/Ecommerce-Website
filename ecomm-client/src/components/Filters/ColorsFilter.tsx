@@ -9,7 +9,7 @@ export const colorSelector: Record<string,string> = {
   "Black": "#000000",
   "White": "#F5F5F5",
   "Grey": "#808080",
-  "Navy": "#000080",
+  "Navy": "#000435",
   "Green": "#014421",
   "Blue": "#0066CC",
   "Brown": "#8B4513",
