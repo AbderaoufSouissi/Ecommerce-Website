@@ -15,7 +15,7 @@ interface ProductCardProps{
 
 }
 
-const ProductCard = ({ id,title, description, price, discount, rating, brand, thumbnail }: ProductCardProps) => {
+const ProductCard = ({ id,title, description, price, brand, thumbnail }: ProductCardProps) => {
   
    const [liked, setLiked] = useState(false);
 
