@@ -25,7 +25,7 @@ public class ProductResource {
     private String url;
 
     @Column(nullable = false)
-    private Boolean primary;
+    private Boolean isPrimary;
 
     @Column(nullable = false)
     private String type;

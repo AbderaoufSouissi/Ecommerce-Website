@@ -34,7 +34,7 @@ public class Product {
     private BigDecimal price;
 
     @Column(nullable = false)
-    private boolean newArrival;
+    private boolean isNewArrival;
 
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
