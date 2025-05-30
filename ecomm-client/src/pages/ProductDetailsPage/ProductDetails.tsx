@@ -11,11 +11,11 @@ import ProductCard from "../ProductListPage/ProductCard";
 
 
 interface Product {
-  id: number;
+  id: string;
   title: string;
   description: string;
-  category_id: number;
-  type_id: number;
+  category_id: string;
+  type_id: string;
   brand: string;
   price: number;
   size: string[];

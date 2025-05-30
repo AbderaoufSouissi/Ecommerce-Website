@@ -8,7 +8,7 @@ import SizeFilter from "../../components/Filters/SizeFilter"
 import ProductCard from "./ProductCard"
 
 type Category = {
-  id: number,
+  id: string,
   name: string,
   code: string,
   description: string
@@ -24,7 +24,7 @@ export type MetaData = {
 }
 
 export type CategorieType = {
-  type_id: number,
+  type_id: string,
   code: string,
   name: string
 }
