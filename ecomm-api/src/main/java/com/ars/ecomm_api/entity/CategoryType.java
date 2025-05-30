@@ -1,5 +1,6 @@
 package com.ars.ecomm_api.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,5 +30,6 @@ public class CategoryType {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id", referencedColumnName = "category_id", nullable = false)
+    @JsonBackReference
     private Category category;
 }

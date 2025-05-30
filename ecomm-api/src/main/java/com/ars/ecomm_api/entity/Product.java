@@ -1,5 +1,7 @@
 package com.ars.ecomm_api.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -43,18 +45,22 @@ public class Product {
     private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<ProductVariant> productVariants = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id",referencedColumnName = "category_id", nullable = false)
+    @JsonBackReference
     private Category category;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_type_id", referencedColumnName = "category_type_id", nullable = false )
+    @JsonBackReference
     private CategoryType categoryType;
 
     @OneToMany(mappedBy = "product",cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<ProductResource> productResources = new ArrayList<>();
 
 

@@ -1,5 +1,6 @@
 package com.ars.ecomm_api.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,5 +30,6 @@ public class ProductVariant {
 
     @ManyToOne
     @JoinColumn(name = "product_id", referencedColumnName = "product_id", nullable = false)
+    @JsonBackReference
     private Product product;
 }
