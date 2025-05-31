@@ -1,10 +1,16 @@
 package com.ars.ecomm_api.dto;
 
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.NotBlank;
+
 import java.util.UUID;
 
 @Data
@@ -13,8 +19,18 @@ import java.util.UUID;
 @Builder
 public class ProductResourceDto {
     private UUID id;
+
+    @NotEmpty(message = "Name is required")
+    @Size(max = 255, message = "name must not exceed 255 characters")
     private String name;
+
+    @NotEmpty(message = "URL is required")
+    @Size(max = 2048, message = "URL must not exceed 2048 characters")
     private String url;
+
+    @NotNull
     private Boolean isPrimary;
+
+    @NotEmpty(message = "Type is required")
     private String type;
 }
