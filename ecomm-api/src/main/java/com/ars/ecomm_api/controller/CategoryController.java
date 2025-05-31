@@ -10,15 +10,20 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/categories")
-
 @RequiredArgsConstructor
 public class CategoryController {
 
     private final CategoryService categoryService;
+
+    @GetMapping
+    public ResponseEntity<List<Category>> getAllCategories(){
+        return new ResponseEntity<>(categoryService.getAllCategories(), HttpStatus.OK);
+    }
 
 
     @GetMapping("/{id}")
@@ -26,6 +31,16 @@ public class CategoryController {
         return new ResponseEntity<>(categoryService.getCategory(categoryId), HttpStatus.OK);
 
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Category> updateCategory(@RequestBody CategoryDto categoryDto,
+                                                   @PathVariable(value = "id") UUID categoryId){
+        return new ResponseEntity<>(categoryService.updateCategory(categoryDto, categoryId), HttpStatus.OK);
+    }
+
+
+
+
 
 
     @PostMapping
