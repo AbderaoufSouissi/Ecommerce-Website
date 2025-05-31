@@ -9,8 +9,6 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface ProductMapper {
-    ProductMapper INSTANCE = Mappers.getMapper( ProductMapper.class );
-
 
     ProductDto toProductDto(Product product);
     Product toProduct(ProductDto productDto);
