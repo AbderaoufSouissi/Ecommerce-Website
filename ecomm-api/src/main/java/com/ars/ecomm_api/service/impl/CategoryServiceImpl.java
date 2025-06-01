@@ -65,4 +65,14 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryRepository.save(category);
 
     }
+
+    @Override
+    public void deleteCategory(UUID categoryId) {
+        categoryRepository.findById(categoryId)
+                .ifPresentOrElse(
+                        categoryRepository::delete,
+                        () -> {throw new ResourceNotFoundException("Category not found with id: " + categoryId);}
+                );
+
+    }
 }

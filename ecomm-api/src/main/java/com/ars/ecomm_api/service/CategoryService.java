@@ -11,4 +11,6 @@ public interface CategoryService {
     Category createCategory(CategoryDto categoryDto);
     List<Category> getAllCategories();
     Category updateCategory(CategoryDto categoryDto, UUID categoryId);
+
+    void deleteCategory(UUID categoryId);
 }
