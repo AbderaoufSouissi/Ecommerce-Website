@@ -3,6 +3,7 @@ package com.ars.ecomm_api.service.impl;
 import com.ars.ecomm_api.dto.CategoryDto;
 import com.ars.ecomm_api.entity.Category;
 import com.ars.ecomm_api.entity.CategoryType;
+import com.ars.ecomm_api.exception.ResourceAlreadyExistsException;
 import com.ars.ecomm_api.exception.ResourceNotFoundException;
 import com.ars.ecomm_api.mapper.CategoryMapper;
 import com.ars.ecomm_api.mapper.CategoryTypeMapper;
@@ -31,10 +32,13 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public Category createCategory(CategoryDto categoryDto) {
 
+        if (categoryRepository.existsByCode(categoryDto.getCode())){
+            throw new ResourceAlreadyExistsException("Category with code '" + categoryDto.getCode() + "' already exists");
+        }
+
         Category newCategory = categoryMapper.toCategory(categoryDto);
         return categoryRepository.save(newCategory);
     }
-
     @Override
     public List<Category> getAllCategories() {
         return categoryRepository.findAll();

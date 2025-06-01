@@ -40,7 +40,7 @@ public class CategoryController {
 
     @PostMapping
     public ResponseEntity<Category> createCategory(@Valid @RequestBody CategoryDto categoryDto) {
-        return new ResponseEntity<>(categoryService.createCategory(categoryDto), HttpStatus.OK);
+        return new ResponseEntity<>(categoryService.createCategory(categoryDto), HttpStatus.CREATED);
     }
 
     @DeleteMapping("/{id}")
