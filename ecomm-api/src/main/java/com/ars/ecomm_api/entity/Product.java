@@ -35,8 +35,11 @@ public class Product {
     @Column(nullable = false)
     private BigDecimal price;
 
+    @Column
+    private Float rating;
+
     @Column(nullable = false)
-    private boolean isNewArrival;
+    private Boolean newArrival;
 
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;

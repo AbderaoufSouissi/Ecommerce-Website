@@ -19,10 +19,11 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 public class CategoryServiceImpl implements CategoryService {
-
-    private final CategoryRepository categoryRepository;
     private final CategoryMapper categoryMapper;
     private final CategoryTypeMapper categoryTypeMapper;
+    private final CategoryRepository categoryRepository;
+
+
 
     @Override
     public Category getCategory(UUID categoryId) {

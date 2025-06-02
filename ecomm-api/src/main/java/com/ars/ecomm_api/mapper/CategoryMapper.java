@@ -8,15 +8,14 @@ import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 
 
-import java.util.List;
+
 
 @Mapper(componentModel = "spring")
 public interface CategoryMapper {
 
     Category toCategory(CategoryDto categoryDto);
     CategoryDto toCategoryDto(Category category);
-    List<Category> toCategories(List<CategoryDto> categoryDtos);
-    List<CategoryDto> toCategoryDtos(List<Category> categories);
+
 
 
     @AfterMapping

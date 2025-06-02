@@ -34,14 +34,18 @@ public class ProductDto {
     @Size(min = 2, max = 100, message = "Brand must be between 2 and 100 characters")
     private String brand;
 
+    private Float rating;
+
     @NotNull(message = "New arrival flag is required")
-    @Builder.Default
-    private Boolean isNewArrival = false;
+    private Boolean newArrival;
 
     @NotNull(message = "Category ID is required")
     private UUID categoryId;
-
+    private String categoryName;
+    @NotNull(message = "CategoryType ID is required")
     private UUID categoryTypeId;
+    private String categoryTypeName;
+
     private List<ProductVariantDto> productVariants;
     private List<ProductResourceDto> productResources;
 
