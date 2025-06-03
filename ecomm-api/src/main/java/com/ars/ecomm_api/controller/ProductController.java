@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
+
 @RestController
 @RequestMapping("/api/products")
 @RequiredArgsConstructor
@@ -20,8 +22,9 @@ public class ProductController {
 
 
     @GetMapping
-    public ResponseEntity<List<Product>> getAllProducts() {
-        return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
+    public ResponseEntity<List<Product>> getAllProducts(@RequestParam(required = false) UUID categoryId,
+                                                        @RequestParam(required = false) UUID categoryTypeId ) {
+        return new ResponseEntity<>(productService.getAllProducts(categoryId,categoryTypeId), HttpStatus.OK);
     }
 
     @PostMapping

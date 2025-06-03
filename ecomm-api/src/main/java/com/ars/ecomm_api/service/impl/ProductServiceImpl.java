@@ -9,7 +9,10 @@ import com.ars.ecomm_api.repository.CategoryRepository;
 
 import com.ars.ecomm_api.service.CategoryService;
 import com.ars.ecomm_api.service.ProductService;
+import com.ars.ecomm_api.specification.ProductSpecification;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Example;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -74,10 +77,28 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getAllProducts() {
-        return productRepository.findAll();
+    public List<Product> getAllProducts(UUID categoryId, UUID categoryTypeId) {
+        return productRepository.findAll(buildProductSpecification(categoryId,categoryTypeId));
     }
 
+
+
+
+    private Specification<Product> buildProductSpecification(UUID categoryId, UUID categoryTypeId) {
+        Specification<Product> spec = null;
+
+        if (categoryId != null) {
+            spec = ProductSpecification.hasCategoryId(categoryId);
+        }
+
+        if (categoryTypeId != null) {
+            spec = (spec == null)
+                    ? ProductSpecification.hasCategoryTypeId(categoryTypeId)
+                    : spec.and(ProductSpecification.hasCategoryTypeId(categoryTypeId));
+        }
+
+        return spec;
+    }
 
 
     @Override
