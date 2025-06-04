@@ -16,7 +16,7 @@ public interface CategoryTypeMapper {
 
     CategoryType toCategoryType(CategoryTypeDto dto);
 
-    List<CategoryTypeDto> toCategoryTypeDtos(List<CategoryType> categoryTypes);
+    List<CategoryTypeDto>   toCategoryTypeDtos(List<CategoryType> categoryTypes);
 
     List<CategoryType> toCategoryTypes(List<CategoryTypeDto> dtos);
 
