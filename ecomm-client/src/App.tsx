@@ -1,11 +1,18 @@
+import { useEffect } from "react";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Category from "./components/Sections/Categories/Category";
 import NewArrivals from "./components/Sections/NewArrivals";
 import content from "./data/content.json";
+import { fetchCategories } from "./api/fetchCategories";
 
-function App(){
+function App() {
+  
+  useEffect(() => {
+    fetchCategories().then(response=> console.log("response: ",response)).catch()
+  },[])
+
   return (
     <>
       <HeroSection />
