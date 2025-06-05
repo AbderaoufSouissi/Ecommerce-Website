@@ -11,7 +11,7 @@ import com.ars.ecomm_api.service.CategoryService;
 import com.ars.ecomm_api.service.ProductService;
 import com.ars.ecomm_api.specification.ProductSpecification;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Example;
+
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
@@ -77,10 +77,10 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getAllProducts(UUID categoryId, UUID categoryTypeId) {
-        return productRepository.findAll(buildProductSpecification(categoryId,categoryTypeId));
+    public List<ProductDto> getAllProducts(UUID categoryId, UUID categoryTypeId) {
+        List<Product> products = productRepository.findAll(buildProductSpecification(categoryId, categoryTypeId));
+        return productMapper.toProductDtos(products);
     }
-
 
 
 

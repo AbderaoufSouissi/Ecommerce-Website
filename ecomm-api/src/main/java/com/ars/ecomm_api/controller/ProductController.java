@@ -22,8 +22,9 @@ public class ProductController {
 
 
     @GetMapping
-    public ResponseEntity<List<Product>> getAllProducts(@RequestParam(required = false) UUID categoryId,
+    public ResponseEntity<List<ProductDto>> getAllProducts(@RequestParam(required = false) UUID categoryId,
                                                         @RequestParam(required = false) UUID categoryTypeId ) {
+
         return new ResponseEntity<>(productService.getAllProducts(categoryId,categoryTypeId), HttpStatus.OK);
     }
 
