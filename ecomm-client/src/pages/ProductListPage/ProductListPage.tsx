@@ -1,4 +1,4 @@
-import { useMemo } from "react"
+import { useEffect, useMemo, useState } from "react"
 import FilterIcon from "../../components/common/FilterIcon"
 import content from "../../data/content.json"
 import Categories from "../../components/Filters/Categories"
@@ -6,6 +6,11 @@ import PriceFilter from "../../components/Filters/PriceFilter"
 import ColorsFilter from "../../components/Filters/ColorsFilter"
 import SizeFilter from "../../components/Filters/SizeFilter"
 import ProductCard from "./ProductCard"
+import { fetchProducts } from "../../api/fetchProducts"
+import { useDispatch, useSelector } from "react-redux"
+import { setLoading } from "../../store/features/common"
+import type { CategoryDTO, ProductDTO } from "../../api/types"
+import type { RootState } from "../../store/store"
 
 type Category = {
   id: string,
@@ -34,14 +39,45 @@ const categories: Category[] = content?.categories
 
 
 const ProductListPage = ({ categoryType }: { categoryType: string }) => {
+
+  const categoryData: CategoryDTO[] = useSelector((state: RootState) => state?.categoryState?.categories)
+  const dispatch = useDispatch()
+  const [products,setProducts] = useState<ProductDTO[]>([])
   
   const categoryContent = useMemo(() => {
     return categories?.find((category) => category.code === categoryType)
   }, [categoryType])
 
-  const productListItems = useMemo(() => {
-    return content?.products.filter((product) => product?.category_id === categoryContent?.id) 
-  },[categoryContent?.id])
+  // const productListItems = useMemo(() => {
+  //   return content?.products.filter((product) => product?.category_id === categoryContent?.id) 
+  // }, [categoryContent])
+
+  const category = useMemo(() => {
+  if (!categoryData || !categoryType) return undefined;
+  return categoryData.find(
+    c => c.code.toLowerCase() === categoryType.toLowerCase()
+  );
+}, [categoryData, categoryType]);
+
+
+
+  useEffect(() => {
+     if (!category || !category.id) return; // guard clause
+    
+    dispatch(setLoading(true));
+    console.log("Fetching with categoryId:", category?.id)
+    if (!category?.id) return;
+    fetchProducts(category?.id)
+      .then((res) => {
+        console.log(res)
+        setProducts(res);
+      })
+      .catch((err) => {console.error(err)})
+      .finally(() => {
+        dispatch(setLoading(false));
+      });
+  }, [category?.id, dispatch]);
+
 
 
 
@@ -77,9 +113,9 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
         </div>
         <div className="p-[15px]">
           {/* PRODUCTS */}
-           <p className="text-black text-lg ">{categoryContent?.description}</p>
+           <p className="text-black text-lg ">{category?.description}</p>
           <div className="pt-4 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8 px-2">
-            {productListItems?.map((item, id) => <ProductCard key={id}  {...item} />)}
+            {products?.map((item, index) => <ProductCard title={item?.name} discount={0} key={item?.id + "_" + index} {...item} />)}
           </div>
          
           
@@ -90,3 +126,4 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
 }
 
 export default ProductListPage
+

@@ -6,12 +6,22 @@ import Category from "./components/Sections/Categories/Category";
 import NewArrivals from "./components/Sections/NewArrivals";
 import content from "./data/content.json";
 import { fetchCategories } from "./api/fetchCategories";
+import { useDispatch } from "react-redux";
+import { loadCategories } from "./store/features/category";
+import { setLoading } from "./store/features/common";
 
 function App() {
+
+
+  const dispatch = useDispatch();
   
   useEffect(() => {
-    fetchCategories().then(response=> console.log("response: ",response)).catch()
-  },[])
+    dispatch(setLoading(true));
+    fetchCategories()
+      .then(response => dispatch(loadCategories(response)))
+      .catch(err => { console.log(err) })
+      .finally(()=> dispatch(setLoading(false)))
+  },[dispatch])
 
   return (
     <>

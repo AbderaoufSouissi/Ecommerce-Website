@@ -41,12 +41,13 @@ public class ProductDto {
 
     @NotNull(message = "Category ID is required")
     private UUID categoryId;
+
     private String thumbnail;
+    private String slug;
     private String categoryName;
     @NotNull(message = "CategoryType ID is required")
     private UUID categoryTypeId;
     private String categoryTypeName;
-
     private List<ProductVariantDto> productVariants;
     private List<ProductResourceDto> productResources;
 

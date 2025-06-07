@@ -9,8 +9,7 @@ import java.util.UUID;
 public interface ProductService {
     Product createProduct(ProductDto productDto);
     List<ProductDto> getAllProducts(UUID categoryId, UUID categoryTypeId);
+    ProductDto getProductBySlug(String slug);
 
-    Product getProduct(UUID ProductId);
-    void deleteProduct(UUID ProductId);
-
+    ProductDto getProductById(UUID id);
 }

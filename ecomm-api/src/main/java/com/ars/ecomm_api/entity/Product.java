@@ -41,6 +41,9 @@ public class Product {
     @Column(nullable = false)
     private Boolean newArrival;
 
+    @Column(nullable = false, unique = true)
+    private String slug;
+
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 

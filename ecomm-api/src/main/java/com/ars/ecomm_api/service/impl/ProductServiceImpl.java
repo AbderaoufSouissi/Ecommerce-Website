@@ -16,6 +16,7 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -82,6 +83,20 @@ public class ProductServiceImpl implements ProductService {
         return productMapper.toProductDtos(products);
     }
 
+    @Override
+    public ProductDto getProductBySlug(String slug) {
+        return Optional.ofNullable(productRepository.findBySlug(slug))
+                .map(productMapper::toProductDto)
+                .orElseThrow(() -> new ResourceNotFoundException("Product not found with slug: " + slug)
+        );
+    }
+
+    @Override
+    public ProductDto getProductById(UUID id) {
+        return productRepository.findById(id)
+                .map(productMapper::toProductDto)
+                .orElseThrow(() -> new ResourceNotFoundException("Product not found with id: " + id));
+    }
 
 
     private Specification<Product> buildProductSpecification(UUID categoryId, UUID categoryTypeId) {
@@ -101,17 +116,4 @@ public class ProductServiceImpl implements ProductService {
     }
 
 
-    @Override
-    public Product getProduct(UUID productId) {
-        return productRepository.findById(productId)
-                .orElseThrow(() -> new RuntimeException("Product not found with id: " + productId));
-    }
-
-    @Override
-    public void deleteProduct(UUID productId) {
-        if (!productRepository.existsById(productId)) {
-            throw new RuntimeException("Product not found with id: " + productId);
-        }
-        productRepository.deleteById(productId);
-    }
 }

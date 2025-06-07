@@ -6,6 +6,7 @@ import com.ars.ecomm_api.dto.ProductDto;
 import com.ars.ecomm_api.entity.Product;
 import com.ars.ecomm_api.service.ProductService;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +16,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/products")
-@RequiredArgsConstructor
+@RequiredArgsConstructor    
 public class ProductController {
     private final ProductService productService;
 
@@ -23,9 +24,23 @@ public class ProductController {
 
     @GetMapping
     public ResponseEntity<List<ProductDto>> getAllProducts(@RequestParam(required = false) UUID categoryId,
-                                                        @RequestParam(required = false) UUID categoryTypeId ) {
+                                                        @RequestParam(required = false) UUID categoryTypeId,
+                                                           @RequestParam(required = false) String slug) {
+        List<ProductDto> productDtoList =productService.getAllProducts(categoryId,categoryTypeId);
 
-        return new ResponseEntity<>(productService.getAllProducts(categoryId,categoryTypeId), HttpStatus.OK);
+
+        if(StringUtils.isNotBlank(slug)) {
+            ProductDto productDto = productService.getProductBySlug(slug);
+            productDtoList.add(productDto);
+        }
+
+        return new ResponseEntity<>(productDtoList, HttpStatus.OK);
+    }
+
+
+    @GetMapping("/{id}")
+    public ResponseEntity<ProductDto> getProductById(@PathVariable UUID id) {
+        return new ResponseEntity<>(productService.getProductById(id),HttpStatus.FOUND);
     }
 
     @PostMapping
