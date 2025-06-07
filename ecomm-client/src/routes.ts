@@ -4,7 +4,7 @@ import ShopAppWrapper from "./pages/ShopAppWrapper";
 import App from "./App";
 import { createElement } from "react";
 import ProductDetails from "./pages/ProductDetailsPage/ProductDetails";
-import { loadProductById } from "./routes/products";
+import { loadProductBySlug } from "./routes/products";
 
 export const router = createBrowserRouter([
     {
@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/product/:productId",
-                loader: loadProductById,
+                loader: loadProductBySlug,
                 element: createElement(ProductDetails)
             }
         ]

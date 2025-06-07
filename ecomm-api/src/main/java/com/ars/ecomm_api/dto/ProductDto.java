@@ -44,7 +44,7 @@ public class ProductDto {
     private String thumbnail;
     private String slug;
     @NotNull(message = "Category ID is required")
-    private UUID categoryId;
+    private UUID categoryId;    
     private String categoryName;
     @NotNull(message = "CategoryType ID is required")
     private UUID categoryTypeId;

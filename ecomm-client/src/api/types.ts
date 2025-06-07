@@ -2,6 +2,7 @@
 
 
 export interface CategoryTypeDTO {
+  id: string
   name: string;
   code: string;
   description: string;
@@ -42,6 +43,7 @@ export interface ProductDTO {
   description: string;
   price: number;
   brand: string;
+  slug: string
   rating: number;
   newArrival: boolean;
   categoryId: string;
