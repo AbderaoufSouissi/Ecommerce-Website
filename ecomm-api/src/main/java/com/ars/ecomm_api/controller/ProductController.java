@@ -16,7 +16,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/products")
-@RequiredArgsConstructor    
+@RequiredArgsConstructor
 public class ProductController {
     private final ProductService productService;
 
@@ -46,5 +46,11 @@ public class ProductController {
     @PostMapping
     public ResponseEntity<Product> createProduct(@RequestBody ProductDto productDto) {
        return new ResponseEntity<>(productService.createProduct(productDto), HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Product> updateProduct(@PathVariable(value = "id") UUID productId ,@RequestBody ProductDto productDto){
+            Product product = productService.updateProduct(productId,productDto);
+            return new ResponseEntity<>(product, HttpStatus.OK);
     }
 }

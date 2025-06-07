@@ -15,6 +15,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -97,6 +99,59 @@ public class ProductServiceImpl implements ProductService {
                 .map(productMapper::toProductDto)
                 .orElseThrow(() -> new ResourceNotFoundException("Product not found with id: " + id));
     }
+
+    @Override
+    public Product updateProduct(UUID productId, ProductDto productDto) {
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new ResourceNotFoundException("Product not found with id: " + productId));
+
+        product.setName(productDto.getName());
+        product.setDescription(productDto.getDescription());
+        product.setPrice(productDto.getPrice());
+        product.setBrand(productDto.getBrand());
+        product.setNewArrival(productDto.getNewArrival());
+        product.setRating(productDto.getRating());
+        product.setSlug(productDto.getSlug());
+
+
+        Category productCategory = categoryRepository.getCategoryById(productDto.getCategoryId());
+        if (productCategory == null) {
+            throw new ResourceNotFoundException("Category not found with id: " + productDto.getCategoryId());
+        }
+        product.setCategory(productCategory);
+
+
+        CategoryType productCategoryType = productCategory.getCategoryTypes().stream()
+                .filter(categoryType -> categoryType.getId().equals(productDto.getCategoryTypeId()))
+                .findFirst()
+                .orElseThrow(() -> new ResourceNotFoundException(
+                        "CategoryType not found with id: " + productDto.getCategoryTypeId()));
+        product.setCategoryType(productCategoryType);
+
+
+        product.getProductResources().clear();
+        if (productDto.getProductResources() != null && !productDto.getProductResources().isEmpty()) {
+            List<ProductResource> newProductResources = productMapper.toProductResources(productDto.getProductResources());
+            for (ProductResource resource : newProductResources) {
+                resource.setProduct(product); // Set parent
+                product.getProductResources().add(resource);
+            }
+        }
+
+
+        product.getProductVariants().clear();
+        if (productDto.getProductVariants() != null && !productDto.getProductVariants().isEmpty()) {
+            List<ProductVariant> newProductVariants = productMapper.toProductVariants(productDto.getProductVariants());
+            for (ProductVariant variant : newProductVariants) {
+                variant.setProduct(product); // Set parent
+                product.getProductVariants().add(variant);
+            }
+        }
+
+
+        return productRepository.save(product);
+    }
+
 
 
     private Specification<Product> buildProductSpecification(UUID categoryId, UUID categoryTypeId) {

@@ -39,6 +39,10 @@ public interface ProductMapper {
     @Mapping(target = "id", ignore = true)
     ProductVariant toProductVariant(ProductVariantDto productVariantDto);
 
+
+    List<ProductResource> toProductResources(List<ProductResourceDto> productResourceDtos);
+    List<ProductVariant> toProductVariants(List<ProductVariantDto> productVariantDtos);
+
     @AfterMapping
     default void setParentChildRelationships(@MappingTarget Product product) {
         if (product.getProductResources() != null) {
