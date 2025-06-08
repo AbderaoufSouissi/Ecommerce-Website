@@ -37,6 +37,8 @@ const ProductDetails = () => {
   }, [product, categories])
   
 
+  
+
 
 
   useEffect(() => { 

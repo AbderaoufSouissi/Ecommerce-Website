@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
 import FilterIcon from "../../components/common/FilterIcon"
-import content from "../../data/content.json"
 import Categories from "../../components/Filters/Categories"
 import PriceFilter from "../../components/Filters/PriceFilter"
 import ColorsFilter from "../../components/Filters/ColorsFilter"
@@ -11,30 +10,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { setLoading } from "../../store/features/common"
 import type { CategoryDTO, ProductDTO } from "../../api/types"
 import type { RootState } from "../../store/store"
-
-type Category = {
-  id: string,
-  name: string,
-  code: string,
-  description: string
-  path: string
-  types: CategorieType[]
-  meta_data: MetaData[]
-}
-
-export type MetaData = {
-  colors: string[],
-  sizes: string[]
-
-}
-
-export type CategorieType = {
-  type_id: string,
-  code: string,
-  name: string
-}
-
-const categories: Category[] = content?.categories
+import _ from "lodash"
 
 
 
@@ -45,12 +21,13 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
   const [products,setProducts] = useState<ProductDTO[]>([])
   
   const categoryContent = useMemo(() => {
-    return categories?.find((category) => category.code === categoryType)
-  }, [categoryType])
+  return categoryData?.find((category) => category.code.toLowerCase() === categoryType.toLowerCase());
+}, [categoryType, categoryData]);
 
-  // const productListItems = useMemo(() => {
-  //   return content?.products.filter((product) => product?.category_id === categoryContent?.id) 
-  // }, [categoryContent])
+
+
+  
+  
 
   const category = useMemo(() => {
   if (!categoryData || !categoryType) return undefined;
@@ -78,11 +55,26 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
       });
   }, [category?.id, dispatch]);
 
+ 
+const availableColors = useMemo(() => {
+    if (!products || products.length === 0) return [];
+    
+    return _.uniq(
+      products.flatMap(product => 
+        product.productVariants.map(variant => variant.color)
+      )
+    );
+  }, [products]);
 
-
-
-  
-
+const availableSizes = useMemo(() => {
+    if (!products || products.length === 0) return [];
+    
+    return _.uniq(
+      products.flatMap(product => 
+        product.productVariants.map(variant => variant.size)
+      )
+    );
+  }, [products]);
 
 
   return (
@@ -96,7 +88,7 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
           </div>
           <div>
             <p className="text-[16px] text-black mt-5">Categories</p>
-            <Categories types={categoryContent?.types} />
+            <Categories types={categoryContent?.categoryTypes} />
             <hr className="mt-4"/>
           </div>
           <div>
@@ -105,10 +97,10 @@ const ProductListPage = ({ categoryType }: { categoryType: string }) => {
             <hr className="mt-4"/>
             {/* COLORS */}
 
-            <ColorsFilter colors={categoryContent?.meta_data?.[0]?.colors} />
+            <ColorsFilter colors={availableColors} />
             <hr />
             {/* SIZES */}
-            <SizeFilter sizes={categoryContent?.meta_data?.[0]?.sizes} hideTitle={false}/>
+            <SizeFilter sizes={availableSizes} multi={false} hideTitle={false}/>
           </div>
         </div>
         <div className="p-[15px]">

@@ -1,17 +1,15 @@
-import type { CategorieType } from "../../pages/ProductListPage/ProductListPage"
+import type { CategoryTypeDTO } from "../../api/types";
 
 
-interface CategoriesProps {
-  types?: CategorieType[];
-}
 
 
-const Categories = ({ types = [] }: CategoriesProps) => {
+
+const Categories = ({ types = [] }: {types?: CategoryTypeDTO[]}) => {
   return (
     <div>
       {types.map((type) => {
         return (
-          <div key={type.type_id} className="flex items-center p-1">
+          <div key={type.id} className="flex items-center p-1">
             <input type="checkbox" name={type?.code} className="border rounded-xl w-4 h-4 accent-black text-black" />
             <label htmlFor={type?.code} className="px-2 text-[14px]">{type?.name}</label>
           </div>

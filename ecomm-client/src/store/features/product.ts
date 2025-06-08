@@ -1,15 +1,11 @@
 import { createSlice} from "@reduxjs/toolkit"
+import type { ProductDTO } from "../../api/types"
 
-// Define the Product interface
-interface Product {
-    id: string | number;
-    name: string;
-    price: number;
-    // Add other product properties as needed
-}
+
+
 
 interface ProductState {
-    products: Product[] // Array of Product objects, not empty tuple
+    products: ProductDTO[] 
 }
 
 const initialState: ProductState = {
@@ -22,11 +18,11 @@ const productSlice = createSlice({
     reducers: {
         addProduct: (state, action) => {
             state.products.push(action.payload)
-            // No need to return state with Immer
+            
         },
         loadProducts: (state, action) => {
             state.products = action.payload
-            // Simpler assignment with Immer
+        
         }
     }
 })

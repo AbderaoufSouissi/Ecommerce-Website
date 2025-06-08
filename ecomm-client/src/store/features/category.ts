@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
+import type { CategoryDTO } from "../../api/types"
 
 interface CategoryState{
-    categories: []
+    categories: CategoryDTO[]
 }
 
 
