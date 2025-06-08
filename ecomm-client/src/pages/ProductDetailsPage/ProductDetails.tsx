@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../store/store";
 import type { CategoryDTO, ProductDTO } from "../../api/types";
 import _ from 'lodash'
+import { fetchProducts } from "../../api/fetchProducts";
 
 
 
@@ -33,7 +34,19 @@ const ProductDetails = () => {
 
   const productCategory: CategoryDTO = useMemo(() => {
   return categories?.find((category) => category?.id === product?.categoryId) || {} as CategoryDTO;
-}, [product, categories])
+  }, [product, categories])
+  
+
+
+
+  useEffect(() => { 
+  fetchProducts(product?.categoryId, product?.categoryTypeId)
+    .then(res => setSimilarProducts(res.filter(item => item?.id !== product?.id)))
+    .catch(err => {
+      console.error("Failed to fetch similar products:", err);
+    });
+}, []);
+
 
   useEffect(() => {
     console.log(product);
