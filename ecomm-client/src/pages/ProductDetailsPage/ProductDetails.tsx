@@ -10,6 +10,7 @@ import ProductCard from "../ProductListPage/ProductCard";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../store/store";
 import type { CategoryDTO, ProductDTO } from "../../api/types";
+import _ from 'lodash'
 
 
 
@@ -60,18 +61,18 @@ const ProductDetails = () => {
 
   const addItemToCart = useCallback(() => { }, [])
   
-  const getProductColors = (product: ProductDTO): string[] => {
+const colors = useMemo (()=>{ 
+  const colorSet = _.uniq(_.map(product?.productVariants, 'color')); 
+  return colorSet 
+  },[product]); 
+
+
+  const sizes = useMemo(() => { 
+  const sizeSet = _.uniq(_.map(product?.productVariants, 'size')); 
+  return sizeSet 
+  },[product]); 
+
   
-    const colors = product.productVariants.map((variant) => variant.color);
-    return Array.from(new Set(colors));
-  };
-
-  const getProductSizes = (product: ProductDTO): string[] => {
-  const sizes = product.productVariants.map((variant) => variant.size);
-  return Array.from(new Set(sizes));
-};
-
-
 
 
 
@@ -112,10 +113,10 @@ const ProductDetails = () => {
             <Link to={"https://en.wikipedia.org/wiki/Clothing_sizes"} className='text-sm text-gray-500'>{'Size Guide ->'}</Link>
           </div>
         </div>
-        <div className="mt-2"><SizeFilter sizes={getProductSizes(product)} hideTitle={true} /></div>
+        <div className="mt-2"><SizeFilter sizes={sizes} hideTitle={true} multi={false} /></div>
         <div>
           <p className="text-lg font-bold" >Available Colors</p>
-          <ProductColors colors={getProductColors(product)}/>
+          <ProductColors colors={colors}/>
         </div>
         <div className='flex pt-4'>
         <button className="group bg-black hover:bg-gray-300 rounded-lg px-4 py-2 transition-colors duration-200">

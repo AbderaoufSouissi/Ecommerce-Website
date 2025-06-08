@@ -3,10 +3,11 @@ import { useState } from "react"
 
 interface SizeFilterProps {
     sizes?: Array<string>,
-    hideTitle:boolean
+    hideTitle: boolean,
+    multi: boolean
 }
 
-const SizeFilter = ({ sizes , hideTitle }: SizeFilterProps) => {
+const SizeFilter = ({ sizes , hideTitle , multi = true}: SizeFilterProps) => {
 
     const [appliedSizes, setAppliedSizes] = useState<Array<string>>([])
 
@@ -16,7 +17,13 @@ const SizeFilter = ({ sizes , hideTitle }: SizeFilterProps) => {
             setAppliedSizes(appliedSizes.filter(s => s != size))
         }
         else {
-            setAppliedSizes([...appliedSizes, size])
+            if (multi) {
+                
+                setAppliedSizes([...appliedSizes, size])
+            }
+            else {
+                setAppliedSizes([size])
+            }
         }
 
     }
