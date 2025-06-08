@@ -23,17 +23,21 @@ public class ProductController {
 
 
     @GetMapping
-    public ResponseEntity<List<ProductDto>> getAllProducts(@RequestParam(required = false) UUID categoryId,
-                                                        @RequestParam(required = false) UUID categoryTypeId,
-                                                           @RequestParam(required = false) String slug) {
-        List<ProductDto> productDtoList =productService.getAllProducts(categoryId,categoryTypeId);
+    public ResponseEntity<List<ProductDto>> getAllProducts(
+            @RequestParam(required = false) UUID categoryId,
+            @RequestParam(required = false) UUID categoryTypeId,
+            @RequestParam(required = false) String slug) {
 
-
-        if(StringUtils.isNotBlank(slug)) {
+        if (StringUtils.isNotBlank(slug)) {
             ProductDto productDto = productService.getProductBySlug(slug);
-            productDtoList.add(productDto);
+            if (productDto != null) {
+                return new ResponseEntity<>(List.of(productDto), HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
         }
 
+        List<ProductDto> productDtoList = productService.getAllProducts(categoryId, categoryTypeId);
         return new ResponseEntity<>(productDtoList, HttpStatus.OK);
     }
 

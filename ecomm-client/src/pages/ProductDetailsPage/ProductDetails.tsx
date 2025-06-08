@@ -35,6 +35,7 @@ const ProductDetails = () => {
 }, [product, categories])
 
   useEffect(() => {
+    console.log(product);
     setImage(product?.thumbnail)
 
     const arrayLinks: BreadcrumbLink[] = [];
