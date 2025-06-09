@@ -1,4 +1,4 @@
-package com.ars.ecomm_api.auth.request;
+package com.ars.ecomm_api.auth.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

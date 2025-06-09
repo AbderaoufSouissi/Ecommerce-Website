@@ -1,4 +1,4 @@
-package com.ars.ecomm_api.auth.request;
+package com.ars.ecomm_api.auth.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,11 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class RegistrationRequest {
-    private String firstName;
-    private String lastName;
-    private String email;
+public class LoginRequest {
+    private String username;
     private CharSequence password;
-    private String phoneNumber;
-
 }
