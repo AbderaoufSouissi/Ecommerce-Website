@@ -1,6 +1,6 @@
-# Fashion Store - E-commerce Website
+# Dabchi - E-commerce Website
 
-A modern, full-stack e-commerce platform specializing in men's and women's clothing with categorized product listings, built with cutting-edge technologies for optimal performance and user experience.
+Dabchi is a modern, full-stack e-commerce platform for a Tunisian brand specializing in men's and women's clothing with categorized product listings, built with cutting-edge technologies for optimal performance and user experience.
 
 > **⚠️ Project Status: Work in Progress**  
 > This project is currently under active development. Authentication system, email functionality, and core features are being implemented and refined.
