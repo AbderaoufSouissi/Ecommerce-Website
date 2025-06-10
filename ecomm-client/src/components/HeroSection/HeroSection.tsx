@@ -16,7 +16,7 @@ const HeroSection = () => {
                     cool / colorful / comfy
                 </p>
                 <button
-                className="border-0 rounded mt-6 bg-black px-8 py-2 text-sm font-semibold text-white shadow hover:bg-white hover:text-black sm:w-auto transition-colors duration-300">
+                className="border-0 rounded mt-6 bg-black px-8 py-2 text-sm font-semibold text-white shadow hover:bg-white hover:text-black hover: cursor-pointer sm:w-auto transition-colors duration-300">
                 Shop Now
                 </button>
             </main>
