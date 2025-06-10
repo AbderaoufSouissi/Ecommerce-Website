@@ -27,9 +27,11 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
+                .csrf(csrf->csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/swagger-ui/**","/v3/api-docs/**").permitAll()
                         .requestMatchers(HttpMethod.GET,"/api/products","/api/categories").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/api/auth/register","/api/auth/verify").permitAll()
                         .anyRequest().authenticated()
                 )
                 .build();
