@@ -3,8 +3,8 @@ package com.ars.ecomm_api.auth.service;
 import com.ars.ecomm_api.auth.entity.AppUser;
 import com.ars.ecomm_api.auth.helper.VerificationCodeGenerator;
 import com.ars.ecomm_api.auth.repository.UserRepository;
-import com.ars.ecomm_api.auth.request.RegistrationRequest;
-import com.ars.ecomm_api.auth.request.RegistrationResponse;
+import com.ars.ecomm_api.auth.dto.request.RegistrationRequest;
+import com.ars.ecomm_api.auth.dto.response.RegistrationResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -16,6 +16,7 @@ public class RegistrationService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final AuthorityService authorityService;
+    private final EmailService emailService;
 
 
 
@@ -30,9 +31,9 @@ public class RegistrationService {
         try{
 
             AppUser user = new AppUser();
-            user.setFirstName(request.getFirstName());
-            user.setLastName(request.getLastName());
-            user.setEmail(request.getEmail());
+            user.setFirstName(request.getFirstName().toLowerCase());
+            user.setLastName(request.getLastName().toLowerCase());
+            user.setEmail(request.getEmail().toLowerCase());
             user.setPhoneNumber(request.getPhoneNumber());
             user.setEnabled(false);
             user.setProvider("manual");
@@ -44,7 +45,8 @@ public class RegistrationService {
             userRepository.save(user);
 
 
-            //TODO CALL METHOD TO SEND VERIFICATION EMAIL
+
+            emailService.sendEmail(user);
 
             return RegistrationResponse.builder()
                     .code(201)
@@ -54,5 +56,11 @@ public class RegistrationService {
         catch (RuntimeException e) {
             throw new ServerErrorException(e.getMessage(),e.getCause());
         }
+    }
+
+    public void verifyUser(String username) {
+        AppUser user = userRepository.findByEmail(username);
+        user.setEnabled(true);
+        userRepository.save(user);
     }
 }

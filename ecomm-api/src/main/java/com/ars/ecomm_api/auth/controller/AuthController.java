@@ -1,22 +1,26 @@
 package com.ars.ecomm_api.auth.controller;
 
 import com.ars.ecomm_api.auth.entity.AppUser;
-import com.ars.ecomm_api.auth.request.LoginRequest;
-import com.ars.ecomm_api.auth.request.RegistrationRequest;
-import com.ars.ecomm_api.auth.request.RegistrationResponse;
+import com.ars.ecomm_api.auth.dto.request.LoginRequest;
+import com.ars.ecomm_api.auth.dto.request.RegistrationRequest;
+import com.ars.ecomm_api.auth.dto.response.RegistrationResponse;
 import com.ars.ecomm_api.auth.service.RegistrationService;
 import com.ars.ecomm_api.auth.token.UserToken;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -24,6 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
     private final AuthenticationManager authManager;
     private final RegistrationService registrationService;
+    private final UserDetailsService userDetailsService;
 
 
     @PostMapping("/login")
@@ -35,7 +40,6 @@ public class AuthController {
                 AppUser user = (AppUser) authResponse.getPrincipal();
                 if(!user.isEnabled()){
                     return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-
                 }
                 //TODO GENERATE JWT TOKEN
                 String token = null;
@@ -48,14 +52,24 @@ public class AuthController {
         return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }
 
-
-
-
     @PostMapping("/register")
     public ResponseEntity<RegistrationResponse> register(@RequestBody RegistrationRequest request) {
-        RegistrationResponse response = registrationService.createUser(request);
-        return new ResponseEntity<>(response, HttpStatus.CREATED);
+        RegistrationResponse registrationResponse = registrationService.createUser(request);
+       return new ResponseEntity<>(registrationResponse, HttpStatusCode.valueOf(registrationResponse.getCode()));
 
+    }
+
+    @PostMapping("/verify")
+    public ResponseEntity<?> verify(@RequestBody Map<String,String> map){
+        String username = map.get("username");
+        String code = map.get("code");
+
+        AppUser user = (AppUser) userDetailsService.loadUserByUsername(username);
+        if(null != user && user.getVerificationCode().equals(code)){
+            registrationService.verifyUser(username);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
 }
