@@ -82,6 +82,7 @@ public class AppUser implements UserDetails {
     @PrePersist
     protected void prePersist() {
         createdAt = LocalDateTime.now();
+        updatedAt = createdAt;
     }
 
     @PreUpdate
