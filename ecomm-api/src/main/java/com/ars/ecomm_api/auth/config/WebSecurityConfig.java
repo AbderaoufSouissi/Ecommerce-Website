@@ -1,5 +1,7 @@
 package com.ars.ecomm_api.auth.config;
 
+import com.ars.ecomm_api.auth.filter.JwtAuthFilter;
+import com.ars.ecomm_api.auth.helper.JwtTokenHelper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +15,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -21,6 +24,7 @@ public class WebSecurityConfig {
 
 
     private final UserDetailsService userDetailsService;
+    private final JwtTokenHelper jwtTokenHelper;
 
 
 
@@ -31,9 +35,10 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/swagger-ui/**","/v3/api-docs/**").permitAll()
                         .requestMatchers(HttpMethod.GET,"/api/products","/api/categories").permitAll()
-                        .requestMatchers(HttpMethod.POST,"/api/auth/register","/api/auth/verify").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/api/auth/register","/api/auth/login","/api/auth/verify").permitAll()
                         .anyRequest().authenticated()
                 )
+                .addFilterBefore( new JwtAuthFilter(userDetailsService, jwtTokenHelper), UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 

@@ -4,6 +4,7 @@ import com.ars.ecomm_api.auth.entity.AppUser;
 import com.ars.ecomm_api.auth.dto.request.LoginRequest;
 import com.ars.ecomm_api.auth.dto.request.RegistrationRequest;
 import com.ars.ecomm_api.auth.dto.response.RegistrationResponse;
+import com.ars.ecomm_api.auth.helper.JwtTokenHelper;
 import com.ars.ecomm_api.auth.service.RegistrationService;
 import com.ars.ecomm_api.auth.token.UserToken;
 import lombok.RequiredArgsConstructor;
@@ -29,6 +30,7 @@ public class AuthController {
     private final AuthenticationManager authManager;
     private final RegistrationService registrationService;
     private final UserDetailsService userDetailsService;
+    private final JwtTokenHelper jwtTokenHelper;
 
 
     @PostMapping("/login")
@@ -41,10 +43,9 @@ public class AuthController {
                 if(!user.isEnabled()){
                     return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
                 }
-                //TODO GENERATE JWT TOKEN
-                String token = null;
+                String token = jwtTokenHelper.generateToken(user.getEmail());
                 UserToken userToken = UserToken.builder().token(token).build();
-                return new ResponseEntity<>(HttpStatus.OK);
+                return new ResponseEntity<>(userToken,HttpStatus.OK);
             }
         } catch (BadCredentialsException e) {
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
@@ -63,13 +64,11 @@ public class AuthController {
     public ResponseEntity<?> verify(@RequestBody Map<String,String> map){
         String username = map.get("username");
         String code = map.get("code");
-
         AppUser user = (AppUser) userDetailsService.loadUserByUsername(username);
         if(null != user && user.getVerificationCode().equals(code)){
             registrationService.verifyUser(username);
             return new ResponseEntity<>(HttpStatus.OK);
-        }
-        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
 }
