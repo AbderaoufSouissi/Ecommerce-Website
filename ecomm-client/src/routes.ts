@@ -5,6 +5,9 @@ import App from "./App";
 import { createElement } from "react";
 import ProductDetails from "./pages/ProductDetailsPage/ProductDetails";
 import { loadProductBySlug } from "./routes/products";
+import AuthWrapper from "./pages/AuthWrapper";
+import Login from "./pages/LoginPage/Login";
+import Registration from "./pages/RegistrationPage/Registration";
 
 export const router = createBrowserRouter([
     {
@@ -30,4 +33,19 @@ export const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: "/v1",
+        element: createElement(AuthWrapper),
+        children: [
+            {
+                path: "/v1/login",
+                element: createElement(Login)
+            },
+            {
+                path: "/v1/register",
+                element: createElement(Registration)
+
+            }
+        ]
+    }
 ]);

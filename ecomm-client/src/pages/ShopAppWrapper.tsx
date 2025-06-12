@@ -9,7 +9,7 @@ const ShopAppWrapper = () => {
   
   return (
     <div>
-      <Navigation />
+      <Navigation/>
       <Outlet />
       {isLoading && <Spinner/>}
     </div>
