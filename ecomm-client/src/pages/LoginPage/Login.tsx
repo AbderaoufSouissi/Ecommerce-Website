@@ -68,29 +68,44 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
   }, [error]);
 
   return (
-    <div className="w-full h-screen flex items-start">
-      <div className="relative w-1/2 h-full flex flex-col">
-        <div className="absolute top-[35%] left-[10%] flex flex-col">
-          <h1 className="text-4xl text-stone-50 font-bold my-4">Tunisia's First Modern Minimal Style Clothing Brand</h1>
-          <p className="text-xl text-stone-50 font-semibold">Simplicity, crafted locally</p>
+    <div className="w-full min-h-screen flex flex-col lg:flex-row items-start">
+      {/* Left Side - Hero Section */}
+      <div className="relative w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-screen flex flex-col">
+        <div className="absolute top-[20%] sm:top-[25%] lg:top-[35%] left-[5%] sm:left-[8%] lg:left-[10%] flex flex-col z-10 px-4">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl text-stone-50 font-bold my-2 lg:my-4 leading-tight">
+            Tunisia's First Modern Minimal Style Clothing Brand
+          </h1>
+          <p className="text-lg sm:text-xl text-stone-50 font-semibold">
+            Simplicity, crafted locally
+          </p>
         </div>
 
-        <img src={coverImage} alt="cover-image" className="w-full h-full object-cover" />
+        <img 
+          src={coverImage} 
+          alt="cover-image" 
+          className="w-full h-full object-cover" 
+        />
       </div>
 
-      <div className="w-1/2 bg-neutral-100 h-full flex flex-col p-25 justify-between items-center">
-        {/* LOGO IMAGE */}
-        <h1 className="text-6xl font-semibold">Dabchi</h1>
-        <div className="w-full flex flex-col max-w-[350px]">
+      {/* Right Side - Login Form */}
+      <div className="w-full lg:w-1/2 bg-neutral-100 min-h-screen lg:h-screen flex flex-col p-6 sm:p-8 lg:p-12 xl:p-16 justify-between items-center">
+        {/* LOGO */}
+        <div className="w-full flex justify-center mb-8 lg:mb-0">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold">Dabchi</h1>
+        </div>
+
+        {/* Form Container */}
+        <div className="w-full flex flex-col max-w-[350px] sm:max-w-[400px]">
           
-          <div className="w-full flex flex-col mb-2 text-center">
-            {/* <h3 className="text-3xl font-semibold mb-2">Login</h3> */}
-            <p className="text-base text-gray-500 mb-2 font-semibold">Enter your email below to login to your account</p>
+          <div className="w-full flex flex-col mb-4 sm:mb-6 text-center">
+            <p className="text-sm sm:text-base text-gray-500 mb-4 font-semibold">
+              Enter your email below to login to your account
+            </p>
           </div>
 
           {/* Error Display */}
           {error && (
-            <div className="text-red-500 text-sm mb-2 text-center bg-red-50 p-2 rounded">
+            <div className="text-red-500 text-sm mb-4 text-center bg-red-50 p-3 rounded">
               {error}
             </div>
           )}
@@ -103,7 +118,7 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
                 value={values.username} 
                 onChange={handleOnChange} 
                 placeholder="Email" 
-                className="bg-transparent w-full text-black py-2 my-2 border-b outline-none focus:border-black transition-colors" 
+                className="bg-transparent w-full text-black py-3 my-2 border-b outline-none focus:border-black transition-colors text-sm sm:text-base" 
                 required
               />
               <input 
@@ -112,19 +127,21 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
                 value={values.password} 
                 onChange={handleOnChange} 
                 placeholder="Password" 
-                className="bg-transparent w-full text-black py-2 my-2 border-b outline-none focus:border-black transition-colors"
+                className="bg-transparent w-full text-black py-3 my-2 border-b outline-none focus:border-black transition-colors text-sm sm:text-base"
                 required 
               />
             </div>
 
-            <div className="w-full flex flex-row-reverse items-center justify-between">
-              <p className="text-sm font-semibold whitespace-nowrap cursor-pointer hover:underline underline-offset-2">Forgot your password?</p>           
+            <div className="w-full flex flex-row-reverse items-center justify-between mt-4">
+              <p className="text-xs sm:text-sm font-semibold whitespace-nowrap cursor-pointer hover:underline underline-offset-2">
+                Forgot your password?
+              </p>           
             </div>
             
-            <div className="w-full flex flex-col items-center">
+            <div className="w-full flex flex-col items-center mt-6">
               <button 
                 type="submit"
-                className="w-full bg-black border-1 rounded-md p-4 my-2 font-semibold text-white text-center flex items-center justify-center cursor-pointer hover:text-black hover:bg-white duration-200"
+                className="w-full bg-black border-1 rounded-md p-3 sm:p-4 my-2 font-semibold text-white text-center text-sm sm:text-base flex items-center justify-center cursor-pointer hover:text-black hover:bg-white duration-200"
               >
                 Login
               </button>
@@ -133,20 +150,29 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
 
           <div className="w-full flex items-center justify-center relative my-6">
             <div className="w-full h-[1px] bg-gray-300"></div>
-            <p className="text-gray-500 text-sm absolute bg-[#f5f5f5] px-4">Or continue with</p>
+            <p className="text-gray-500 text-xs sm:text-sm absolute bg-neutral-100 px-4">
+              Or continue with
+            </p>
           </div>
 
           <div className="w-full flex flex-col items-center">
-            <button className="w-full bg-white border border-gray-300 rounded-md p-4 my-2 font-semibold text-black text-center flex items-center justify-center cursor-pointer hover:bg-gray-200 duration-200">
-              <img className="h-6 mr-2" src={googleImage} alt="google-image" />
+            <button className="w-full bg-white border border-gray-300 rounded-md p-3 sm:p-4 my-2 font-semibold text-black text-center text-sm sm:text-base flex items-center justify-center cursor-pointer hover:bg-gray-200 duration-200">
+              <img className="h-5 sm:h-6 mr-2" src={googleImage} alt="google-image" />
               Google
             </button>
           </div>
         </div>
       
-        <div className="w-full flex items-center justify-center">
-          <p className="text-sm font-normal text-black">Don't Have an account?
-          <NavLink  className="font-semibold cursor-pointer underline underline-offset-4 transition-all duration-300 hover:text-blue-600" to={"/v1/register"}> Sign Up</NavLink>
+        {/* Sign Up Link */}
+        <div className="w-full flex items-center justify-center mt-8 lg:mt-0">
+          <p className="text-xs sm:text-sm font-normal text-black text-center">
+            Don't Have an account?
+            <NavLink  
+              className="font-semibold cursor-pointer underline underline-offset-4 transition-all duration-300 hover:text-blue-600 ml-1" 
+              to={"/v1/register"}
+            > 
+              Sign Up
+            </NavLink>
           </p>
         </div>
       </div>
