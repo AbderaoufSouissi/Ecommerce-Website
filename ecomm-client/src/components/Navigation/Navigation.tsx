@@ -69,8 +69,8 @@ const Navigation = () => {
         {/* ACTION ITEMS icons */}
         
           <ul className="flex items-center gap-8">
-            <li><button className="group"><Wishlist /></button></li>
-            <li><button className="group"><AccountIcon /></button></li>
+          <li><button className="group"><Wishlist /></button></li>
+          <li><button className="group"><Link to={"/v1/login"}><AccountIcon /></Link></button></li>
             <li>
               <Link to="/cart-items" className="group">
                 <CartIcon />
