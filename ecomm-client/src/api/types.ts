@@ -54,3 +54,9 @@ export interface ProductDTO {
   productVariants: ProductVariantDTO[];
   productResources: ProductResourceDTO[];
 }
+
+
+export interface Credentials{
+  username: string,
+  password: string
+}
