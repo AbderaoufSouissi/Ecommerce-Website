@@ -35,6 +35,6 @@ public class RegistrationRequest {
     @Size(min = 8, max = 128, message = "Password must be between 8 and 128 characters")
     private CharSequence password;
 
-    @Pattern(regexp = "^\\+\\d{3} \\d{8}$", message = "Phone number must be in +XXX XXXXXXXX format")
+    @Pattern(regexp = "^\\+[1-9]\\d{1,14}$", message = "Phone number must be in international format (+XXXXXXXXXXXX)")
     private String phoneNumber;
 }
