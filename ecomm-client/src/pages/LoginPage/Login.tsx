@@ -7,10 +7,12 @@ import type { Credentials } from "../../api/types"
 import { setLoading } from "../../store/features/common"
 import { login } from "../../api/authentication"
 import { saveToken } from "../../utils/jwt-helper"
+import EyeIcon from "../../components/common/EyeIcon"
 
 const Login = () => {
   const[values,setValues] = useState<Credentials>({username:"",password:""})
   const [error, setError] = useState<string>("");
+  const [showPassword, setShowPassword] = useState<boolean>(false);
   const dispatch = useDispatch();
 
   const navigate = useNavigate()
@@ -19,13 +21,11 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError('')
     
-    // Add validation for empty fields
     if (!values.username.trim() || !values.password.trim()) {
       setError("Please fill in all fields");
       return;
     }
 
-    // Optional: Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(values.username)) {
       setError("Please enter a valid email address");
@@ -42,7 +42,6 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
         setError("Invalid credentials. Please try again.")
       }
     }).catch(error => {
-      // Handle different types of errors
       if (error.response?.status === 401) {
         setError("Invalid email or password");
       } else if (error.response?.status === 400) {
@@ -61,15 +60,17 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
   const handleOnChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     e.persist();
     setValues(values => ({...values, [e.target.name]: e.target.value}));
-    // Clear error when user starts typing
     if (error) {
       setError("");
     }
   }, [error]);
 
+  const togglePasswordVisibility = useCallback(() => {
+    setShowPassword(prev => !prev);
+  }, []);
+
   return (
     <div className="w-full min-h-screen flex flex-col lg:flex-row items-start">
-      {/* Left Side - Hero Section */}
       <div className="relative w-full lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-screen flex flex-col">
         <div className="absolute top-[20%] sm:top-[25%] lg:top-[35%] left-[5%] sm:left-[8%] lg:left-[10%] flex flex-col z-10 px-4">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl text-stone-50 font-bold my-2 lg:my-4 leading-tight">
@@ -87,14 +88,13 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
         />
       </div>
 
-      {/* Right Side - Login Form */}
       <div className="w-full lg:w-1/2 bg-neutral-100 min-h-screen lg:h-screen flex flex-col p-6 sm:p-8 lg:p-12 xl:p-16 justify-between items-center">
         {/* LOGO */}
         <div className="w-full flex justify-center mb-8 lg:mb-0">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold">Dabchi</h1>
         </div>
 
-        {/* Form Container */}
+      
         <div className="w-full flex flex-col max-w-[350px] sm:max-w-[400px]">
           
           <div className="w-full flex flex-col mb-4 sm:mb-6 text-center">
@@ -103,7 +103,6 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
             </p>
           </div>
 
-          {/* Error Display */}
           {error && (
             <div className="text-red-500 text-sm mb-4 text-center bg-red-50 p-3 rounded">
               {error}
@@ -121,15 +120,23 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
                 className="bg-transparent w-full text-black py-3 my-2 border-b outline-none focus:border-black transition-colors text-sm sm:text-base" 
                 required
               />
-              <input 
-                type="password" 
-                name="password" 
-                value={values.password} 
-                onChange={handleOnChange} 
-                placeholder="Password" 
-                className="bg-transparent w-full text-black py-3 my-2 border-b outline-none focus:border-black transition-colors text-sm sm:text-base"
-                required 
-              />
+              
+           
+              <div className="relative w-full">
+                <input 
+                  type={showPassword ? "text" : "password"}
+                  name="password" 
+                  value={values.password} 
+                  onChange={handleOnChange} 
+                  placeholder="Password" 
+                  className="bg-transparent w-full text-black py-3 my-2 border-b outline-none focus:border-black transition-colors text-sm sm:text-base pr-10"
+                  required 
+                />
+                <EyeIcon 
+                  isVisible={showPassword} 
+                  onClick={togglePasswordVisibility} 
+                />
+              </div>
             </div>
 
             <div className="w-full flex flex-row-reverse items-center justify-between mt-4">
@@ -164,7 +171,7 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
         </div>
       
         {/* Sign Up Link */}
-        <div className="w-full flex items-center justify-center mt-8 lg:mt-0">
+        <div className="w-full flex items-center justify-center mt-2 lg:mt-0">
           <p className="text-xs sm:text-sm font-normal text-black text-center">
             Don't Have an account?
             <NavLink  
