@@ -3,14 +3,17 @@ import coverImage from "../../assets/img/cover-image.jpg"
 import googleImage from "../../assets/img/google_image.png"
 import { useCallback, useState } from "react"
 import { useDispatch } from "react-redux"
-import type { Credentials } from "../../api/types"
 import { setLoading } from "../../store/features/common"
-import { login } from "../../api/authentication"
+import { login, type LoginCredentials } from "../../api/authentication"
 import { saveToken } from "../../utils/jwt-helper"
 import EyeIcon from "../../components/common/EyeIcon"
 
+
+
+
+
 const Login = () => {
-  const[values,setValues] = useState<Credentials>({username:"",password:""})
+  const[values,setValues] = useState<LoginCredentials>({username:"",password:""})
   const [error, setError] = useState<string>("");
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const dispatch = useDispatch();
