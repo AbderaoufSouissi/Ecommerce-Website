@@ -43,14 +43,12 @@
 - **Order Management**: Complete checkout process with order tracking *(In Progress)*
 - **Responsive Design**: Mobile-first approach with seamless cross-device experience
 
-### Advanced Features
+### Upcoming Features 
 - **Real-time Inventory**: Live stock updates *(Planned)*
 - **Wishlist**: Save favorite items for later *(Coming Soon)*
-
 - **Email Notifications**: Order confirmations, shipping updates, and promotional emails *
 - **Admin Dashboard**: Product and order management interface *(Planned)*
-- **Payment Integration**: Secure payment processing (ready for integration) *(Future Release)*
-
+- **Payment Integration**: Secure payment processing (ready for integration) **(Planned)*
 ## 🛠 Tech Stack
 
 ### Frontend
