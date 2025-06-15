@@ -7,6 +7,7 @@ import { setLoading } from "../../store/features/common"
 import EyeIcon from "../../components/common/EyeIcon"
 import { register, type SignUpCredentials } from "../../api/authentication"
 import VerifyCodePage from "../VerifyCodePage/VerifyCodePage"
+import GoogleSignInButton from "../../components/Buttons/GoogleSignInButton"
 
 const countryCodes = [
   { code: "+216", country: "Tunisia", flag: "🇹🇳" },
@@ -336,11 +337,9 @@ const Registration = () => {
             </div>
 
             <div className="w-full flex flex-col items-center">
-              <button className="w-full bg-white border border-gray-300 rounded-md p-3 sm:p-4 my-2 font-semibold text-black text-center text-sm sm:text-base flex items-center justify-center cursor-pointer hover:bg-gray-200 duration-200">
-                <img className="h-5 sm:h-6 mr-2" src={googleImage} alt="google-image" />
-                Google
-              </button>
+              <GoogleSignInButton onClick={() => {console.log("Google Sign-In from Registration page");}} />
             </div>
+            
           </div>
       
      

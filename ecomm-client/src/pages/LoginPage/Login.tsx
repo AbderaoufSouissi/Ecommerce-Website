@@ -1,12 +1,12 @@
 import { NavLink, useNavigate } from "react-router-dom"
 import coverImage from "../../assets/img/cover-image.jpg"
-import googleImage from "../../assets/img/google_image.png"
 import { useCallback, useState } from "react"
 import { useDispatch } from "react-redux"
 import { setLoading } from "../../store/features/common"
 import { login, type LoginCredentials } from "../../api/authentication"
 import { saveToken } from "../../utils/jwt-helper"
 import EyeIcon from "../../components/common/EyeIcon"
+import GoogleSignInButton from "../../components/Buttons/GoogleSignInButton"
 
 
 
@@ -166,10 +166,10 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
           </div>
 
           <div className="w-full flex flex-col items-center">
-            <button className="w-full bg-white border border-gray-300 rounded-md p-3 sm:p-4 my-2 font-semibold text-black text-center text-sm sm:text-base flex items-center justify-center cursor-pointer hover:bg-gray-200 duration-200">
-              <img className="h-5 sm:h-6 mr-2" src={googleImage} alt="google-image" />
-              Google
-            </button>
+            <GoogleSignInButton onClick={() => {
+            // Add your Google Sign-In logic here
+              console.log("Google Sign-In from Login page");
+              }} />
           </div>
         </div>
       
