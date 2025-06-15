@@ -21,7 +21,6 @@ public class OAuth2Service {
         String firstName = oAuth2User.getAttribute("given_name");
         String lastName = oAuth2User.getAttribute("family_name");
         String email = oAuth2User.getAttribute("email");
-        String phoneNumber = oAuth2User.getAttribute("phone_number");
 
         AppUser appUser = AppUser
                 .builder()
@@ -29,7 +28,6 @@ public class OAuth2Service {
                 .lastName(lastName)
                 .email(email)
                 .provider(provider)
-                .phoneNumber(phoneNumber)
                 .enabled(true)
                 .authorities(authorityService.getUserAuthorities())
                 .build();
