@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -38,8 +39,11 @@ public class WebSecurityConfig {
                         .requestMatchers("/swagger-ui/**","/v3/api-docs/**").permitAll()
                         .requestMatchers(HttpMethod.GET,"/api/products","/api/categories").permitAll()
                         .requestMatchers(HttpMethod.POST,"/api/auth/register","/api/auth/login","/api/auth/verify").permitAll()
+                        .requestMatchers("/oauth2/success").permitAll()
                         .anyRequest().authenticated()
                 )
+                .oauth2Login((login)-> login.defaultSuccessUrl("/oauth2/success"))
+                .sessionManagement((session)-> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
                 .addFilterBefore( new JwtAuthFilter(userDetailsService, jwtTokenHelper), UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
