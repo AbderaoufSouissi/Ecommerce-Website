@@ -166,10 +166,7 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
           </div>
 
           <div className="w-full flex flex-col items-center">
-            <GoogleSignInButton onClick={() => {
-            // Add your Google Sign-In logic here
-              console.log("Google Sign-In from Login page");
-              }} />
+            <GoogleSignInButton />
           </div>
         </div>
       

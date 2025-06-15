@@ -1,6 +1,5 @@
 import { NavLink} from "react-router-dom"
 import coverImage from "../../assets/img/cover-image.jpg"
-import googleImage from "../../assets/img/google_image.png"
 import { useCallback, useState } from "react"
 import { useDispatch } from "react-redux"
 import { setLoading } from "../../store/features/common"
@@ -337,7 +336,7 @@ const Registration = () => {
             </div>
 
             <div className="w-full flex flex-col items-center">
-              <GoogleSignInButton onClick={() => {console.log("Google Sign-In from Registration page");}} />
+              <GoogleSignInButton/>
             </div>
             
           </div>
