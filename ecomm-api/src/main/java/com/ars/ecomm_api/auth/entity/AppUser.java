@@ -42,7 +42,6 @@ public class AppUser implements UserDetails {
     private String provider;
 
 
-    @Column(nullable = false)
     private String phoneNumber;
 
     private String verificationCode;
