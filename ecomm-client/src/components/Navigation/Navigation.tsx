@@ -13,7 +13,7 @@ const Navigation = () => {
     <nav className="flex items-center py-6 px-8 justify-between gap-40">
       <div className="flex items-center gap-6">
         {/* LOGO */}
-        <a href="/" className="text-3xl text-black gap-8 font-bold">Dabchi</a>
+        <a href="/" className="text-3xl text-black gap-8 font-bold">9achi</a>
       </div>
 
   

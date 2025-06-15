@@ -94,7 +94,7 @@ const onSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
       <div className="w-full lg:w-1/2 bg-neutral-100 min-h-screen lg:h-screen flex flex-col p-6 sm:p-8 lg:p-12 xl:p-16 justify-between items-center">
         {/* LOGO */}
         <div className="w-full flex justify-center mb-8 lg:mb-0">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold">Dabchi</h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold">9achi</h1>
         </div>
 
       
