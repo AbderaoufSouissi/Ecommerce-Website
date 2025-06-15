@@ -1,6 +1,13 @@
-# Dabchi - E-commerce Website
+"# Ecommerce-Website" 
+# 9achi - E-commerce Website
 
-Dabchi is a modern, full-stack e-commerce platform for a Tunisian brand specializing in men's and women's clothing with categorized product listings, built with cutting-edge technologies for optimal performance and user experience.
+## 🚀 Project Overview
+
+**9achi** is a full-stack e-commerce website tailored for a Tunisian clothing brand specializing in men’s and women’s apparel.
+
+---
+
+
 
 > **⚠️ Project Status: Work in Progress**  
 > This project is currently under active development. Authentication system, email functionality, and core features are being implemented and refined.
@@ -9,6 +16,7 @@ Dabchi is a modern, full-stack e-commerce platform for a Tunisian brand speciali
 
 - **Frontend**: [Deployed on Vercel](your-vercel-url-here) *(Coming Soon)*
 - **Backend API**: [Spring Boot API endpoint](your-api-url-here) *(In Development)*
+
 
 ## 📋 Table of Contents
 
@@ -38,11 +46,9 @@ Dabchi is a modern, full-stack e-commerce platform for a Tunisian brand speciali
 
 ### Advanced Features
 - **Real-time Inventory**: Live stock updates *(Planned)*
-- **Social Login**: OAuth 2 integration with Google, Facebook, and GitHub *(In Development)*
 - **Wishlist**: Save favorite items for later *(Coming Soon)*
-- **Product Reviews**: Customer feedback and rating system *(Planned)*
-- **Email Notifications**: Order confirmations, shipping updates, and promotional emails *(In Development)*
-- **Interactive API Documentation**: Comprehensive Swagger UI for testing and development *(In Progress)*
+
+- **Email Notifications**: Order confirmations, shipping updates, and promotional emails *
 - **Admin Dashboard**: Product and order management interface *(Planned)*
 - **Payment Integration**: Secure payment processing (ready for integration) *(Future Release)*
 
@@ -78,16 +84,16 @@ Dabchi is a modern, full-stack e-commerce platform for a Tunisian brand speciali
 ## 🏗 Architecture
 
 ```
-fashion-store-ecommerce/
-├── ecomm-client/          # React + TypeScript Frontend
+ecomm-website/
+├── ecomm-client/          # Vite(React + TypeScript) Frontend
 │   ├── src/
 │   ├── public/
 │   └── package.json
 ├── ecomm-api/             # Spring Boot Backend
 │   ├── src/main/java/
 │   ├── src/main/resources/
-│   └── pom.xml
-├── docker-compose.yml     # pgAdmin container
+│   ├── pom.xml
+│   └── docker-compose.yml     # pgAdmin container
 └── README.md
 
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -95,9 +101,9 @@ fashion-store-ecommerce/
 │ (ecomm-client)  │◄──►│  (ecomm-api)    │◄──►│   (Supabase)    │
 │   Vite + Vercel │    │   REST API      │    │   Database      │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                                              │
-         │              ┌─────────────────┐             │
-         └──────────────►│    pgAdmin      │◄────────────┘
+         │                                             │
+         │              ┌─────────────────┐            │
+         └──────────────│    pgAdmin      │◄───────────┘
                         │   (Docker)      │
                         └─────────────────┘
 ```
@@ -113,15 +119,15 @@ Before running this project, ensure you have:
 - **Docker & Docker Compose** (for pgAdmin)
 - **Git** for version control
 - **Supabase Account** for database hosting
-- **OAuth 2 Provider Accounts** (Google Cloud Console, Facebook Developer, GitHub OAuth Apps)
+- **OAuth 2 Provider Account** (Google Cloud Console)
 
 ## 🔧 Installation & Setup
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/fashion-store-ecommerce.git
-cd fashion-store-ecommerce
+git clone https://github.com/AbderaoufSouissi/Ecommerce-Website
+cd Ecommerce-Website
 ```
 
 ### 2. OAuth 2 Provider Setup
@@ -135,24 +141,14 @@ Before running the application, set up OAuth 2 applications:
 2. Create a new project or select existing
 3. Enable Google+ API
 4. Create OAuth 2.0 credentials
-5. Add authorized redirect URIs: `http://localhost:8080/login/oauth2/code/google`
+5. Add authorized redirect URIs: `http://localhost:8085/login/oauth2/code/google`
 
-**Facebook OAuth 2:**
-1. Go to [Facebook Developer Console](https://developers.facebook.com/)
-2. Create a new app
-3. Add Facebook Login product
-4. Configure Valid OAuth Redirect URIs: `http://localhost:8080/login/oauth2/code/facebook`
-
-**GitHub OAuth 2:**
-1. Go to GitHub Settings > Developer settings > OAuth Apps
-2. Create a new OAuth App
-3. Set Authorization callback URL: `http://localhost:8080/login/oauth2/code/github`
 
 ### 2. Frontend Setup
 
 ```bash
 # Navigate to frontend directory
-cd frontend
+cd ecomm-client
 
 # Install dependencies
 npm install
@@ -165,7 +161,7 @@ cp .env.example .env.local
 
 ```bash
 # Navigate to backend directory
-cd ../backend
+cd ../ecomm-api
 
 # Install Maven dependencies
 mvn clean install
@@ -178,7 +174,7 @@ cp src/main/resources/application.properties.example src/main/resources/applicat
 
 ```bash
 # Navigate to project root
-cd ..
+cd ecomm-api
 
 # Start pgAdmin container
 docker-compose up -d pgadmin
@@ -290,64 +286,54 @@ docker-compose up -d pgadmin
 
 ### Access Points
 - **Frontend**: http://localhost:5173
-- **Backend API**: http://localhost:8080/api
-- **Swagger UI**: http://localhost:8080/swagger-ui.html
-- **API Documentation**: http://localhost:8080/api-docs
-- **pgAdmin**: http://localhost:5050
+- **Backend API**: http://localhost:8085
+- **Swagger UI**: http://localhost:8085/swagger-ui.html
+- **API Documentation**: http://localhost:8085/v3/api-docs
+- **pgAdmin**: http://localhost:7000
 
 ## 📚 API Documentation
 
-The API is fully documented using **Swagger UI** and can be accessed at `http://localhost:8080/swagger-ui.html` when running locally.
+The API is fully documented using **Swagger UI** and can be accessed at `http://localhost:8085/swagger-ui.html` when running locally.
 
 > **📝 Note**: API endpoints are being actively developed and documented. Some endpoints may be incomplete or subject to change.
 
 ### Authentication Endpoints *(In Development)*
 - `POST /api/auth/register` - User registration
 - `POST /api/auth/login` - User login with email/password
-- `GET /api/auth/oauth2/authorization/{provider}` - OAuth 2 login (google, facebook, github)
+- `POST /api/auth/verify` - User verification via OTP code sent via Email
 - `POST /api/auth/refresh` - Refresh JWT token
 - `POST /api/auth/logout` - User logout
 
 ### Product Endpoints
-- `GET /api/products` - Get all products with pagination
+- `GET /api/products` - Get all products
 - `GET /api/products/{id}` - Get product by ID
+- `DELETE /api/products/{id}` - Delete product by ID
+- `POST /api/products/` - Create new product
+- `PUT /api/products/{id}` - Update a product by ID
+
 
 ### Category Endpoints
 - `GET /api/categories` - Get all categories
+- `POST /api/categories` - Create a new category
+- `GET /api/categories/{id}` - Update a category
+- `PUT /api/categories/{id}` - Update a category by ID
+- `DELETE /api/categories/{id}` - Delete a category by ID
+
+### User Endpoints
 
 
-### Cart Endpoints
-- `GET /api/cart` - Get user's cart
-- `POST /api/cart/add` - Add item to cart
-- `PUT /api/cart/update/{itemId}` - Update cart item
-- `DELETE /api/cart/remove/{itemId}` - Remove item from cart
-
-### Email Endpoints *(In Development)*
-- `POST /api/email/order-confirmation` - Send order confirmation email
-- `POST /api/email/shipping-notification` - Send shipping update email  
-- `POST /api/email/password-reset` - Send password reset email
-- `POST /api/email/welcome` - Send welcome email to new users
-
-### Order Endpoints
-- `POST /api/orders` - Create new order
-- `GET /api/orders` - Get user's orders
-- `GET /api/orders/{id}` - Get order details
 
 ## 🗄 Database Schema
 
 > **🔧 Database Structure**: Currently being designed and implemented. Schema may evolve as development progresses.
 
 ### Key Tables
-- **users** - User account information *(In Development)*
-- **oauth2_users** - OAuth 2 social login user details *(In Development)*
-- **categories** - Product categories (men/women subdivisions) *(Implemented)*
-- **products** - Product catalog with details *(In Progress)*
-- **cart_items** - Shopping cart contents *(In Progress)*
-- **orders** - Order information *(Planned)*
-- **order_items** - Individual items within orders *(Planned)*
-- **reviews** - Product reviews and ratings *(Future Release)*
-- **email_templates** - Email notification templates *(In Development)*
-- **email_logs** - Email sending history and status *(In Development)*
+- **users** - User account information ✅ Implemented
+- **authorities** User authorities ✅ Implemented
+- **user_auth_junction** - Junction table for user-authority relationships ✅ Implemented
+- **categories** - Product categories (men/women subdivisions) ✅ Implemented
+- **products** - Product catalog with details ✅ Implemented
+
 
 ## 🚀 Deployment
 
@@ -392,18 +378,3 @@ The API is fully documented using **Swagger UI** and can be accessed at `http://
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Support
-
-For support, email support@fashionstore.com or create an issue on GitHub.
-
-> **💬 Development Updates**: Follow the repository for regular updates on development progress, new features, and release notes.
-
-## 🙏 Acknowledgments
-
-- React 19 team for the latest features and improvements
-- Redux Toolkit team for simplified state management
-- Spring Boot team for the robust framework
-- Java Mail Sender for reliable email services
-- Supabase for reliable database hosting
-- Vercel for seamless deployment experience

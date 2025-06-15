@@ -4,16 +4,19 @@ import CartIcon from "../common/CartIcon";
 import Wishlist from "../common/Wishlist";
 import "./Navigation.css"
 
+
+
+
+
 const Navigation = () => {
   return (
     <nav className="flex items-center py-6 px-8 justify-between gap-40">
       <div className="flex items-center gap-6">
         {/* LOGO */}
-        <a href="/" className="text-3xl text-black gap-8 font-bold">
-          TnGarments
-        </a>
+        <a href="/" className="text-3xl text-black gap-8 font-bold">9achi</a>
       </div>
 
+  
       <div className="flex-wrap items-center gap-10 flex-1">
         {/* NAV ITEMS */}
         <ul className="flex gap-14 text-gray-700 hover:text-black">
@@ -31,6 +34,10 @@ const Navigation = () => {
           </li>
         </ul>
       </div>
+      
+      
+      
+      
       <div className="flex justify-center">
         {/* SEARCH BAR */}
         <div className="border rounded flex items-center overflow-hidden">
@@ -55,18 +62,31 @@ const Navigation = () => {
         </div>
       
       </div>
+     
+        
 
       <div className="flex flex-wrap items-center gap-4">
         {/* ACTION ITEMS icons */}
-       <ul className="flex items-center gap-8">
-  <li><button className="group"><Wishlist /></button></li>
-  <li><button className="group"><AccountIcon /></button></li>
-  <li>
-    <Link to="/cart-items" className="group">
-      <CartIcon />
-    </Link>
-  </li>
-</ul>
+        
+          <ul className="flex items-center gap-8">
+          <li><button className="group"><Wishlist /></button></li>
+          <li><button className="group"><Link to={"/v1/login"}><AccountIcon /></Link></button></li>
+            <li>
+              <Link to="/cart-items" className="group">
+                <CartIcon />
+              </Link>
+            </li>
+          </ul>
+       
+
+
+        
+          
+   
+
+
+          
+  
 
       </div>
     </nav>

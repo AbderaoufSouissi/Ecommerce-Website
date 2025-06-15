@@ -92,6 +92,7 @@ ecomm-api/application-local.properties
 ecomm-api/application-local.yml
 ecomm-api/src/main/resources/application-local.properties
 ecomm-api/src/main/resources/application-local.yml
+ecomm-api/src/main/resources/application-dev.yml
 
 # Spring Boot environment files
 ecomm-api/.env

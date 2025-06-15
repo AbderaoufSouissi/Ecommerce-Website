@@ -57,7 +57,7 @@
   },
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Men",
       "code": "MEN",
       "path": "/men",
@@ -76,46 +76,51 @@
             "DriftWood",
             "Dark Taupe"
           ],
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
         }
       ],
       "types": [
         {
-          "type_id": 1,
+          "type_id": "1",
           "code": "JEANS",
           "name": "Jeans"
         },
         {
-          "type_id": 2,
+          "type_id": "2",
           "code": "SHIRTS",
           "name": "Shirts"
         },
         {
-          "type_id": 3,
+          "type_id": "3",
           "code": "HOODIES&SWEATSHIRTS",
           "name": "Hoodies & Sweatshirts"
         },
-
         {
-          "type_id": 4,
+          "type_id": "4",
           "code": "SWEATERS",
           "name": "Sweaters"
         },
         {
-          "type_id": 5,
+          "type_id": "5",
           "code": "JACKETS",
           "name": "Jackets"
         },
         {
-          "type_id": 6,
+          "type_id": "6",
           "code": "JOGGERS",
           "name": "Joggers"
         }
-        
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Women",
       "code": "WOMEN",
       "path": "/women",
@@ -135,39 +140,46 @@
             "Dark Taupe",
             "Shell"
           ],
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
         }
       ],
-  "types": [
+      "types": [
         {
-          "type_id": 1,
+          "type_id": "1",
           "code": "SHIRTS",
           "name": "Shirts"
         },
         {
-          "type_id": 2,
+          "type_id": "2",
           "code": "DRESSES",
           "name": "Dresses"
         },
         {
-          "type_id": 3,
+          "type_id": "3",
           "code": "JACKETS",
           "name": "Jackets"
         },
         {
-          "type_id": 4,
+          "type_id": "4",
           "code": "PANTS",
           "name": "Pants"
         },
-	{
-          "type_id": 5,
+        {
+          "type_id": "5",
           "code": "TOPS",
           "name": "Tops"
         }
-]
+      ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Kids",
       "code": "KIDS",
       "path": "/kids",
@@ -186,22 +198,29 @@
             "DriftWood",
             "Dark Taupe"
           ],
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ]
         }
       ],
       "types": [
         {
-          "type_id": 1,
+          "type_id": "1",
           "code": "JEANS",
           "name": "Jeans"
         },
         {
-          "type_id": 2,
+          "type_id": "2",
           "code": "SHIRTS",
           "name": "Shirts"
         },
         {
-          "type_id": 3,
+          "type_id": "3",
           "code": "HATS",
           "name": "Hats"
         }
@@ -271,14 +290,14 @@
       }
     ]
   },
-  "copyright": "Copyright © 2025 TnGarments",
+  "copyright": "Copyright © 2025 9achi",
   "products": [
     {
-      "id": 1,
-      "title": "Long Sleeve Shirts",
-      "description": "Stay cozy and chic with our women's long sleeve tops. Designed with soft fabrics and flattering cuts, they’re perfect for layering or wearing on their own.",
-      "category_id": 2,
-      "type_id": 1,
+      "id": "1",
+      "title": "Long Sleeve Shirt",
+      "description": "Stay cozy and chic with our women's long sleeve tops. Designed with soft fabrics and flattering cuts, they're perfect for layering or wearing on their own.",
+      "category_id": "2",
+      "type_id": "1",
       "brand": "Women's Long Sleeves ",
       "price": 89.99,
       "size": [
@@ -305,11 +324,11 @@
       "rating": 4.6
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Oversized T-Shirts",
       "description": "Stay effortlessly cool with our men's oversized t-shirts. Crafted from soft, breathable cotton, these tees offer a relaxed fit for ultimate comfort and style—perfect for laid-back looks or layered streetwear vibes.",
-      "category_id": 1,
-      "type_id": 2,
+      "category_id": "1",
+      "type_id": "2",
       "brand": "Men's T-shirts",
       "price": 89.99,
       "size": [
@@ -330,11 +349,11 @@
       "rating": 3.2
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Basic Sweatshirts",
-      "description": "Lounge or move in style with our men’s sweats. Designed for comfort with soft fleece interiors and a modern fit, they’re ideal for everything from casual outings to chill days at home.",
-      "category_id": 1,
-      "type_id": 3,
+      "description": "Lounge or move in style with our men's sweats. Designed for comfort with soft fleece interiors and a modern fit, they're ideal for everything from casual outings to chill days at home.",
+      "category_id": "1",
+      "type_id": "3",
       "brand": "Men's Sweatshirts",
       "price": 69.99,
       "size": [
@@ -357,11 +376,11 @@
       "rating": 4.5
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Relaxed Fit Jeans",
       "description": "Meet your new go-to denim. Our relaxed fit jeans feature a roomy cut through the thigh and leg, offering all-day comfort with classic style that never fades",
-      "category_id": 1,
-      "type_id": 1,
+      "category_id": "1",
+      "type_id": "1",
       "brand": "Men's Jeans",
       "price": 69.99,
       "size": [
@@ -384,11 +403,11 @@
       "rating": 4.5
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Basic Hoodies",
-      "description": "A wardrobe essential, our men’s basic hoodies are made from premium cotton blends for softness and warmth. Perfect for layering or wearing solo on cooler days",
-      "category_id": 1,
-      "type_id": 3,
+      "description": "A wardrobe essential, our men's basic hoodies are made from premium cotton blends for softness and warmth. Perfect for layering or wearing solo on cooler days",
+      "category_id": "1",
+      "type_id": "3",
       "brand": "Men's Hoodies",
       "price": 69.99,
       "size": [
@@ -411,11 +430,11 @@
       "rating": 4.5
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Smart Joggers",
       "description": "Elevate your casualwear with our smart joggers. With tailored lines and a tapered fit, they blend comfort and sophistication—perfect for work-from-home or weekend outings.",
-      "category_id": 1,
-      "type_id": 6,
+      "category_id": "1",
+      "type_id": "6",
       "brand": "Men's Joggers",
       "price": 49.99,
       "size": [
@@ -438,11 +457,11 @@
       "rating": 4.5
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Blasers",
-      "description": "Add instant polish to any outfit with our men’s blazers. Designed with modern cuts and clean lines, they’re ideal for formal events or smart-casual ensembles.",
-      "category_id": 1,
-      "type_id": 5,
+      "description": "Add instant polish to any outfit with our men's blazers. Designed with modern cuts and clean lines, they're ideal for formal events or smart-casual ensembles.",
+      "category_id": "1",
+      "type_id": "5",
       "brand": "Men's Blasers",
       "price": 69.99,
       "size": [
@@ -467,11 +486,11 @@
       "rating": 4.5
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Jogger Pants",
       "description": "Casual comfort meets everyday style. Our jogger pants are lightweight, breathable, and feature an elastic waist and cuffs—perfect for on-the-go ease.",
-      "category_id": 1,
-      "type_id": 6,
+      "category_id": "1",
+      "type_id": "6",
       "brand": "Men's Joggers",
       "price": 69.99,
       "size": [
@@ -500,11 +519,11 @@
       "rating": 4.5
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Bomber Jackets",
-      "description": "Bold yet versatile, our women’s bomber jackets bring edge to any outfit. Designed with a sleek fit and functional details for year-round wear.",
-      "category_id": 2,
-      "type_id": 3,
+      "description": "Bold yet versatile, our women's bomber jackets bring edge to any outfit. Designed with a sleek fit and functional details for year-round wear.",
+      "category_id": "2",
+      "type_id": "3",
       "brand": "Women's Jackets",
       "price": 69.99,
       "size": [
@@ -527,11 +546,11 @@
       "rating": 4.5
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Cardigans",
-      "description": "Layer up in style with our versatile men’s cardigans. Whether open or buttoned, they provide a cozy, refined look for chilly days or office layering.",
-      "category_id": 1,
-      "type_id": 5,
+      "description": "Layer up in style with our versatile men's cardigans. Whether open or buttoned, they provide a cozy, refined look for chilly days or office layering.",
+      "category_id": "1",
+      "type_id": "5",
       "brand": "Men's Cardigans",
       "price": 69.99,
       "size": [
@@ -556,11 +575,11 @@
       "rating": 4.5
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Bomber Jackets",
       "description": "Cool and contemporary, our bomber jackets feature classic silhouettes with modern detailing. Great for transitional weather and easy layering.",
-      "category_id": 1,
-      "type_id": 5,
+      "category_id": "1",
+      "type_id": "5",
       "brand": "Men's jackets",
       "price": 69.99,
       "size": [
@@ -585,11 +604,11 @@
       "rating": 4.5
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Overshirts",
       "description": "Part shirt, part jacket—our overshirts are the perfect lightweight layer. Designed for versatility, they work great over tees or under coats.",
-      "category_id": 1,
-      "type_id": 5,
+      "category_id": "1",
+      "type_id": "5",
       "brand": "Men's Overshirts",
       "price": 69.99,
       "size": [
@@ -616,11 +635,11 @@
       "rating": 4.5
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Polos",
-      "description": "Clean, crisp, and classic. Our men’s polos are made with soft, breathable fabrics and tailored fits—perfect for work or weekends.",
-      "category_id": 1,
-      "type_id": 2,
+      "description": "Clean, crisp, and classic. Our men's polos are made with soft, breathable fabrics and tailored fits—perfect for work or weekends.",
+      "category_id": "1",
+      "type_id": "2",
       "brand": "Men's Polos",
       "price": 69.99,
       "size": [
@@ -647,11 +666,11 @@
       "rating": 4.5
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Long Sleeve Split Hem Dress",
-      "description": "Elevate your wardrobe with our split hem dress. Featuring a flattering fit, long sleeves, and a stylish side split—it’s your go-to piece for effortless elegance.",
-      "category_id": 2,
-      "type_id": 2,
+      "description": "Elevate your wardrobe with our split hem dress. Featuring a flattering fit, long sleeves, and a stylish side split—it's your go-to piece for effortless elegance.",
+      "category_id": "2",
+      "type_id": "2",
       "brand": "Women's Dresses",
       "price": 69.99,
       "size": [
@@ -671,16 +690,16 @@
       "images": [
         "/images/women-black-long-sleeve-split-hem-dress.webp",
         "/images/women-coffee-long-sleeve-split-hem-dress.webp",
-        "/images/women-driftwood-long-sleeve-split-hem-dress.webp"
+        "/images/women-driftwood-long-sleeve-split-hem-dress.webp"  
       ],
       "rating": 4.5
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Wide Leg Pants",
       "description": "Flowy and flattering, our wide leg pants offer breathable comfort and chic style. Perfect for office days, brunch dates, or relaxing in style.",
-      "category_id": 2,
-      "type_id": 4,
+      "category_id": "2",
+      "type_id": "4",
       "brand": "Women's Pants",
       "price": 69.99,
       "size": [
@@ -709,11 +728,11 @@
       "rating": 4.5
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "Straight Everyday Pants",
-      "description": "Sleek and simple, our straight everyday pants are a closet staple. With a tailored silhouette and all-day comfort, they’re your versatile work-to-weekend essential.",
-      "category_id": 2,
-      "type_id": 4,
+      "description": "Sleek and simple, our straight everyday pants are a closet staple. With a tailored silhouette and all-day comfort, they're your versatile work-to-weekend essential.",
+      "category_id": "2",
+      "type_id": "4",
       "brand": "Women's Pants",
       "price": 69.99,
       "size": [
@@ -738,11 +757,11 @@
       "rating": 4.5
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Skinny Everyday Pants",
       "description": "Form-fitting and functional, these skinny pants hug your curves while offering stretch and comfort. Great for office or casual wear.",
-      "category_id": 2,
-      "type_id": 4,
+      "category_id": "2",
+      "type_id": "4",
       "brand": "Women's Pants",
       "price": 69.99,
       "size": [
@@ -769,11 +788,11 @@
       "rating": 4.5
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "Classic T-Shirt",
       "description": "Timeless and comfy, our classic tees are made with soft cotton and a flattering fit. Perfect for layering or pairing with anything.",
-      "category_id": 2,
-      "type_id": 1,
+      "category_id": "2",
+      "type_id": "1",
       "brand": "Women's T-Shirts",
       "price": 69.99,
       "size": [
@@ -800,11 +819,11 @@
       "rating": 4.5
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "V Neck T-Shirt",
       "description": "A staple with a twist. Our v-neck tees offer a feminine neckline and a relaxed fit—ideal for dressing up or down.",
-      "category_id": 2,
-      "type_id": 1,
+      "category_id": "2",
+      "type_id": "1",
       "brand": "Women's T-Shirts",
       "price": 69.99,
       "size": [
@@ -829,11 +848,11 @@
       "rating": 4.5
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "Button-Down Shirt",
       "description": "Smart meets style. Our button-down shirts feature crisp lines and breathable fabrics, ideal for work or layering over basics.",
-      "category_id": 2,
-      "type_id": 1,
+      "category_id": "2",
+      "type_id": "1",
       "brand": "Women's Shirts",
       "price": 69.99,
       "size": [
@@ -858,11 +877,11 @@
       "rating": 4.5
     },
     {
-      "id": 21,
+      "id": "21",
       "title": "Relaxed Polo Shirt",
       "description": "Easygoing and stylish, our relaxed polos offer a looser fit for everyday comfort—perfect for a polished yet casual look.",
-      "category_id": 2,
-      "type_id": 1,
+      "category_id": "2",
+      "type_id": "1",
       "brand": "Women's Polos",
       "price": 69.99,
       "size": [
@@ -871,7 +890,7 @@
         "M",
         "L",
         "XL"
-      ],
+      ],  
       "color": [
         "Black",
         "Grey",
@@ -889,11 +908,11 @@
       "rating": 4.5
     },
     {
-      "id": 22,
+      "id": "22",
       "title": "Relaxed Pullovers",
       "description": "Effortlessly stylish and comfortable, this relaxed pullover shirt is designed for everyday ease. Crafted from soft, breathable fabric, it features a loose, drapey silhouette that flatters all body types. With its clean neckline, dropped shoulders, and minimal detailing, it's perfect for layering or wearing on its own.",
-      "category_id": 2,
-      "type_id": 1,
+      "category_id": "2",
+      "type_id": "1",
       "brand": "Women's Pullovers",
       "price": 69.99,
       "size": [
@@ -907,7 +926,6 @@
         "Black",
         "Grey",
         "Driftwood"
-    
       ],
       "discount": 5,
       "thumbnail": "/images/women-black-relaxed-pullover.webp",
@@ -915,16 +933,15 @@
         "/images/women-black-relaxed-pullover.webp",
         "/images/women-grey-relaxed-pullover.webp",
         "/images/women-driftwood-relaxed-pullover.webp"
-        
       ],
       "rating": 4.5
     },
     {
-      "id": 23,
+      "id": "23",
       "title": "Relaxed Shackets",
-      "description": "Combining the structure of a jacket with the softness of a shirt, this relaxed women's shacket is your go-to layering piece for transitional weather. Designed with a loose, laid-back fit, it features a button-down front, oversized chest pockets, and a slightly curved hem for added shape. Made from cozy, mid-weight fabric, it's perfect for tossing over tees, sweaters, or dresses",
-      "category_id": 2,
-      "type_id": 3,
+      "description": "Combining the structure of a jacket with the softness of a shirt.Designed with a loose, laid-back fit, it features a button-down front, oversized chest pockets, and a slightly curved hem for added shape.",
+      "category_id": "2",
+      "type_id": "3",
       "brand": "Women's Jackets",
       "price": 69.99,
       "size": [
@@ -937,23 +954,21 @@
       "color": [
         "Black",
         "Grey"
-    
       ],
       "discount": 5,
       "thumbnail": "/images/women-black-relaxed-shacket.webp",
       "images": [
         "/images/women-black-relaxed-shacket.webp",
         "/images/women-grey-relaxed-shacket.webp"
-        
       ],
       "rating": 4.5
     },
     {
-      "id": 24,
+      "id": "24",
       "title": "Boxing Pants",
       "description": "Engineered for performance and comfort, these boxing pants are designed to support every move in and out of the ring. Featuring a relaxed fit with a wide-leg silhouette, they offer full range of motion during training or competition. The lightweight, breathable fabric keeps you cool, while the elastic waistband with drawstring ensures a secure, customizable fit.",
-      "category_id": 2,
-      "type_id": 4,
+      "category_id": "2",
+      "type_id": "4",
       "brand": "Women's Pants",
       "price": 69.99,
       "size": [
@@ -965,79 +980,13 @@
       ],
       "color": [
         "Black",
-        "Grey"    
+        "Grey"
       ],
       "discount": 5,
       "thumbnail": "/images/women-black-boxing-pant.webp",
       "images": [
         "/images/women-black-boxing-pant.webp",
         "/images/women-grey-boxing-pant.webp"
-      ],
-      "rating": 4.5
-    },
-    {
-      "id": 25,
-      "title": "Serene Shackets",
-      "description": "Effortlessly combining the cozy comfort of a shirt with the warmth of a jacket, the Serene Shacket is your perfect layering piece for transitional weather. Designed in a soft, brushed fabric with a relaxed silhouette, it features dropped shoulders, button-front closure, and oversized chest pockets for a casual yet polished look",
-      "category_id": 2,
-      "type_id": 3,
-      "brand": "Women's Jackets",
-      "price": 69.99,
-      "size": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "color": [
-        "Black",
-        "White",
-        "Driftwood",
-        "Dune",
-        "Shell"
-    
-      ],
-      "discount": 5,
-      "thumbnail": "/images/women-black-serene-shacket.webp",
-      "images": [
-        "/images/women-black-serene-shacket.webp",
-        "/images/women-driftwood-serene-shacket.webp",
-        "/images/women-dune-serene-shacket.webp",
-        "/images/women-shell-serene-shacket.webp",
-        "/images/women-white-serene-shacket.webp"
-        
-      ],
-      "rating": 4.5
-    },
-    {
-      "id": 26,
-      "title": "Drop Cut Tanks",
-      "description": "Effortlessly cool and breathable, the Drop-Cut Women's Tank is designed for comfort and versatility.Crafted from lightweight, breathable fabric, it features a flattering drop-cut hem that elongates the silhouette, this tank offers a relaxed fit perfect for everyday wear or layering",
-      "category_id": 2,
-      "type_id": 5,
-      "brand": "Women's Tank Tops",
-      "price": 69.99,
-      "size": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
-      "color": [
-        "Black",
-        "White",
-        "Driftwood"
-    
-      ],
-      "discount": 5,
-      "thumbnail": "/images/women-black-drop-cut-tank.webp",
-      "images": [
-        "/images/women-black-drop-cut-tank.webp",
-        "/images/women-driftwood-drop-cut-tank.webp",
-        "/images/women-white-drop-cut-tank.webp"
-        
       ],
       "rating": 4.5
     }
