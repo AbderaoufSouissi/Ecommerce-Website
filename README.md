@@ -1,4 +1,3 @@
-"# Ecommerce-Website" 
 # 9achi - E-commerce Website
 
 ## 🚀 Project Overview
