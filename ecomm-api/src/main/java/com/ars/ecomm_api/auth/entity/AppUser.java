@@ -1,5 +1,7 @@
 package com.ars.ecomm_api.auth.entity;
 
+import com.ars.ecomm_api.entity.Address;
+import com.ars.ecomm_api.entity.Order;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
@@ -54,6 +56,13 @@ public class AppUser implements UserDetails {
             inverseJoinColumns = @JoinColumn(referencedColumnName = "authority_id")
     )
     private List<Authority> authorities = new ArrayList<>();
+
+
+    @OneToMany(mappedBy ="user",cascade = CascadeType.ALL)
+    private List<Address> addressList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Order> orders = new ArrayList<>();
 
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
