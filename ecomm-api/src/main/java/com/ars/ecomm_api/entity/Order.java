@@ -2,6 +2,10 @@ package com.ars.ecomm_api.entity;
 
 import com.ars.ecomm_api.auth.entity.AppUser;
 import com.ars.ecomm_api.enumeration.OrderStatus;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.ArrayList;
@@ -28,10 +32,14 @@ public class Order {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
+    @ToString.Exclude
+    @JsonBackReference
     private AppUser user;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "address_id",nullable = false)
+    @JsonBackReference
+    @ToString.Exclude
     private Address address;
 
     @Column(nullable = false)
@@ -41,8 +49,8 @@ public class Order {
     @Column(nullable = false)
     private OrderStatus orderStatus;
 
-//    @Column(nullable = false)
-//    private String paymentMethod;
+    @Column(nullable = false)
+    private String paymentMethod;
 
     @Column(nullable = true)
     private String shipmentNumber;
@@ -52,11 +60,14 @@ public class Order {
     private Date deliveryDate;
 
     @OneToMany(mappedBy="order", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonManagedReference
+    @ToString.Exclude
     private List<OrderItem> orderItems = new ArrayList<>();
 
     private Double discount;
 
     @OneToOne(mappedBy="order", cascade = CascadeType.ALL)
+    @ToString.Exclude
     private Payment payment;
 
 }

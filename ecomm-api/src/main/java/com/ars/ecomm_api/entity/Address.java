@@ -1,6 +1,7 @@
 package com.ars.ecomm_api.entity;
 
 import com.ars.ecomm_api.auth.entity.AppUser;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.UUID;
@@ -31,8 +32,13 @@ public class Address {
     @Column(nullable = false)
     private String zipCode;
 
+    @Column(nullable = false)
+    private String PhoneNumber;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id",nullable = false)
+    @JsonBackReference
+    @ToString.Exclude
     private AppUser user;
 
 }

@@ -3,6 +3,7 @@ package com.ars.ecomm_api.auth.entity;
 import com.ars.ecomm_api.entity.Address;
 import com.ars.ecomm_api.entity.Order;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -59,9 +60,12 @@ public class AppUser implements UserDetails {
 
 
     @OneToMany(mappedBy ="user",cascade = CascadeType.ALL)
+    @JsonManagedReference
+    @ToString.Exclude
     private List<Address> addressList = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Order> orders = new ArrayList<>();
 
     @Column(nullable = false, updatable = false)

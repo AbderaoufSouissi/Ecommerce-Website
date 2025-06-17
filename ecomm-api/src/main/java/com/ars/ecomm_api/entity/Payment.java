@@ -1,6 +1,7 @@
 package com.ars.ecomm_api.entity;
 
 import com.ars.ecomm_api.enumeration.PaymentStatus;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.Date;
@@ -22,6 +23,7 @@ public class Payment {
 
     @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JoinColumn(name = "order_id",nullable = false)
+    @JsonIgnore
     private Order order;
 
     @Temporal(TemporalType.TIMESTAMP)

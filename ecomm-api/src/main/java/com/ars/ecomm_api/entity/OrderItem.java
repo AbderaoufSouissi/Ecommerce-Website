@@ -1,5 +1,6 @@
 package com.ars.ecomm_api.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.UUID;
@@ -19,10 +20,16 @@ public class OrderItem {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id", nullable = false)
+    @JsonBackReference
     private Product product;
+
+
+    private UUID productVariantId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id", nullable = false)
+    @JsonBackReference
+    @ToString.Exclude
     private Order order;
 
     @Column(nullable = false)
