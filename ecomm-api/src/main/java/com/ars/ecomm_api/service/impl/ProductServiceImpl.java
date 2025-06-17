@@ -152,6 +152,10 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.save(product);
     }
 
+    @Override
+    public Product fetchProductById(UUID id) {
+        return productRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Product not found with id: " + id));
+    }
 
 
     private Specification<Product> buildProductSpecification(UUID categoryId, UUID categoryTypeId) {

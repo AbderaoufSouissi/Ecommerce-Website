@@ -10,8 +10,7 @@ public interface ProductService {
     Product createProduct(ProductDto productDto);
     List<ProductDto> getAllProducts(UUID categoryId, UUID categoryTypeId);
     ProductDto getProductBySlug(String slug);
-
     ProductDto getProductById(UUID id);
-
     Product updateProduct(UUID productId, ProductDto productDto);
+    Product fetchProductById(UUID id);
 }
