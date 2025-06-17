@@ -35,6 +35,7 @@ public class UserDetailsController {
                 .email(user.getEmail())
                 .phoneNumber(user.getPhoneNumber())
                 .authorityList(user.getAuthorities())
+                .addressList(user.getAddressList())
                 .build();
 
         return new ResponseEntity<>(userDetailsDto, HttpStatus.OK);

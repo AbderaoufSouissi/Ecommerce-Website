@@ -36,7 +36,7 @@ public class WebSecurityConfig {
                 .csrf(csrf->csrf.disable())
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/swagger-ui/**","/v3/api-docs/**").permitAll()
+                        .requestMatchers("/swagger-ui/**","/swagger-ui.html","/v3/api-docs/**").permitAll()
                         .requestMatchers(HttpMethod.GET,"/api/products","/api/categories").permitAll()
                         .requestMatchers(HttpMethod.POST,"/api/auth/register","/api/auth/login","/api/auth/verify").permitAll()
                         .requestMatchers("/oauth2/success").permitAll()
