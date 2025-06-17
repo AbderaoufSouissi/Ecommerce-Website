@@ -20,7 +20,7 @@ public class EmailService {
 
     public void sendEmail(AppUser user) {
         String subject = "Email Verification";
-        String senderName = "Dabchi";
+        String senderName = "9achi";
         String mailContent = "<p>Hello " + user.getFirstName() + ",</p>"
                 + "<p>Thank you for registering with <strong>"+senderName+"</strong>.</p>"
                 + "<p>Your verification code is:</p>"
