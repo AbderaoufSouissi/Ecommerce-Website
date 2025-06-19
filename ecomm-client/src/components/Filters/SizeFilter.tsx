@@ -1,51 +1,61 @@
-import { useState } from "react"
-
+import { useCallback, useEffect, useState } from "react";
 
 interface SizeFilterProps {
-    sizes?: Array<string>,
-    hideTitle: boolean,
-    multi: boolean
+  sizes?: string[];
+  hideTitle: boolean;
+  multi: boolean;
+  onChange: (appliedSizes: string[]) => void;
 }
 
-const SizeFilter = ({ sizes , hideTitle , multi = true}: SizeFilterProps) => {
+const SizeFilter = ({ sizes, hideTitle, multi = true, onChange }: SizeFilterProps) => {
+  const [appliedSize, setAppliedSize] = useState<string[]>([]);
 
-    const [appliedSizes, setAppliedSizes] = useState<Array<string>>([])
+  const handleOnClick = useCallback(
+    (size: string) => {
+      let updated: string[];
 
+      if (appliedSize.includes(size)) {
+        updated = appliedSize.filter((s) => s !== size);
+      } else {
+        updated = multi ? [...appliedSize, size] : [size];
+      }
 
-    const handleOnClick = (size: string) => {
-        if (appliedSizes.includes(size)) {
-            setAppliedSizes(appliedSizes.filter(s => s != size))
-        }
-        else {
-            if (multi) {
-                
-                setAppliedSizes([...appliedSizes, size])
-            }
-            else {
-                setAppliedSizes([size])
-            }
-        }
+      setAppliedSize(updated);
+    },
+    [appliedSize, multi]
+  );
 
-    }
+  useEffect(() => {
+    onChange(appliedSize);
+  }, [appliedSize, onChange]);
 
+  return (
+    <div className="flex flex-col mb-6">
+      {!hideTitle && <p className="text-lg font-semibold text-gray-800 mb-4">Available Sizes</p>}
 
-    return (
-        <div className="flex flex-col mb-4">
-            {!hideTitle &&  <p className="text-[16px] text-black mt-5 mb-5">Sizes</p>}
-           
-            <div className="flex flex-wrap gap-3">
-                {sizes?.map((size) => (
-                    <div
-                        key={size}
-                        className={`w-8 h-8 rounded-xl shadow-sm hover:scale-105 transition-transform duration-150 cursor-pointer ${appliedSizes.includes(size) ? "ring-2 ring-purple-900 ring-offset-1" : "border-0"}`}
-                        onClick={() => handleOnClick(size)}
-                    >
-                    <p aria-disabled className="text-center pt-1">{size}</p>
-                    </div>
-                ))}
-            </div>
-        </div>
-    )
-}
+      <div className="flex flex-wrap gap-3">
+        {sizes?.map((size) => {
+          const isSelected = appliedSize.includes(size);
+          return (
+            <button
+              key={size}
+              type="button"
+              onClick={() => handleOnClick(size)}
+              className={`px-4 py-2 rounded-xl border transition-all duration-200 text-sm font-medium
+                ${
+                  isSelected
+                    ? "bg-purple-900 text-white shadow-md"
+                    : "bg-white text-gray-800 border-gray-300 hover:bg-gray-100"
+                }
+              `}
+            >
+              {size}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
 
-export default SizeFilter
+export default SizeFilter;
