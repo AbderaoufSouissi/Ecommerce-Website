@@ -134,12 +134,13 @@ const colors = useMemo (()=>{
           <ProductColors colors={colors}/>
         </div>
         <div className='flex pt-4'>
-        <button className="group bg-black hover:bg-gray-300 rounded-lg px-4 py-2 transition-colors duration-200">
-            <div className="flex items-center text-white group-hover:text-black transition-colors">
-              <CartIcon />
-              <span>Add to cart</span>
-            </div>
-          </button>
+        <button className="group bg-black hover:bg-neutral-300 rounded-xl px-5 py-2.5 transition duration-300 cursor-pointer shadow-md hover:shadow-lg ">
+        <div className="flex items-center text-white group-hover:text-black transition-colors duration-300">
+        <CartIcon />
+         <span className="font-medium">Add to cart</span>
+        </div>
+        </button>
+
         </div>
         {/* Product Description */}
       
